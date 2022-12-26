@@ -1,0 +1,35 @@
+<div class="h-full w-full bg-stone-800 flex md:justify-center p-5">
+  <div *ngFor="let button of buttons">
+    <h2
+      class="sm:text-lg md:text-2xl text-center md:ml-10 md:mr-10 cursor-pointer pl-2 pr-2 pt-1 pb-1 hover:border-b-[0.5px] hover:scale-125 duration-300 rounded-md hover:border-orange-500"
+    >
+      {{ button }}
+    </h2>
+  </div>
+  <div
+    id="lang-changer"
+    class="w-10 h-10 absolute right-10"
+    (click)="openLanguageChanger()"
+  >
+    <img
+      id="lang-flag"
+      src="../../../assets/ icons/bulgaria.png"
+      class="cursor-pointer hover:scale-125 duration-300"
+      (click)="openLanguageChanger()"
+    />
+    <ul id="langs" class="hidden text-center absolute right-11 z-10">
+      <li
+        (click)="onClickChangeLangFlag('bg')"
+        class="bg-orange-500 w-[150px] mt-5 cursor-pointer text-black hover:border-[1px] hover:bg-black hover:text-white tracking-[1px] hover:scale-125 duration-300"
+      >
+        Български
+      </li>
+      <li
+        (click)="onClickChangeLangFlag('en')"
+        class="bg-orange-500 w-[150px] mt-[0.5px] cursor-pointer text-black hover:text-white hover:border-[1px] hover:bg-black tracking-[1px] hover:scale-125 duration-300"
+      >
+        English
+      </li>
+    </ul>
+  </div>
+</div>
