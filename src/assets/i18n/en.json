@@ -1,0 +1,16 @@
+{
+  "NAV" : {
+    "MENU" : {
+      "HOME" : "Home",
+      "FOOD_MENU" : "Menu",
+      "CONTACTS" : "Find us"
+    }
+  },
+  "FOOTER" : {
+    "ADDRESS" : "Address:",
+    "STREET" : "Lajos Kosut str. 19 , 9003 Varna",
+    "WORK_I" : "Monday - Friday : 9:30 - 20:30",
+    "WORK_II" : "Saturday : 10:00 - 20:00 ",
+    "RIGHTS_RESERVED" : "© 2023 Crazy Donkeys"
+  }
+}

@@ -1,4 +1,5 @@
 import { Component, OnInit, Renderer2 } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-nav',
@@ -6,11 +7,20 @@ import { Component, OnInit, Renderer2 } from '@angular/core';
   styleUrls: ['./nav.component.scss'],
 })
 export class NavComponent implements OnInit {
-  buttons: string[] = ['Начало','Меню','Контакти'];
-  constructor(private renderer: Renderer2) {}
+  buttons: string[] = [
+    'NAV.MENU.HOME',
+    'NAV.MENU.FOOD_MENU',
+    'NAV.MENU.CONTACTS',
+  ];
+
+  constructor(
+    private renderer: Renderer2,
+    private translate: TranslateService
+  ) {}
 
   ngOnInit(): void {
     this.closeLanguageChanger();
+    this.setLanguageState();
   }
 
   openLanguageChanger(): void {
@@ -29,11 +39,23 @@ export class NavComponent implements OnInit {
   }
 
   onClickChangeLangFlag(language: string): void {
+    this.translate.use(language);
+    localStorage.setItem('lang', language);
     let doc = document.getElementById('lang-flag') as HTMLImageElement;
     if (language === 'bg') {
       doc.src = '../../../assets/ icons/bulgaria.png';
     } else if (language === 'en') {
       doc.src = '../../../assets/ icons/united-kingdom.png';
+    }
+  }
+
+  setLanguageState() {
+    let language: string | null = localStorage.getItem('lang');
+
+    if (language === 'bg' || language === 'en') {
+      this.translate.use(language as string);
+    } else {
+      this.translate.setDefaultLang('bg');
     }
   }
 }
