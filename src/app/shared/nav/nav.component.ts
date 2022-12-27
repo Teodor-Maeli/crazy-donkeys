@@ -1,5 +1,8 @@
 import { Component, OnInit, Renderer2 } from '@angular/core';
+import { Router } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
+import { MenuButtons } from '../models/models';
+
 
 @Component({
   selector: 'app-nav',
@@ -7,15 +10,25 @@ import { TranslateService } from '@ngx-translate/core';
   styleUrls: ['./nav.component.scss'],
 })
 export class NavComponent implements OnInit {
-  buttons: string[] = [
-    'NAV.MENU.HOME',
-    'NAV.MENU.FOOD_MENU',
-    'NAV.MENU.CONTACTS',
+  buttons: MenuButtons[] = [
+    {
+      name: 'NAV.MENU.HOME',
+      location: '/home',
+    },
+    {
+      name: 'NAV.MENU.FOOD_MENU',
+      location: '/menu',
+    },
+    {
+      name: 'NAV.MENU.CONTACTS',
+      location: '/contacts',
+    },
   ];
 
   constructor(
     private renderer: Renderer2,
-    private translate: TranslateService
+    private translate: TranslateService,
+    private router: Router
   ) {}
 
   ngOnInit(): void {
@@ -57,5 +70,9 @@ export class NavComponent implements OnInit {
     } else {
       this.translate.setDefaultLang('bg');
     }
+  }
+
+  routerNavigate(path: string) {
+    this.router.navigate([path]);
   }
 }

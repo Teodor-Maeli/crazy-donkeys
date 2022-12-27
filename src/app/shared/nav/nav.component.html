@@ -2,8 +2,8 @@
   <div *ngFor="let button of buttons">
     <h2
       class="sm:text-lg md:text-2xl text-center md:ml-10 md:mr-10 cursor-pointer pl-2 pr-2 pt-1 pb-1 hover:border-b-[2px] hover:scale-125 duration-300 hover:text-orange-500 hover:border-orange-500"
-    >
-      {{ button | translate }}
+    (click)="routerNavigate(button.location)">
+      {{ button.name | translate }}
     </h2>
   </div>
   <div

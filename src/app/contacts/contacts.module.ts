@@ -1,14 +1,14 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { FullLayoutRoutingModule } from './full-layout-routing.module';
-import { RouterModule } from '@angular/router';
+import { ContactsRoutingModule } from './contacts-routing.module';
 
 
 @NgModule({
   declarations: [],
   imports: [
     CommonModule,
+    ContactsRoutingModule
   ]
 })
-export class FullLayoutModule { }
+export class ContactsModule { }

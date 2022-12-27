@@ -8,7 +8,7 @@ import { HttpLoaderFactory } from './functions/functions';
 import { HttpClient } from '@angular/common/http';
 
 @NgModule({
-  declarations: [NavComponent, FooterComponent, HomeComponent],
+  declarations: [NavComponent, FooterComponent],
   imports: [
     CommonModule,
     TranslateModule.forRoot({
@@ -19,6 +19,6 @@ import { HttpClient } from '@angular/common/http';
       },
     }),
   ],
-  exports: [NavComponent, FooterComponent, HomeComponent, TranslateModule],
+  exports: [NavComponent, FooterComponent, TranslateModule],
 })
 export class SharedModule {}

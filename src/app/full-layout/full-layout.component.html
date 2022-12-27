@@ -1,3 +1,14 @@
 <app-nav class="flex justify-center w-full h-20 bg-black"></app-nav>
-<app-home class="flex justify-center w-full h-full bg-black"></app-home>
+<div class="home-main h-full w-full relative">
+  <div
+    class="absolute bottom-0 bg-gradient-to-r from-black via-orange-600 to-slate-600 h-[2px] w-full"
+  ></div>
+  <div class="w-full h-full bg-black flex justify-center items-center">
+    <router-outlet></router-outlet>
+  </div>
+
+  <div
+    class="absolute top-0 bg-gradient-to-r from-black via-orange-600 to-slate-600 h-[1px] w-full"
+  ></div>
+</div>
 <app-footer class="flex justify-center w-full h-50 bg-black"></app-footer>
