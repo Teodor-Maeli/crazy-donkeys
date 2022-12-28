@@ -7,6 +7,7 @@ import { SharedModule } from './shared/shared.module';
 import { FullLayoutComponent } from './full-layout/full-layout.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ContactsComponent } from './contacts/contacts.component';
+import { ContactsModule } from './contacts/contacts.module';
 
 @NgModule({
   declarations: [AppComponent, FullLayoutComponent],

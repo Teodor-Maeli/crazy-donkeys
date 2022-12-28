@@ -12,5 +12,13 @@
     "WORK_I" : "Monday - Friday : 9:30 - 20:30",
     "WORK_II" : "Saturday : 10:00 - 20:00 ",
     "RIGHTS_RESERVED" : "© 2023 Crazy Donkeys"
+  },
+  "WORKING_TIME": {
+    "MONDAY" : "MONDAY: 09:30 - 20:30",
+    "TUESDAY" : "TUESDAY: 09:30 - 20:30",
+    "WEDNESDAY" : "WEDNESDAY: 09:30 - 20:30",
+    "THURSDAY" : "THURSDAY: 09:30 - 20:30",
+    "FRIDAY" : "FRIDAY: 09:30 - 20:30",
+    "SATURDAY" : "SATURDAY: 10:-0 - 20:00"
   }
 }

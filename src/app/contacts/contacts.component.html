@@ -1,31 +1,32 @@
-<div class="mapouter">
-  <div class="gmap_canvas">
+<div
+  class="w-full h-full flex justify-center sm:items-center relative"
+>
+  <div class=" inline-block w-[95%] h-[90%] sm:w-[60%] sm:h-[60%] sm:flex justify-center items-center sm:gap-4 relative">
+    <div
+    class="absolute top-0 bg-gradient-to-r from-black via-orange-600 to-black h-[2px] w-full"
+  ></div>
     <iframe
-      class="gmap_iframe"
+      class="gmap_iframe w-[90%] h-[30%] sm:w-[50%] sm:h-[95%]"
       frameborder="0"
       scrolling="no"
       marginheight="0"
       marginwidth="0"
       src="https://maps.google.com/maps?width=600&amp;height=400&amp;hl=en&amp;q=Crazy Donkeys asparuhovo&amp;t=&amp;z=15&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
-    ></iframe
-    >
+    ></iframe>
+    <div class="w-[90%] h-[30%] sm:w-[50%] sm:h-[95%] flex justify-center items-center">
+     
+      <div class="tracking-[5px] text-center">
+        <p>{{ "WORKING_TIME.MONDAY" | translate }}</p>
+        <p>{{ "WORKING_TIME.TUESDAY" | translate }}</p>
+        <p>{{ "WORKING_TIME.WEDNESDAY" | translate }}</p>
+        <p>{{ "WORKING_TIME.THURSDAY" | translate }}</p>
+        <p>{{ "WORKING_TIME.FRIDAY" | translate }}</p>
+        <p>{{ "WORKING_TIME.SATURDAY" | translate }}</p>
+      </div>
+      
+    </div> 
+    <div
+    class="absolute bottom-0 bg-gradient-to-r from-black via-orange-600 to-black h-[2px] w-full"
+  ></div> 
   </div>
-  <style>
-    .mapouter {
-      position: relative;
-      text-align: right;
-      width: 600px;
-      height: 400px;
-    }
-    .gmap_canvas {
-      overflow: hidden;
-      background: none !important;
-      width: 600px;
-      height: 400px;
-    }
-    .gmap_iframe {
-      width: 600px !important;
-      height: 400px !important;
-    }
-  </style>
 </div>
