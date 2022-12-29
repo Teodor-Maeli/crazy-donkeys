@@ -6,7 +6,7 @@ src="../../../assets/pictures/tomato.png"
 class="opacity-20 absolute w-[500px] h-[333px] left-[2%] top-[-5%] sm:left-[10%] sm:top-[-10%] scale-x-[-1] overflow-hidden"
 />
   <div
-    class="contacts text-center text-lg tracking-[2px] w-full overflow-x-hidden z-10"
+    class="contacts text-center text-lg tracking-[2px] w-full overflow-x-hidden relative"
   >
     <h1>{{ 'FOOTER.ADDRESS' | translate }}</h1>
     <p
@@ -19,7 +19,7 @@ class="opacity-20 absolute w-[500px] h-[333px] left-[2%] top-[-5%] sm:left-[10%]
     <p>{{ 'FOOTER.WORK_I' | translate }}</p>
     <p>{{ 'FOOTER.WORK_II' | translate }}</p>
   </div>
-  <div class="sm:absolute bottom-2 right-5 text-center mt-5 sm:mt-0 z-10">
+  <div class="sm:absolute bottom-2 sm:right-5 text-center mt-5 sm:mt-0 relative ">
     <h1 class="text-xs">{{ 'FOOTER.RIGHTS_RESERVED' | translate }}</h1>
     <h1 class="cursor-pointer hover:scale-125 duration-300 text-orange-600" (click)="redirectLinkedIn()">
       Web masters
