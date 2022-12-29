@@ -6,9 +6,10 @@ import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { HttpLoaderFactory } from '../shared/functions/functions';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { ContactsComponent } from './contacts.component';
+import { SocialIconsComponent } from '../shared/social-icons/social-icons.component';
 
 @NgModule({
-  declarations: [ContactsComponent],
+  declarations: [ContactsComponent,SocialIconsComponent],
   imports: [
     CommonModule,
     ContactsRoutingModule,
