@@ -13,7 +13,7 @@ export class NavComponent implements OnInit {
   buttons: MenuButtons[] = [
     {
       name: 'NAV.MENU.HOME',
-      location: '/home',
+      location: '',
     },
     {
       name: 'NAV.MENU.FOOD_MENU',
