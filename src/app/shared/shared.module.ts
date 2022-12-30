@@ -8,7 +8,7 @@ import { HttpClient } from '@angular/common/http';
 import { SocialIconsComponent } from './social-icons/social-icons.component';
 
 @NgModule({
-  declarations: [NavComponent, FooterComponent],
+  declarations: [NavComponent, FooterComponent,SocialIconsComponent],
   imports: [
     CommonModule,
     TranslateModule.forRoot({
@@ -19,6 +19,6 @@ import { SocialIconsComponent } from './social-icons/social-icons.component';
       },
     }),
   ],
-  exports: [NavComponent, FooterComponent, TranslateModule],
+  exports: [NavComponent, FooterComponent,SocialIconsComponent, TranslateModule],
 })
 export class SharedModule {}
