@@ -14,14 +14,12 @@ export class NavComponent implements OnInit {
     {
       name: 'NAV.MENU.HOME',
       location: '',
-    },
-    {
-      name: 'NAV.MENU.FOOD_MENU',
-      location: '/menu',
+      class:'hover:-rotate-2 '
     },
     {
       name: 'NAV.MENU.CONTACTS',
       location: '/contacts',
+      class:'hover:rotate-2 '
     },
   ];
 

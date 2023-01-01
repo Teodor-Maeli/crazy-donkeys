@@ -1,3 +1,7 @@
+<img
+  src="../../../assets/ icons/donkey.png"
+  class="absolute cursor-pointer w-[150px] md:w-[220px] h-auto z-[1] left-1/2 transform -translate-x-1/2 -translate-y-1/2 top-[9%] md:top-[11%] hover:top-[13%] hover:scale-125 duration-300"
+/>
 <div
   class="relative h-full w-full bg-stone-800 flex justify-center pb-2 pt-10 md:p-5"
 >
@@ -9,14 +13,19 @@
     src="../../../assets/pictures/lettuce.png"
     class="absolute sm:opacity-100 opacity-25 w-[150px] right-[-50px] rotate-12 top-[-90px] md:w-[170px]"
   />
-  <div *ngFor="let button of buttons" class="z-10">
-    <h2
-      class="sm:text-lg md:text-2xl text-center md:ml-10 md:mr-10 cursor-pointer pl-2 pr-2 pt-1 pb-1 hover:border-b-[2px] hover:scale-125 hover:rotate-2 duration-300 hover:text-orange-500 hover:border-orange-500"
-      (click)="routerNavigate(button.location)"
-    >
-      {{ button.name | translate }}
-    </h2>
+  <div class="z-10 flex w-[500px] h-fit justify-between">
+    <div *ngFor="let button of buttons">
+      <h2
+        class="{{
+          button.class
+        }} sm:text-lg md:text-2xl text-center cursor-pointer pl-2 pr-2 pt-1 pb-1 hover:border-b-[2px] hover:scale-125 duration-300 hover:text-orange-500 hover:border-orange-500"
+        (click)="routerNavigate(button.location)"
+      >
+        {{ button.name | translate }}
+      </h2>
+    </div>
   </div>
+
   <div
     id="lang-changer"
     class="w-10 h-10 absolute top-1 sm:top-5 right-3 sm:right-10 z-10"

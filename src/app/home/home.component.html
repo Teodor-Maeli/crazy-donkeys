@@ -1,11 +1,21 @@
 <div class="w-full h-full image-bg bg-cover bg-bottom">
   <div
-    class="gradient flex justify-center lg:justify-start items-center w-full h-full overflow-hidden"
+    class="gradient flex flex-col justify-center lg:justify-start items-center w-full h-full overflow-hidden"
   >
+  <div class="w-full h-[30%] mt-20 mb-20">
+    
+  </div>
     <div
-      class="w-full h-[50%] bg-white bg-opacity-5 lg:hover:scale-[105%] duration-300 flex justify-center text-white"
+      class="sm:w-full h-fit pb-5 bg-black bg-opacity-50  flex flex-col justify-start text-center text-white"
     >
-      <h1 class="">Crazy Donkeys</h1>
+      <h1 class="text-[45px] tracking-[10px] font-semibold">Crazy Donkeys</h1>
+      <h1
+        class="text-[20px] tracking-[20px] w-fit mx-auto border-b-[1px] font-semibold border-white whitespace-nowrap"
+      >
+        Est. 2022
+      </h1>
+      <h1 class="text-[25px] tracking-[10px]">{{'HOME_TITLE' | translate}}</h1>
+      <div class="w-fit mx-auto"><app-social-icons></app-social-icons></div>
     </div>
   </div>
 </div>

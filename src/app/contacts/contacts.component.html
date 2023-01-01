@@ -1,8 +1,8 @@
-<div class="w-full h-full flex flex-col justify-between items-center relative">
+<div class="w-full h-full flex flex-col justify-between items-center relative overflow-y-auto">
   <iframe
     class="gmap_iframe w-[100%] h-[30%] mt-5 mb-5"
     frameborder="0"
-    scrolling="no"
+    scrolling="yes"
     marginheight="0"
     marginwidth="0"
     src="https://maps.google.com/maps?width=600&amp;height=400&amp;hl=en&amp;q=Crazy Donkeys asparuhovo&amp;t=&amp;z=15&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
@@ -18,7 +18,7 @@
       class="mx-auto pt-5 pb-10 lg:mx-0 w-[90%] h-fit flex flex-col justify-center items-center"
     >
       <div
-        class="tracking-[5px] text-center text-[12px] sm:text-[15px] xl:text-[20px] flex flex-col gap-5 whitespace-nowrap"
+        class="tracking-[5px] text-center text-[15px] xl:text-[20px] flex flex-col gap-5 whitespace-nowrap"
       >
         <p>{{ "WORKING_TIME.MONDAY" | translate }}</p>
         <p>{{ "WORKING_TIME.TUESDAY" | translate }}</p>
@@ -31,8 +31,11 @@
     <div
       class="mx-auto pt-5 pb-10 lg:mx-0 w-[90%] h-fit flex flex-col justify-center items-center whitespace-nowrap"
     >
-      <p class="text-[12px] sm:text-[15px] xl:text-[20px] ">
-        {{ "CONTACTS.EMAIL" | translate }}<a class="text-orange-600" href="mailto:CrazyDonkeyFoods@gmail.com?"> CrazyDonkeyFoods@gmail.com</a> 
+      <p class="text-[12px] sm:text-[15px] xl:text-[20px]">
+        {{ "CONTACTS.EMAIL" | translate
+        }}<a class="text-orange-600" href="mailto:CrazyDonkeyFoods@gmail.com?">
+          CrazyDonkeyFoods@gmail.com</a
+        >
       </p>
       <app-social-icons></app-social-icons>
       <div class="inline-block sm:flex justify-center items-center mt-5">
