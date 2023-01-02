@@ -1,6 +1,6 @@
 <img
   src="../../../assets/ icons/donkey.png"
-  class="absolute cursor-pointer w-[150px] md:w-[220px] h-auto z-[1] left-1/2 transform -translate-x-1/2 -translate-y-1/2 top-[9%] md:top-[11%] hover:top-[13%] hover:scale-125 duration-300"
+  class="absolute  cursor-pointer w-[150px] md:w-[220px] h-auto z-[1] left-1/2 transform -translate-x-1/2 -translate-y-1/2 top-[9%] md:top-[11%] hover:top-[13%] hover:scale-125 duration-300"
 />
 <div
   class="relative h-full w-full bg-stone-800 flex justify-center pb-2 pt-10 md:p-5"
@@ -13,8 +13,8 @@
     src="../../../assets/pictures/lettuce.png"
     class="absolute sm:opacity-100 opacity-25 w-[150px] right-[-50px] rotate-12 top-[-90px] md:w-[170px]"
   />
-  <div class="z-10 flex w-[500px] h-fit justify-between">
-    <div *ngFor="let button of buttons">
+  <div class="z-10 flex flex w-[500px] h-fit justify-between mt-auto">
+    <div *ngFor="let button of buttons" >
       <h2
         class="{{
           button.class

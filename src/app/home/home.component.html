@@ -1,20 +1,33 @@
 <div class="w-full h-full image-bg bg-cover bg-bottom">
   <div
-    class="gradient flex flex-col justify-center lg:justify-start items-center w-full h-full overflow-hidden"
+    class="gradient flex flex-col justify-center lg:justify-start items-center w-full h-full  overflow-hidden"
   >
-  <div class="w-full h-[30%] mt-20 mb-20">
-    
-  </div>
+    <div class="w-full h-[30%] mt-20 relative mb-5" (mouseenter)="onHoverStopSlider()" >
+      <div id="slider" class="w-[400%] bg-rose-500 h-full flex absolute duration-[1500ms] transform" [ngClass]="translate">
+        <div class="w-full h-full bg-gray-800">1</div>
+        <div class="w-full h-full bg-orange-800">2</div>
+        <div class="w-full h-full bg-slate-400">3</div>
+        <div class="w-full h-full bg-purple-500">4</div>
+      </div>
+      <div>
+        <button class="absolute top-1/2 left-[40%]" (click)="slideNext()">Next</button>
+        <button class="absolute top-1/2 left-[60%]" (click)="slidePrev()">Prev</button>
+      </div>
+    </div>
     <div
-      class="sm:w-full h-fit pb-5 bg-black bg-opacity-50  flex flex-col justify-start text-center text-white"
+      class="sm:w-full h-[40%] pb-5 bg-black bg-opacity-40 flex flex-col justify-start text-center text-white"
     >
-      <h1 class="text-[45px] tracking-[10px] font-semibold">Crazy Donkeys</h1>
+      <h1 class="text-[45px] tracking-[10px] font-semibold mt-8">
+        Crazy Donkeys
+      </h1>
       <h1
         class="text-[20px] tracking-[20px] w-fit mx-auto border-b-[1px] font-semibold border-white whitespace-nowrap"
       >
         Est. 2022
       </h1>
-      <h1 class="text-[25px] tracking-[10px]">{{'HOME_TITLE' | translate}}</h1>
+      <h1 class="text-[25px] tracking-[10px]">
+        {{ "HOME_TITLE" | translate }}
+      </h1>
       <div class="w-fit mx-auto"><app-social-icons></app-social-icons></div>
     </div>
   </div>
