@@ -4,9 +4,6 @@ import { CommonModule } from '@angular/common';
 import { HomeRoutingModule } from './home-routing.module';
 import { SharedModule } from '../shared/shared.module';
 import { HomeComponent } from './home.component';
-import { HttpClient, HttpClientModule } from '@angular/common/http';
-import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
-import { HttpLoaderFactory } from '../shared/functions/functions';
 
 
 @NgModule({
@@ -14,7 +11,7 @@ import { HttpLoaderFactory } from '../shared/functions/functions';
   imports: [
     CommonModule,
     HomeRoutingModule,
-    SharedModule    
+    SharedModule,
   ]
 })
 export class HomeModule { }

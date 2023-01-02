@@ -8,10 +8,11 @@ import { FullLayoutComponent } from './full-layout/full-layout.component';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { HttpLoaderFactory } from './shared/functions/functions';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [AppComponent, FullLayoutComponent],
-  imports: [BrowserModule, AppRoutingModule, SharedModule,
+  imports: [BrowserModule, AppRoutingModule, SharedModule,BrowserAnimationsModule,
     HttpClientModule,
     TranslateModule.forRoot({
       loader: {

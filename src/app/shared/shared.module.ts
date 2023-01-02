@@ -6,6 +6,7 @@ import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { HttpLoaderFactory } from './functions/functions';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { SocialIconsComponent } from './social-icons/social-icons.component';
+import { BrowserModule } from '@angular/platform-browser';
 
 @NgModule({
   declarations: [NavComponent, FooterComponent,SocialIconsComponent],
