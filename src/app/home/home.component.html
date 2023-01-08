@@ -1,35 +1,72 @@
 <div class="image-bg h-full w-full bg-cover bg-bottom">
   <div
-    class="gradient flex h-full w-full flex-col items-center justify-center overflow-hidden lg:justify-start"
+    class="gradient flex h-full w-full flex-col items-center justify-center overflow-x-hidden lg:justify-start"
   >
     <div
-      class="relative mt-20 mb-5 h-[30%] w-full"
+      class="xl:[20px] relative mt-20 mb-5 h-full w-full text-[13px] sm:text-[15px] md:text-[16px] lg:text-[18.5px]"
       (mouseover)="stopInterval()"
       (mouseleave)="startInterval()"
     >
       <div
         id="slider"
-        class="absolute flex h-full w-[400%] bg-[rgba(225,225,225,0.1)]"
+        class="absolute flex h-full w-[400%] bg-[rgba(0,0,0,0.6)]"
         [@slide]="this.getCurrentSlide()"
       >
-        <div class="h-full w-full bg-transparent"></div>
+        <div class="h-full w-full bg-transparent sm:flex">
+          <div
+            class="h-[30%] w-full bg-[url('^../../assets/pictures/gyros.png')] bg-left bg-no-repeat sm:h-full sm:w-[50%] sm:bg-cover "
+          ></div>
+          <span
+            class="my-auto block h-[70%] overflow-auto px-4 pt-2 text-justify align-middle font-mono font-semibold sm:h-auto sm:w-[45%] sm:text-left"
+          >
+            <div class="mx-auto w-fit">
+              <a href="#_" class="group relative inline-block text-lg animation-pulse rounded-xl  my-5 ">
+                <span
+                  class="relative z-10 block overflow-hidden rounded-lg border-2 border-gray-900 px-10 py-3 font-medium leading-tight text-gray-800 transition-colors duration-300 ease-out  group-hover:text-white"
+                >
+                  <span
+                    class="absolute inset-0 h-full w-full rounded-lg  bg-gray-50 px-5 py-3"
+                  ></span>
+                  <span
+                    class="ease absolute left-0 -ml-2 h-48 w-48 origin-top-right -translate-x-full translate-y-12 -rotate-90 bg-gray-900 transition-all duration-300 group-hover:-rotate-180"
+                  ></span>
+                  <span class="relative">{{'MENU' | translate}}</span>
+                </span>
+                <span
+                  class="absolute bottom-0 right-0 -mb-1 -mr-1 h-12 w-full rounded-lg  bg-gray-900 transition-all duration-200 ease-linear group-hover:mb-0 group-hover:mr-0"
+                  data-rounded="rounded-lg"
+                ></span>
+              </a>
+            </div>
+            <div class="hidden sm:block">
+              {{ "INTRO" | translate }}<br />
+              <br />
+              {{ "ITEM_1" | translate }}<br />
+              {{ "ITEM_2" | translate }}<br />
+              {{ "ITEM_3" | translate }}<br />
+              {{ "ITEM_4" | translate }}<br />
+              {{ "ITEM_5" | translate }}<br />
+            </div>
+
+          </span>
+        </div>
         <div class="h-full w-full bg-transparent">2</div>
         <div class="h-full w-full bg-transparent">3</div>
         <div class="h-full w-full bg-transparent">4</div>
       </div>
       <div>
         <button
-          class="arrow absolute top-1/2 right-[4%] h-[48px] w-[48px] -translate-y-1/2 transform rounded-[48px] border-[2px] bg-black duration-200 hover:scale-125 hover:border-orange-600 hover:text-orange-600"
+          class="arrow absolute right-[1%] h-[48px] w-[48px] -translate-y-1/2 transform rounded-[48px] border-[2px] bg-black opacity-80 duration-200 hover:scale-125 hover:border-orange-600 hover:text-orange-600 sm:top-1/2"
           (click)="slideNext()"
         ></button>
         <button
-          class="arrow absolute top-1/2 left-[4%] h-[48px] w-[48px] -translate-y-1/2 rotate-180 transform rounded-[48px] border-[2px] bg-black duration-200 hover:scale-125 hover:border-orange-600 hover:text-orange-600"
+          class="arrow absolute left-[1%] h-[48px] w-[48px] -translate-y-1/2 rotate-180 transform rounded-[48px] border-[2px] bg-black opacity-80 duration-200 hover:scale-125 hover:border-orange-600 hover:text-orange-600 sm:top-1/2"
           (click)="slidePrev()"
         ></button>
       </div>
     </div>
     <div
-      class="flex h-[40%] flex-col justify-start bg-black bg-opacity-40 pb-5 text-center text-white sm:w-full"
+      class="flex h-fit flex-col justify-start bg-black bg-opacity-40 pb-5 text-center text-white sm:w-full"
     >
       <h1 class="mt-8 text-[45px] font-semibold tracking-[10px]">
         Crazy Donkeys

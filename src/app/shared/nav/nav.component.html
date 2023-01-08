@@ -1,5 +1,5 @@
 <img
-  src="../../../assets/ icons/donkey.png"
+  src="../../../assets/icons/donkey.png"
   id="logo"
   class="absolute left-1/2 top-[9%] z-[1] h-auto w-[150px] -translate-x-1/2 -translate-y-1/2 transform cursor-pointer duration-300 hover:top-[13%] hover:scale-110 md:top-[11%] md:w-[220px]"
 />
@@ -18,12 +18,12 @@
     <div *ngFor="let button of buttons">
  
         <a href="#_" class="relative inline-block text-lg group opacity-80 {{button.class}}" (click)="routerNavigate(button.location)">
-          <span class="relative z-10 block p-[5px] sm:px-3 sm:py-3 overflow-hidden font-medium leading-tight text-[13px] sm:text-[20px] text-gray-800 transition-colors duration-300 ease-out border-2 hover:border-white hover:scale-110 border-gray-900 rounded-lg group-hover:text-white">
-          <span class="absolute inset-0 w-[100px] h-[30px] sm:w-full sm:h-full px-5 py-3 rounded-md sm:rounded-lg bg-orange-600"></span>
+          <span class="relative z-10 block p-[8px] sm:px-3 sm:py-3 overflow-hidden font-medium leading-tight text-[13px] sm:text-[20px] text-gray-800 transition-colors duration-300 ease-out border-2 hover:border-white hover:scale-110 border-gray-900 rounded-lg group-hover:text-white">
+          <span class="absolute inset-0 w-[100px] h-full sm:w-full px-5 py-3 rounded-md sm:rounded-lg bg-orange-600"></span>
           <span class="absolute left-0 w-48 h-48 -ml-2 transition-all duration-300 origin-top-right -rotate-90 -translate-x-full translate-y-12 bg-black group-hover:-rotate-180 ease"></span>
           <span class="relative">{{ button.name | translate }}</span>
           </span>
-          <span class="absolute bottom-0 right-0 w-full h-6 sm:h-12 -mb-1 -mr-1 transition-all duration-200 ease-linear bg-gray-900 rounded-lg group-hover:mb-0 group-hover:mr-0" data-rounded="rounded-lg"></span>
+          <span class="absolute bottom-0 right-0 w-full h-9 sm:h-12 -mb-1 -mr-1 transition-all duration-200 ease-linear bg-gray-900 rounded-lg group-hover:mb-0 group-hover:mr-0" data-rounded="rounded-lg"></span>
           </a>
     </div>
   </div>
@@ -36,7 +36,7 @@
   >
     <img
       id="lang-flag"
-      src="../../../assets/ icons/bulgaria.png"
+      [src]="langFlag"
       class="cursor-pointer duration-300 hover:rotate-180 hover:scale-125"
       (click)="openLanguageChanger()"
     />

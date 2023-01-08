@@ -29,5 +29,12 @@
     "EMAIL": "Reach us at ",
     "PHONE": "or just call us on"
   },
-  "HOME_TITLE": "Burgers and Grill sandwiches"
+  "HOME_TITLE": "Burgers and Grill sandwiches",
+  "INTRO": "Welcome to Crazy Donkeys, where we serve delicious fast food made with only the finest ingredients! Our menu includes:",
+  "ITEM_1": "● Burgers and grill sandwiches in mid-size and XXL options",
+  "ITEM_2": "● Mouthwatering Greek-style gyros",
+  "ITEM_3": "● Cheese-topped French fries",
+  "ITEM_4": "● Grandma's savory meatballs with fries",
+  "ITEM_5": "● Crispy chicken",
+  "MENU" : "MENU :)"
 }

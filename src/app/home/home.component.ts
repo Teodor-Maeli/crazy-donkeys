@@ -76,7 +76,7 @@ export class HomeComponent implements OnInit, AfterViewInit {
   startInterval(): void {
     this.interval = setInterval(() => {
       this.slideNext();
-    }, 2500);
+    }, 112500);
   }
 
   stopInterval(): void {

@@ -22,6 +22,10 @@ export class NavComponent implements OnInit {
     },
   ];
 
+  langFlag: string =
+    localStorage.getItem('lang') === 'bg' || undefined
+      ? '../../../assets/icons/bulgaria.png'
+      : '../../../assets/icons/united-kingdom.png';
 
   constructor(
     private renderer: Renderer2,
@@ -32,6 +36,7 @@ export class NavComponent implements OnInit {
   ngOnInit(): void {
     this.closeLanguageChanger();
     this.setLanguageState();
+
   }
 
   openLanguageChanger(): void {
@@ -54,9 +59,9 @@ export class NavComponent implements OnInit {
     localStorage.setItem('lang', language);
     let doc = document.getElementById('lang-flag') as HTMLImageElement;
     if (language === 'bg') {
-      doc.src = '../../../assets/ icons/bulgaria.png';
+      doc.src = '../../../assets/icons/bulgaria.png';
     } else if (language === 'en') {
-      doc.src = '../../../assets/ icons/united-kingdom.png';
+      doc.src = '../../../assets/icons/united-kingdom.png';
     }
   }
 
@@ -73,6 +78,4 @@ export class NavComponent implements OnInit {
   routerNavigate(path: string) {
     this.router.navigate([path]);
   }
-
-
 }
