@@ -5,7 +5,6 @@ import {
   style,
   animate,
   transition,
-  // ...
 } from '@angular/animations';
 
 @Component({
@@ -45,14 +44,13 @@ import {
 export class HomeComponent implements OnInit, AfterViewInit {
   private slider: HTMLDivElement = document.createElement('div');
   percentage: number = 0;
-  interval!:NodeJS.Timer;
+  interval!: NodeJS.Timer;
   constructor() {}
 
   ngOnInit(): void {}
 
   ngAfterViewInit(): void {
-   this.startInterval();
-
+    this.startInterval();
   }
 
   slideNext(): void {
@@ -61,7 +59,6 @@ export class HomeComponent implements OnInit, AfterViewInit {
       return;
     }
     this.percentage += 25;
-    console.log(this.percentage);
   }
 
   slidePrev(): void {
@@ -70,7 +67,6 @@ export class HomeComponent implements OnInit, AfterViewInit {
       return;
     }
     this.percentage -= 25;
-    console.log(this.percentage);
   }
 
   getCurrentSlide(): number {
@@ -80,7 +76,7 @@ export class HomeComponent implements OnInit, AfterViewInit {
   startInterval(): void {
     this.interval = setInterval(() => {
       this.slideNext();
-    },2500)
+    }, 2500);
   }
 
   stopInterval(): void {

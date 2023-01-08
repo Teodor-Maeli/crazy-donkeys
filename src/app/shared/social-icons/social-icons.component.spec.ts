@@ -8,9 +8,8 @@ describe('SocialIconsComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ SocialIconsComponent ]
-    })
-    .compileComponents();
+      declarations: [SocialIconsComponent],
+    }).compileComponents();
 
     fixture = TestBed.createComponent(SocialIconsComponent);
     component = fixture.componentInstance;

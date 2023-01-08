@@ -1,34 +1,48 @@
-<div class="w-full h-full image-bg bg-cover bg-bottom">
+<div class="image-bg h-full w-full bg-cover bg-bottom">
   <div
-    class="gradient flex flex-col justify-center lg:justify-start items-center w-full h-full  overflow-hidden"
+    class="gradient flex h-full w-full flex-col items-center justify-center overflow-hidden lg:justify-start"
   >
-    <div class="w-full h-[30%] mt-20 relative mb-5" (mouseover)="stopInterval()" (mouseleave)="startInterval()">
-      <div id="slider" class="w-[400%] bg-rose-500 h-full flex absolute" [@slide]="this.getCurrentSlide()">
-        <div class="w-full h-full bg-gray-800">1</div>
-        <div class="w-full h-full bg-orange-800">2</div>
-        <div class="w-full h-full bg-slate-400">3</div>
-        <div class="w-full h-full bg-purple-500">4</div>
+    <div
+      class="relative mt-20 mb-5 h-[30%] w-full"
+      (mouseover)="stopInterval()"
+      (mouseleave)="startInterval()"
+    >
+      <div
+        id="slider"
+        class="absolute flex h-full w-[400%] bg-[rgba(225,225,225,0.1)]"
+        [@slide]="this.getCurrentSlide()"
+      >
+        <div class="h-full w-full bg-transparent"></div>
+        <div class="h-full w-full bg-transparent">2</div>
+        <div class="h-full w-full bg-transparent">3</div>
+        <div class="h-full w-full bg-transparent">4</div>
       </div>
       <div>
-        <button class="absolute top-1/2 left-[40%]" (click)="slideNext()">Next</button>
-        <button class="absolute top-1/2 left-[60%]" (click)="slidePrev()">Prev</button>
+        <button
+          class="arrow absolute top-1/2 right-[4%] h-[48px] w-[48px] -translate-y-1/2 transform rounded-[48px] border-[2px] bg-black duration-200 hover:scale-125 hover:border-orange-600 hover:text-orange-600"
+          (click)="slideNext()"
+        ></button>
+        <button
+          class="arrow absolute top-1/2 left-[4%] h-[48px] w-[48px] -translate-y-1/2 rotate-180 transform rounded-[48px] border-[2px] bg-black duration-200 hover:scale-125 hover:border-orange-600 hover:text-orange-600"
+          (click)="slidePrev()"
+        ></button>
       </div>
     </div>
     <div
-      class="sm:w-full h-[40%] pb-5 bg-black bg-opacity-40 flex flex-col justify-start text-center text-white"
+      class="flex h-[40%] flex-col justify-start bg-black bg-opacity-40 pb-5 text-center text-white sm:w-full"
     >
-      <h1 class="text-[45px] tracking-[10px] font-semibold mt-8">
+      <h1 class="mt-8 text-[45px] font-semibold tracking-[10px]">
         Crazy Donkeys
       </h1>
       <h1
-        class="text-[20px] tracking-[20px] w-fit mx-auto border-b-[1px] font-semibold border-white whitespace-nowrap"
+        class="mx-auto w-fit whitespace-nowrap border-b-[1px] border-white text-[20px] font-semibold tracking-[20px]"
       >
         Est. 2022
       </h1>
       <h1 class="text-[25px] tracking-[10px]">
         {{ "HOME_TITLE" | translate }}
       </h1>
-      <div class="w-fit mx-auto"><app-social-icons></app-social-icons></div>
+      <div class="mx-auto w-fit"><app-social-icons></app-social-icons></div>
     </div>
   </div>
 </div>

@@ -1,6 +1,5 @@
 export interface MenuButtons {
-    name: string;
-    location: string;
-    class:string;
-  }
-  
+  name: string;
+  location: string;
+  class: string;
+}

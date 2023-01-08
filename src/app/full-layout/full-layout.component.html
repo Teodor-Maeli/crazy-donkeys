@@ -1,14 +1,18 @@
-<app-nav class=" flex justify-center w-full h-24 sm:h-20 bg-black overflow-hidden"></app-nav>
-<div class="home-main h-full w-full relative">
+<app-nav
+  class="flex h-24 w-full justify-center overflow-hidden bg-black sm:h-20"
+></app-nav>
+<div class="home-main relative h-full w-full">
   <div
-    class="absolute bottom-0 bg-gradient-to-r from-black via-orange-600 to-slate-600 h-[3px] w-full"
+    class="absolute bottom-0 h-[3px] w-full bg-gradient-to-r from-black via-orange-600 to-slate-600"
   ></div>
-  <div class="w-full h-full bg-black flex justify-center items-center">
+  <div class="flex h-full w-full items-center justify-center bg-black">
     <router-outlet></router-outlet>
   </div>
 
   <div
-    class="absolute top-0 bg-gradient-to-r from-black via-orange-600 to-slate-600 h-[3px] w-full"
+    class="absolute top-0 h-[3px] w-full bg-gradient-to-r from-black via-orange-600 to-slate-600"
   ></div>
 </div>
-<app-footer class="flex justify-center w-full h-50 bg-black overflow-hidden"></app-footer>
+<app-footer
+  class="h-50 flex w-full justify-center overflow-hidden bg-black"
+></app-footer>

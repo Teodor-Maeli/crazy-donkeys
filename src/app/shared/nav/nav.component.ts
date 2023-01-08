@@ -3,7 +3,6 @@ import { Router } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
 import { MenuButtons } from '../models/models';
 
-
 @Component({
   selector: 'app-nav',
   templateUrl: './nav.component.html',
@@ -14,14 +13,15 @@ export class NavComponent implements OnInit {
     {
       name: 'NAV.MENU.HOME',
       location: '',
-      class:'hover:-rotate-2 '
+      class: 'hover:-rotate-2 ml-[10px] sm:ml-0',
     },
     {
       name: 'NAV.MENU.CONTACTS',
       location: '/contacts',
-      class:'hover:rotate-2 '
+      class: 'hover:rotate-2 mr-[10px] sm:mr-0 ',
     },
   ];
+
 
   constructor(
     private renderer: Renderer2,
@@ -73,4 +73,6 @@ export class NavComponent implements OnInit {
   routerNavigate(path: string) {
     this.router.navigate([path]);
   }
+
+
 }

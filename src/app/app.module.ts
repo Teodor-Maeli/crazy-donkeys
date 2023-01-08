@@ -12,15 +12,20 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [AppComponent, FullLayoutComponent],
-  imports: [BrowserModule, AppRoutingModule, SharedModule,BrowserAnimationsModule,
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    SharedModule,
+    BrowserAnimationsModule,
     HttpClientModule,
     TranslateModule.forRoot({
       loader: {
         provide: TranslateLoader,
         useFactory: HttpLoaderFactory,
         deps: [HttpClient],
-      }
-    }),],
+      },
+    }),
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })

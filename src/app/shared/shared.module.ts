@@ -9,7 +9,7 @@ import { SocialIconsComponent } from './social-icons/social-icons.component';
 import { BrowserModule } from '@angular/platform-browser';
 
 @NgModule({
-  declarations: [NavComponent, FooterComponent,SocialIconsComponent],
+  declarations: [NavComponent, FooterComponent, SocialIconsComponent],
   imports: [
     CommonModule,
     HttpClientModule,
@@ -18,10 +18,15 @@ import { BrowserModule } from '@angular/platform-browser';
         provide: TranslateLoader,
         useFactory: HttpLoaderFactory,
         deps: [HttpClient],
-      }
+      },
     }),
   ],
-  exports: [NavComponent, FooterComponent, SocialIconsComponent,HttpClientModule,
-    TranslateModule],
+  exports: [
+    NavComponent,
+    FooterComponent,
+    SocialIconsComponent,
+    HttpClientModule,
+    TranslateModule,
+  ],
 })
 export class SharedModule {}

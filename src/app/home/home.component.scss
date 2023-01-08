@@ -15,6 +15,6 @@
 }
 
 
- .fifty{
-  transform: translateX(-12.5%)
- }
+.arrow::after {
+  content: "\279C";
+}

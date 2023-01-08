@@ -8,9 +8,8 @@ describe('FullLayoutComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ FullLayoutComponent ]
-    })
-    .compileComponents();
+      declarations: [FullLayoutComponent],
+    }).compileComponents();
 
     fixture = TestBed.createComponent(FullLayoutComponent);
     component = fixture.componentInstance;

@@ -25,9 +25,9 @@
     "FOLLOW": "Follow us on",
     "OR": "or"
   },
-    "CONTACTS" : {
-    "EMAIL" : "Reach us at ",
-    "PHONE":"or just call us on"
+  "CONTACTS": {
+    "EMAIL": "Reach us at ",
+    "PHONE": "or just call us on"
   },
-  "HOME_TITLE" : "Burgers and Grill sandwiches"
+  "HOME_TITLE": "Burgers and Grill sandwiches"
 }
