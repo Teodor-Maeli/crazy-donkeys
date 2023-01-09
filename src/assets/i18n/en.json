@@ -30,11 +30,20 @@
     "PHONE": "or just call us on"
   },
   "HOME_TITLE": "Burgers and Grill sandwiches",
-  "INTRO": "Welcome to Crazy Donkeys, where we serve delicious fast food made with only the finest ingredients! Our menu includes:",
+  "INTRO": "Welcome to Crazy Donkeys, where we serve delicious and made at the moment food with only the finest ingredients! Our menu includes:",
   "ITEM_1": "● Burgers and grill sandwiches in mid-size and XXL options",
   "ITEM_2": "● Mouthwatering Greek-style gyros",
   "ITEM_3": "● Cheese-topped French fries",
   "ITEM_4": "● Grandma's savory meatballs with fries",
   "ITEM_5": "● Crispy chicken",
-  "MENU" : "MENU :)"
+  "MENU": "MENU :)",
+  "BURGER_1": "A juicy beef patty topped with bacon, pickle, cheddar cheese, lettuce, tomato,served with fries and our special sauce.",
+  "BURGER_2": "A succulent pork patty topped with onion, cheddar cheese, pickle, lettuce,served with fries and our special sauce.",
+  "BURGER_3": "A tender and flavorful chicken patty topped with fresh cucumber, tomato, lettuce, cheddar cheese, mayonnaise,served with fries and our special sauce.",
+  "BURGER_4": "A delicious plant-based patty topped with lettuce, tomato, pickle, and served with our special sauce.",
+  "BURGER_DESC": "All of our burgers are made with Greek style brioche and are available in Mid and XXL sizes, except for the Veggie Burger which is only available in Mid size.",
+  "CRAZY_DONKEY": "● CRAZY DONKEY'S BURGER",
+  "PORK_BURGER": "● PORK BURGER",
+  "CHICKEN_BURGER": "● CHICKEN BURGER",
+  "VEGGIE_BURGER": "● VEGGIE BURGER"
 }

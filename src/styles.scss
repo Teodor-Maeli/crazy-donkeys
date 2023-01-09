@@ -1,7 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import url("https://fonts.googleapis.com/css2?family=Playfair+Display+SC:wght@400;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Distressed&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Diplomata+SC&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Dirt&display=swap');
 
 html,
 body {
@@ -9,10 +11,18 @@ body {
   color: white;
 }
 
+.titles {
+  font-family: 'Diplomata SC', cursive;
+}
+
+.food_titles {
+  font-family: 'Rubik Dirt', cursive;
+}
+
 
 
 * {
-  font-family: "Playfair Display SC", serif;
+  font-family: 'Rubik Distressed', cursive;
   cursor: url('../src/assets/pictures/cursor.png'), auto;	
 
 }
