@@ -45,5 +45,19 @@
   "CRAZY_DONKEY": "● CRAZY DONKEY'S BURGER",
   "PORK_BURGER": "● PORK BURGER",
   "CHICKEN_BURGER": "● CHICKEN BURGER",
-  "VEGGIE_BURGER": "● VEGGIE BURGER"
+  "VEGGIE_BURGER": "● VEGGIE BURGER",
+  "PORTIONS":"PORTIONS",
+  "BURGERS":"BURGERS",
+  "CRISPY_CHICKEN":"● Crispy chicken with french fries and souce",
+  "FRIED_MEAT": "● Grand's Ma fried meat balls with french fries and souce",
+  "CHICKEN_WINGS": "● Marinate chicken wings with french fries and souce",
+  "FALAFEL_SALAD":"● Falafel salad and souce",
+  "FRENCH_FRIES":"● French fries with cheese and souce",
+  "FRENCH_FRIES_I":"● French fries with souce",
+  "CHIPS":"● CHIPS",
+  "SANDWICH":"● Princess Sandwich",
+  "TOAST":"● Toast with bacon and cheese",
+  "GYROS":"● Greek style gyros"
+
+  
 }

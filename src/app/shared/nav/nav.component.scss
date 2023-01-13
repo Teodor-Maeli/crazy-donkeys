@@ -1,6 +1,6 @@
-@media only screen and (max-width:300px) {
+@media only screen and (max-width:350px) {
     #logo {
-        width: 100px;
+      
     }
     
 }
@@ -11,4 +11,9 @@
 
 .hover\:animate-pulse:hover {
     animation: pulse 1s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+.label {
+    background: rgb(226,88,15);
+    background: linear-gradient(0deg, rgba(226,88,15,1) 0%, rgba(0,0,0,0.5312325613839286) 66%, rgba(7,3,0,1) 100%); 
 }

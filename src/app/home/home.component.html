@@ -1,11 +1,11 @@
 <div class="image-bg h-full w-full bg-cover bg-bottom">
   <div>
     <button
-      class="arrow absolute right-[1%] top-[30px] z-10 h-[48px] w-[48px] -translate-y-1/2 transform rounded-[48px] border-[2px] bg-black opacity-80 duration-200 hover:scale-125 hover:border-orange-600 hover:text-orange-600 sm:top-1/2"
+      class="arrow absolute right-[2%] top-[60px] z-10 h-[48px] w-[48px] -translate-y-1/2 transform rounded-[48px] border-[2px] bg-black opacity-80 duration-200 hover:scale-125 hover:border-orange-600 hover:text-orange-600 sm:top-1/2"
       (click)="slideNext()"
     ></button>
     <button
-      class="arrow absolute left-[1%] top-[30px] z-10 h-[48px] w-[48px] -translate-y-1/2 rotate-180 transform rounded-[48px] border-[2px] bg-black opacity-80 duration-200 hover:scale-125 hover:border-orange-600 hover:text-orange-600 sm:top-1/2"
+      class="arrow absolute left-[2%] top-[60px] z-10 h-[48px] w-[48px] -translate-y-1/2 rotate-180 transform rounded-[48px] border-[2px] bg-black opacity-80 duration-200 hover:scale-125 hover:border-orange-600 hover:text-orange-600 sm:top-1/2"
       (click)="slidePrev()"
     ></button>
   </div>
@@ -20,35 +20,15 @@
         class="absolute flex h-[700px] w-[400%] overflow-y-auto bg-black bg-opacity-60 sm:h-full"
         [@slide]="this.getCurrentSlide()"
       >
-        <div class="h-full w-full bg-transparent sm:flex">
+        <div class="h-full w-[100vw] bg-transparent sm:flex">
           <div
-            class="h-[50%] w-full bg-[url('^../../assets/pictures/gyros.png')] bg-left bg-no-repeat sm:h-full sm:w-[50%] sm:bg-cover"
+            class="h-[50%] w-[100vw] bg-[url('^../../assets/pictures/pita.png')] bg-cover bg-left bg-no-repeat sm:h-full sm:w-[50%]"
           ></div>
           <span
             class="my-auto block h-auto px-4 pt-2 text-justify align-middle font-semibold sm:h-auto sm:w-[45%] sm:text-left"
           >
-            <div class="mx-auto w-fit">
-              <a
-                class="animation-pulse group relative my-5 inline-block rounded-xl text-lg"
-              >
-                <span
-                  class="relative z-10 block overflow-hidden rounded-lg border-2 border-gray-900 px-10 py-3 font-medium leading-tight text-gray-800 transition-colors duration-300 ease-out group-hover:text-white"
-                >
-                  <span
-                    class="absolute inset-0 h-full w-full rounded-lg bg-gray-50 px-5 py-3"
-                  ></span>
-                  <span
-                    class="ease absolute left-0 -ml-2 h-48 w-48 origin-top-right -translate-x-full translate-y-12 -rotate-90 bg-gray-900 transition-all duration-300 group-hover:-rotate-180"
-                  ></span>
-                  <span class="relative">{{ "MENU" | translate }}</span>
-                </span>
-                <span
-                  class="absolute bottom-0 right-0 -mb-1 -mr-1 h-12 w-full rounded-lg bg-gray-900 transition-all duration-200 ease-linear group-hover:mb-0 group-hover:mr-0"
-                  data-rounded="rounded-lg"
-                ></span>
-              </a>
-            </div>
-            <div>
+            <div class="mx-auto w-fit"></div>
+            <div class="text-lg">
               {{ "INTRO" | translate }}<br />
               <br />
               <div class="flex justify-center sm:justify-start">
@@ -61,16 +41,21 @@
             </div>
           </span>
         </div>
-        <div class="h-full w-full bg-transparent sm:flex">
+        <div class="h-full w-[100vw] bg-transparent sm:flex">
           <div
-            class="h-[50%] w-full bg-[url('^../../assets/pictures/no-bg-burger.png')] bg-cover bg-left bg-no-repeat sm:h-full sm:w-[50%]"
+            class="h-[50%] w-[100vw] bg-[url('^../../assets/pictures/no-bg-burger.png')] bg-cover bg-left bg-no-repeat sm:h-full sm:w-[50%]"
           ></div>
           <span
             class="my-auto block h-auto px-4 py-2 text-justify align-middle font-semibold sm:h-auto sm:w-[45%] sm:text-left"
           >
             <div class="mx-auto w-fit"></div>
             <div>
-              <div class="flex flex-col">
+              <div class="flex flex-col justify-start">
+                <h1
+                  class="food_titles my-5 text-center text-[20px] tracking-wider text-orange-600"
+                >
+                  {{ "BURGERS" | translate }}
+                </h1>
                 <h1 class="food_titles tracking-wider text-orange-600">
                   {{ "CRAZY_DONKEY" | translate }}
                 </h1>
@@ -99,8 +84,76 @@
             </div>
           </span>
         </div>
-        <div class="h-full w-full bg-transparent">3</div>
-        <div class="h-full w-full bg-transparent">4</div>
+        <div class="h-full w-[100vw] bg-transparent sm:flex">
+          <div
+            class="h-[50%] w-[100vw] bg-[url('^../../assets/pictures/gyros.png')] bg-cover bg-left bg-no-repeat sm:h-full sm:w-[50%]"
+          ></div>
+          <span
+            class="my-auto block h-auto px-4 pt-2 text-justify align-middle font-semibold sm:h-auto sm:w-[45%] sm:text-left"
+          >
+            <div>
+              <div
+                class="flex flex-col justify-start text-justify sm:text-[20px] text-base font-semibold tracking-wider"
+              >
+                <h1
+                  class="food_titles my-5 text-center text-[20px] sm:text-[30px] text-orange-600"
+                >
+                  {{ "PORTIONS" | translate }}
+                </h1>
+                <h1>
+                  {{ "CRISPY_CHICKEN" | translate }}
+                </h1>
+                <h1>
+                  {{ "FRIED_MEAT" | translate }}
+                </h1>
+                <h1>
+                  {{ "CHICKEN_WINGS" | translate }}
+                </h1>
+                <h1>
+                  {{ "FALAFEL_SALAD" | translate }}
+                </h1>
+                <h1>
+                  {{ "FRENCH_FRIES" | translate }}
+                </h1>
+                <h1>
+                  {{ "FRENCH_FRIES_I" | translate }}
+                </h1>
+                <h1>
+                  {{ "CHIPS" | translate }}
+                </h1>
+                <h1>
+                  {{ "SANDWICH" | translate }}
+                </h1>
+                <h1>
+                  {{ "TOAST" | translate }}
+                </h1>
+                <h1>
+                  {{ "GYROS" | translate }}
+                </h1>
+              </div>
+            </div>
+          </span>
+        </div>
+        <div class="h-full w-[100vw] bg-transparent sm:flex">
+          <div
+            class="h-[50%] w-[100vw] bg-[url('^../../assets/pictures/gyros.png')] bg-left bg-no-repeat sm:h-full sm:w-[50%] sm:bg-cover"
+          ></div>
+          <span
+            class="my-auto block h-auto px-4 pt-2 text-justify align-middle font-semibold sm:h-auto sm:w-[45%] sm:text-left"
+          >
+            <div>
+              {{ "INTRO" | translate }}<br />
+              <br />
+              <div class="flex justify-center sm:justify-start">
+                {{ "ITEM_1" | translate }} <br />
+                {{ "ITEM_2" | translate }}<br />
+                {{ "ITEM_3" | translate }}<br />
+                {{ "ITEM_4" | translate }}<br />
+                {{ "ITEM_5" | translate }}<br />
+              </div>
+            </div>
+          </span>
+        </div>
       </div>
     </div>
     <div
