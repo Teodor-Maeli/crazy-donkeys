@@ -59,9 +59,9 @@ export class NavComponent implements OnInit {
     localStorage.setItem('lang', language);
     let doc = document.getElementById('lang-flag') as HTMLImageElement;
     if (language === 'bg') {
-      doc.src = '../../../assets/icons/bulgaria.png';
+      doc.src = environment.langFlagBg;
     } else if (language === 'en') {
-      doc.src = '../../../assets/icons/united-kingdom.png';
+      doc.src = environment.langFlagEn;
     }
   }
 
