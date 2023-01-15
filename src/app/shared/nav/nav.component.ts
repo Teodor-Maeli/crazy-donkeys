@@ -24,8 +24,8 @@ export class NavComponent implements OnInit {
 
   langFlag: string =
     localStorage.getItem('lang') === 'bg' || undefined
-      ? './assets/icons/bulgaria.png'
-      : './assets/icons/united-kingdom.png';
+      ? '/assets/icons/bulgaria.png'
+      : '/assets/icons/united-kingdom.png';
 
   constructor(
     private renderer: Renderer2,
