@@ -4,14 +4,16 @@ import { NavComponent } from 'src/app/shared/nav/nav.component';
 import { FooterComponent } from 'src/app/shared/footer/footer.component';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { HttpLoaderFactory } from './functions/functions';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { SocialIconsComponent } from './social-icons/social-icons.component';
+import { BrowserModule } from '@angular/platform-browser';
 
 @NgModule({
-  declarations: [NavComponent, FooterComponent],
+  declarations: [NavComponent, FooterComponent, SocialIconsComponent],
   imports: [
     CommonModule,
-    TranslateModule.forRoot({
+    HttpClientModule,
+    TranslateModule.forChild({
       loader: {
         provide: TranslateLoader,
         useFactory: HttpLoaderFactory,
@@ -19,6 +21,12 @@ import { SocialIconsComponent } from './social-icons/social-icons.component';
       },
     }),
   ],
-  exports: [NavComponent, FooterComponent, TranslateModule],
+  exports: [
+    NavComponent,
+    FooterComponent,
+    SocialIconsComponent,
+    HttpClientModule,
+    TranslateModule,
+  ],
 })
 export class SharedModule {}

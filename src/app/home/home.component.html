@@ -1,9 +1,178 @@
-<div class="w-full h-full image-bg bg-cover bg-bottom">
-  <div class="gradient flex justify-center lg:justify-start items-center w-full h-full">
+<div class="image-bg h-full w-full bg-cover bg-bottom">
+  <div>
+    <button
+      class="arrow absolute right-[2%] top-[60px] z-10 h-[48px] w-[48px] -translate-y-1/2 transform rounded-[48px] border-[2px] bg-black opacity-80 duration-200 hover:scale-125 hover:border-orange-600 hover:text-orange-600 sm:top-1/2"
+      (click)="slideNext()"
+    ></button>
+    <button
+      class="arrow absolute left-[2%] top-[60px] z-10 h-[48px] w-[48px] -translate-y-1/2 rotate-180 transform rounded-[48px] border-[2px] bg-black opacity-80 duration-200 hover:scale-125 hover:border-orange-600 hover:text-orange-600 sm:top-1/2"
+      (click)="slidePrev()"
+    ></button>
+  </div>
+  <div
+    class="gradient flex h-full w-full flex-col items-center justify-center overflow-x-hidden lg:justify-start"
+  >
     <div
-      class="w-full h-[50%] bg-white bg-opacity-5  lg:hover:scale-[105%] duration-300 flex justify-center text-white overflow-hidden "
+      class="relative mt-[270px] h-[100%] w-full text-[13px] sm:mt-20 sm:text-[15px] md:text-[16px] lg:text-[18.5px]"
     >
-        <h1 class="">Crazy Donkeys</h1>
+      <div
+        id="slider"
+        class="absolute flex h-[700px] w-[400%] overflow-y-auto bg-black bg-opacity-60 sm:h-full"
+        [@slide]="this.getCurrentSlide()"
+      >
+        <div class="h-full w-[100vw] bg-transparent sm:flex">
+          <div
+            class="h-[50%] w-[100vw] bg-[url('^./assets/pictures/pita.png')] bg-cover bg-left bg-no-repeat sm:h-full sm:w-[50%]"
+          ></div>
+          <span
+            class="my-auto block h-auto px-4 pt-2 text-justify align-middle font-bold sm:h-auto sm:w-[45%] sm:text-left"
+          >
+            <div class="mx-auto w-fit"></div>
+            <div class="text-lg">
+              {{ "INTRO" | translate }}<br />
+              <br />
+              <div class="flex justify-center sm:justify-start">
+                {{ "ITEM_1" | translate }} <br />
+                {{ "ITEM_2" | translate }}<br />
+                {{ "ITEM_3" | translate }}<br />
+                {{ "ITEM_4" | translate }}<br />
+                {{ "ITEM_5" | translate }}<br />
+              </div>
+            </div>
+          </span>
+        </div>
+        <div class="h-full w-[100vw] bg-transparent sm:flex">
+          <div
+            class="h-[50%] w-[100vw] bg-[url('^./assets/pictures/no-bg-burger.png')] bg-cover bg-left bg-no-repeat sm:h-full sm:w-[50%]"
+          ></div>
+          <span
+            class="my-auto block h-auto px-4 py-2 text-justify align-middle font-bold sm:h-auto sm:w-[45%] sm:text-left"
+          >
+            <div class="mx-auto w-fit"></div>
+            <div>
+              <div class="flex flex-col justify-start">
+                <h1
+                  class="food_titles my-5 text-center text-[20px] tracking-wider text-orange-600 sm:text-[30px]"
+                >
+                  {{ "BURGERS" | translate }}
+                </h1>
+                <h1 class="food_titles tracking-wider text-orange-600">
+                  {{ "CRAZY_DONKEY" | translate }}
+                </h1>
+                <h1 class="text-base tracking-wide">
+                  {{ "BURGER_1" | translate }}
+                </h1>
+                <h1 class="food_titles tracking-wider text-orange-600">
+                  {{ "PORK_BURGER" | translate }}
+                </h1>
+                <h1 class="text-base tracking-wide">
+                  {{ "BURGER_2" | translate }}
+                </h1>
+                <h1 class="food_titles tracking-wider text-orange-600">
+                  {{ "CHICKEN_BURGER" | translate }}
+                </h1>
+                <h1 class="text-base tracking-wide">
+                  {{ "BURGER_3" | translate }}
+                </h1>
+                <h1 class="food_titles tracking-wider text-orange-600">
+                  {{ "VEGGIE_BURGER" | translate }}
+                </h1>
+                <h1 class="text-base tracking-wide">
+                  {{ "BURGER_4" | translate }}
+                </h1>
+              </div>
+            </div>
+          </span>
+        </div>
+        <div class="h-full w-[100vw] bg-transparent sm:flex">
+          <div
+            class="h-[50%] w-[100vw] bg-[url('^./assets/pictures/gyros.png')] bg-cover bg-left bg-no-repeat sm:h-full sm:w-[50%]"
+          ></div>
+          <span
+            class="my-auto block h-auto px-4 pt-2 text-justify align-middle font-bold sm:h-auto sm:w-[45%] sm:text-left"
+          >
+            <div>
+              <div
+                class="flex flex-col justify-start text-justify text-base font-bold tracking-wider sm:text-[20px]"
+              >
+                <h1
+                  class="food_titles my-5 text-center text-[20px] text-orange-600 sm:text-[30px]"
+                >
+                  {{ "PORTIONS" | translate }}
+                </h1>
+                <h1>
+                  {{ "CRISPY_CHICKEN" | translate }}
+                </h1>
+                <h1>
+                  {{ "FRIED_MEAT" | translate }}
+                </h1>
+                <h1>
+                  {{ "CHICKEN_WINGS" | translate }}
+                </h1>
+                <h1>
+                  {{ "FALAFEL_SALAD" | translate }}
+                </h1>
+                <h1>
+                  {{ "FRENCH_FRIES" | translate }}
+                </h1>
+                <h1>
+                  {{ "FRENCH_FRIES_I" | translate }}
+                </h1>
+                <h1>
+                  {{ "CHIPS" | translate }}
+                </h1>
+                <h1>
+                  {{ "SANDWICH" | translate }}
+                </h1>
+                <h1>
+                  {{ "TOAST" | translate }}
+                </h1>
+                <h1>
+                  {{ "GYROS" | translate }}
+                </h1>
+              </div>
+            </div>
+          </span>
+        </div>
+        <div class="h-full w-[100vw] bg-transparent sm:flex">
+          <div
+            class="h-[50%] w-[100vw] bg-[url('^./assets/pictures/gyros.png')] bg-left bg-no-repeat sm:h-full sm:w-[50%] sm:bg-cover"
+          ></div>
+          <span
+            class="my-auto block h-auto px-4 pt-2 text-justify align-middle font-bold sm:h-auto sm:w-[45%] sm:text-left"
+          >
+            <div>
+              {{ "INTRO" | translate }}<br />
+              <br />
+              <div class="flex justify-center sm:justify-start">
+                {{ "ITEM_1" | translate }} <br />
+                {{ "ITEM_2" | translate }}<br />
+                {{ "ITEM_3" | translate }}<br />
+                {{ "ITEM_4" | translate }}<br />
+                {{ "ITEM_5" | translate }}<br />
+              </div>
+            </div>
+          </span>
+        </div>
+      </div>
+    </div>
+    <div
+      class="mt-[700px] flex h-fit flex-col justify-start bg-black bg-opacity-60 pb-5 text-center text-white sm:mt-0 sm:w-full"
+    >
+      <h1
+        class="titles text-[30px] font-bold sm:text-[45px] sm:tracking-[10px]"
+      >
+        Crazy Donkeys
+      </h1>
+      <h1
+        class="titles mx-auto w-fit whitespace-nowrap border-b-[1px] border-white text-[10px] font-bold tracking-[20px] sm:text-[20px]"
+      >
+        Est. 2022
+      </h1>
+      <h1 class="text-[25px] sm:tracking-[10px]">
+        {{ "HOME_TITLE" | translate }}
+      </h1>
+      <div class="mx-auto w-fit"><app-social-icons></app-social-icons></div>
     </div>
   </div>
 </div>

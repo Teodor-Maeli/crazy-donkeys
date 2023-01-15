@@ -1,45 +1,72 @@
-<div
-  class="relative h-full w-full bg-stone-800 flex justify-center pb-2 pt-10 md:p-5"
->
+<img
+  src="./assets/icons/donkey.png"
+  id="logo"
+  class="absolute left-1/2 top-[9%] z-[1] h-auto w-[150px] -translate-x-1/2 -translate-y-1/2 transform cursor-pointer md:top-[11%] md:w-[220px]"
+/>
+<div class="relative flex h-full w-full justify-center bg-stone-800 md:p-5">
+  <div
+    class="label absolute left-1/2 top-[9%] h-[200%] w-[133px] -translate-x-1/2 -translate-y-1/2 transform cursor-pointer md:top-[11%] md:w-[200px]"
+  ></div>
   <img
-    src="../../../assets/pictures/onion.png"
-    class="absolute sm:opacity-100 opacity-25 w-[150px] lg:w-[150px] left-[-15px] top-[-30px] sm: hover:rotate-180 duration-1000"
+    src="./assets/pictures/onion.png"
+    class="sm: absolute left-[-15px] top-[-30px] w-[150px] animate-spin opacity-25 duration-1000 sm:opacity-100 lg:w-[150px]"
   />
   <img
-    src="../../../assets/pictures/lettuce.png"
-    class="absolute sm:opacity-100 opacity-25 w-[150px] right-[-50px] rotate-12 top-[-90px] md:w-[170px]"
+    src="./assets/pictures/lettuce.png"
+    class="absolute right-[-50px] top-[-90px] w-[150px] rotate-12 opacity-25 sm:opacity-100 md:w-[170px]"
   />
-  <div *ngFor="let button of buttons" class="z-10">
-    <h2
-      class="sm:text-lg md:text-2xl text-center md:ml-10 md:mr-10 cursor-pointer pl-2 pr-2 pt-1 pb-1 hover:border-b-[2px] hover:scale-125 hover:rotate-2 duration-300 hover:text-orange-500 hover:border-orange-500"
-      (click)="routerNavigate(button.location)"
-    >
-      {{ button.name | translate }}
-    </h2>
+  <div
+    class="z-10 mt-auto flex h-fit w-[100%] justify-between sm:w-[550px] sm:pr-[20px] sm:pl-[48px]"
+  >
+    <div *ngFor="let button of buttons">
+      <a
+        class="relative inline-block text-lg group opacity-80 {{
+          button.class
+        }}"
+        (click)="routerNavigate(button.location)"
+      >
+        <span
+          class="relative z-10 block overflow-hidden rounded-lg border-2 border-gray-900 p-[8px] text-[13px] font-medium leading-tight text-gray-800 transition-colors duration-300 ease-out hover:scale-110 hover:border-white group-hover:text-white sm:px-3 sm:py-3 sm:text-[20px]"
+        >
+          <span
+            class="absolute inset-0 h-full w-[100px] rounded-md bg-orange-600 px-5 py-3 sm:w-full sm:rounded-lg"
+          ></span>
+          <span
+            class="ease absolute left-0 -ml-2 h-48 w-48 origin-top-right -translate-x-full translate-y-12 -rotate-90 bg-black transition-all duration-300 group-hover:-rotate-180"
+          ></span>
+          <span class="relative">{{ button.name | translate }}</span>
+        </span>
+        <span
+          class="absolute bottom-0 right-0 -mb-1 -mr-1 h-9 w-full rounded-lg bg-gray-900 transition-all duration-200 ease-linear group-hover:mb-0 group-hover:mr-0 sm:h-12"
+          data-rounded="rounded-lg"
+        ></span>
+      </a>
+    </div>
   </div>
+
   <div
     id="lang-changer"
-    class="w-10 h-10 absolute top-1 sm:top-5 right-3 sm:right-10 z-10"
+    class="absolute top-1 right-3 z-10 h-10 w-10 sm:top-5 sm:right-4"
     (click)="openLanguageChanger()"
   >
     <img
       id="lang-flag"
-      src="../../../assets/ icons/bulgaria.png"
-      class="cursor-pointer hover:scale-125 hover:rotate-180 duration-300"
+      [src]="langFlag"
+      class="cursor-pointer duration-300 hover:rotate-180 hover:scale-125"
       (click)="openLanguageChanger()"
     />
   </div>
 </div>
-<ul id="langs" class="hidden text-center absolute right-11 top-16 z-10">
+<ul id="langs" class="absolute right-11 top-16 z-10 hidden text-center">
   <li
     (click)="onClickChangeLangFlag('bg')"
-    class="bg-orange-500 w-[150px] mt-5 cursor-pointer text-black hover:border-[1px] hover:bg-black hover:text-white tracking-[1px] hover:scale-125 duration-300"
+    class="mt-5 w-[150px] cursor-pointer bg-orange-500 tracking-[1px] text-black duration-300 hover:scale-125 hover:border-[1px] hover:bg-black hover:text-white"
   >
     Български
   </li>
   <li
     (click)="onClickChangeLangFlag('en')"
-    class="bg-orange-500 w-[150px] mt-[0.5px] cursor-pointer text-black hover:text-white hover:border-[1px] hover:bg-black tracking-[1px] hover:scale-125 duration-300"
+    class="mt-[0.5px] w-[150px] cursor-pointer bg-orange-500 tracking-[1px] text-black duration-300 hover:scale-125 hover:border-[1px] hover:bg-black hover:text-white"
   >
     English
   </li>

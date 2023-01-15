@@ -1,27 +1,32 @@
 <div
-  class="relative h-full w-full flex-col sm:flex justify-center bg-stone-800 p-5"
+  class="relative h-full w-full flex-col justify-center bg-stone-800 p-5 sm:flex"
 >
-<img
-src="../../../assets/pictures/tomato.png"
-class="opacity-20 absolute w-[500px] h-[333px] left-[2%] top-[-5%] sm:left-[10%] sm:top-[-10%] scale-x-[-1] overflow-hidden"
-/>
+  <img
+    src="./assets/pictures/tomato.png"
+    class="absolute left-[2%] top-[-5%] h-[333px] w-[500px] scale-x-[-1] overflow-hidden opacity-20 sm:left-[10%] sm:top-[-10%]"
+  />
   <div
-    class="contacts text-center text-lg tracking-[2px] w-full overflow-x-hidden relative"
+    class="contacts relative mx-auto w-fit text-center text-lg tracking-[2px]"
   >
-    <h1>{{ 'FOOTER.ADDRESS' | translate }}</h1>
+    <h1>{{ "FOOTER.ADDRESS" | translate }}</h1>
     <p
-      class="hover:scale-125 duration-300 cursor-pointer text-orange-600 mt-1 mb-1"
+      class="mt-1 mb-1 cursor-pointer text-orange-600 duration-300 hover:scale-125"
       (click)="redirectToLocation()"
     >
-      {{ 'FOOTER.STREET' | translate }}
+      {{ "FOOTER.STREET" | translate }}
     </p>
     <p>+359 884 917 666</p>
-    <p>{{ 'FOOTER.WORK_I' | translate }}</p>
-    <p>{{ 'FOOTER.WORK_II' | translate }}</p>
+    <p>{{ "FOOTER.WORK_I" | translate }}</p>
+    <p>{{ "FOOTER.WORK_II" | translate }}</p>
   </div>
-  <div class="sm:absolute bottom-2 sm:right-5 text-center mt-5 sm:mt-0 relative ">
-    <h1 class="text-xs">{{ 'FOOTER.RIGHTS_RESERVED' | translate }}</h1>
-    <h1 class="cursor-pointer hover:scale-125 duration-300 text-orange-600" (click)="redirectLinkedIn()">
+  <div
+    class="relative bottom-2 mt-5 text-center sm:absolute sm:right-5 sm:mt-0"
+  >
+    <h1 class="text-xs">{{ "FOOTER.RIGHTS_RESERVED" | translate }}</h1>
+    <h1
+      class="cursor-pointer text-orange-600 duration-300 hover:scale-125"
+      (click)="redirectLinkedIn()"
+    >
       Web masters
     </h1>
   </div>

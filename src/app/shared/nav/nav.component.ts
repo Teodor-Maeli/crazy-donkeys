@@ -2,7 +2,7 @@ import { Component, OnInit, Renderer2 } from '@angular/core';
 import { Router } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
 import { MenuButtons } from '../models/models';
-
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-nav',
@@ -14,16 +14,19 @@ export class NavComponent implements OnInit {
     {
       name: 'NAV.MENU.HOME',
       location: '',
-    },
-    {
-      name: 'NAV.MENU.FOOD_MENU',
-      location: '/menu',
+      class: 'hover:-rotate-2 ml-[10px] sm:ml-0',
     },
     {
       name: 'NAV.MENU.CONTACTS',
       location: '/contacts',
+      class: 'hover:rotate-2 mr-[10px] sm:mr-0 ',
     },
   ];
+
+  langFlag: string =
+    localStorage.getItem('lang') === 'bg' || undefined
+      ? environment.langFlagBg
+      : environment.langFlagEn;
 
   constructor(
     private renderer: Renderer2,
@@ -56,9 +59,9 @@ export class NavComponent implements OnInit {
     localStorage.setItem('lang', language);
     let doc = document.getElementById('lang-flag') as HTMLImageElement;
     if (language === 'bg') {
-      doc.src = '../../../assets/ icons/bulgaria.png';
+      doc.src = environment.langFlagBg;
     } else if (language === 'en') {
-      doc.src = '../../../assets/ icons/united-kingdom.png';
+      doc.src = environment.langFlagEn;
     }
   }
 

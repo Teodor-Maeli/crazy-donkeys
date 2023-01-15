@@ -1,24 +1,26 @@
-<div class="w-full h-full flex flex-col justify-between items-center relative">
+<div
+  class="relative flex h-full w-full flex-col items-center justify-between overflow-y-auto"
+>
   <iframe
-    class="gmap_iframe w-[100%] h-[30%] mt-5 mb-5"
+    class="gmap_iframe mt-5 mb-5 h-[30%] w-[100%]"
     frameborder="0"
-    scrolling="no"
+    scrolling="yes"
     marginheight="0"
     marginwidth="0"
     src="https://maps.google.com/maps?width=600&amp;height=400&amp;hl=en&amp;q=Crazy Donkeys asparuhovo&amp;t=&amp;z=15&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
   ></iframe>
   <div
-    class="inline-block w-[100%] h-fit sm:w-[70%] lg:w-[80%] lg:h-[50%] lg:flex justify-center items-center relative mb-14 lg:mb-24"
+    class="relative mb-14 inline-block h-fit w-[100%] items-center justify-center sm:w-[70%] lg:mb-24 lg:flex lg:h-[50%] lg:w-[80%]"
   >
     <div
-      class="absolute top-0 bg-gradient-to-r from-black via-orange-600 to-black h-[1px] w-full"
+      class="absolute top-0 h-[1px] w-full bg-gradient-to-r from-black via-orange-600 to-black"
     ></div>
 
     <div
-      class="mx-auto pt-5 pb-10 lg:mx-0 w-[90%] h-fit flex flex-col justify-center items-center"
+      class="mx-auto flex h-fit w-[90%] flex-col items-center justify-center pt-5 pb-10 lg:mx-0"
     >
       <div
-        class="tracking-[5px] text-center text-[12px] sm:text-[15px] xl:text-[20px] flex flex-col gap-5 whitespace-nowrap"
+        class="flex flex-col gap-5 whitespace-nowrap text-center text-[15px] tracking-[5px] xl:text-[20px]"
       >
         <p>{{ "WORKING_TIME.MONDAY" | translate }}</p>
         <p>{{ "WORKING_TIME.TUESDAY" | translate }}</p>
@@ -29,24 +31,27 @@
       </div>
     </div>
     <div
-      class="mx-auto pt-5 pb-10 lg:mx-0 w-[90%] h-fit flex flex-col justify-center items-center whitespace-nowrap"
+      class="mx-auto flex h-fit w-[90%] flex-col items-center justify-center whitespace-nowrap pt-5 pb-10 lg:mx-0"
     >
-      <p class="text-[12px] sm:text-[15px] xl:text-[20px] ">
-        {{ "CONTACTS.EMAIL" | translate }}<a class="text-orange-600" href="mailto:CrazyDonkeyFoods@gmail.com?"> CrazyDonkeyFoods@gmail.com</a> 
+      <p class="text-[12px] sm:text-[15px] xl:text-[20px]">
+        {{ "CONTACTS.EMAIL" | translate
+        }}<a class="text-orange-600" href="mailto:CrazyDonkeyFoods@gmail.com?">
+          CrazyDonkeyFoods@gmail.com</a
+        >
       </p>
       <app-social-icons></app-social-icons>
-      <div class="inline-block sm:flex justify-center items-center mt-5">
+      <div class="mt-5 inline-block items-center justify-center sm:flex">
         <p
-          class="text-[12px] sm:text-[15px] xl:text-[20px] w-fit mx-auto sm:mx-0"
+          class="mx-auto w-fit text-[12px] sm:mx-0 sm:text-[15px] xl:text-[20px]"
         >
           {{ "CONTACTS.PHONE" | translate }}
         </p>
-        <p class="sm:ml-5 text-[20px] xl:text-[25px] text">+359 884 917 666</p>
+        <p class="text text-[20px] sm:ml-5 xl:text-[25px]">+359 884 917 666</p>
       </div>
     </div>
 
     <div
-      class="absolute bottom-0 bg-gradient-to-r from-black via-orange-600 to-black h-[1px] w-full"
+      class="absolute bottom-0 h-[1px] w-full bg-gradient-to-r from-black via-orange-600 to-black"
     ></div>
   </div>
 </div>

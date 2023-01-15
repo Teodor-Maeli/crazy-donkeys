@@ -4,13 +4,10 @@ import { TranslateService } from '@ngx-translate/core';
 @Component({
   selector: 'app-contacts',
   templateUrl: './contacts.component.html',
-  styleUrls: ['./contacts.component.scss']
+  styleUrls: ['./contacts.component.scss'],
 })
 export class ContactsComponent implements OnInit {
+  constructor() {}
 
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
+  ngOnInit(): void {}
 }

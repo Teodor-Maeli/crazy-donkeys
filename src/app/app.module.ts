@@ -5,13 +5,27 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SharedModule } from './shared/shared.module';
 import { FullLayoutComponent } from './full-layout/full-layout.component';
-import { HttpClientModule } from '@angular/common/http';
-import { ContactsComponent } from './contacts/contacts.component';
-import { ContactsModule } from './contacts/contacts.module';
+import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
+import { HttpLoaderFactory } from './shared/functions/functions';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [AppComponent, FullLayoutComponent],
-  imports: [BrowserModule, AppRoutingModule, SharedModule, HttpClientModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    SharedModule,
+    BrowserAnimationsModule,
+    HttpClientModule,
+    TranslateModule.forRoot({
+      loader: {
+        provide: TranslateLoader,
+        useFactory: HttpLoaderFactory,
+        deps: [HttpClient],
+      },
+    }),
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })
