@@ -2,6 +2,7 @@ import { Component, OnInit, Renderer2 } from '@angular/core';
 import { Router } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
 import { MenuButtons } from '../models/models';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-nav',
@@ -24,8 +25,8 @@ export class NavComponent implements OnInit {
 
   langFlag: string =
     localStorage.getItem('lang') === 'bg' || undefined
-      ? '/assets/icons/bulgaria.png'
-      : '/assets/icons/united-kingdom.png';
+      ? environment.langFlagBg
+      : environment.langFlagEn;
 
   constructor(
     private renderer: Renderer2,
@@ -36,7 +37,6 @@ export class NavComponent implements OnInit {
   ngOnInit(): void {
     this.closeLanguageChanger();
     this.setLanguageState();
-
   }
 
   openLanguageChanger(): void {
