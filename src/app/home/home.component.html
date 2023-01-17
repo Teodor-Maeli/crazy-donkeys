@@ -25,18 +25,32 @@
             class="h-[50%] w-[100vw] bg-[url('^./assets/pictures/pita.png')] bg-cover bg-left bg-no-repeat sm:h-full sm:w-[50%]"
           ></div>
           <span
-            class="my-auto block h-auto px-4 pt-2 text-justify align-middle font-bold sm:h-auto sm:w-[45%] sm:text-left"
+            class="my-auto block h-auto px-4 py-2 text-justify align-middle sm:h-auto sm:w-[45%] sm:text-left"
           >
-            <div class="mx-auto w-fit"></div>
-            <div class="text-lg">
-              {{ "INTRO" | translate }}<br />
-              <br />
-              <div class="flex justify-center sm:justify-start">
-                {{ "ITEM_1" | translate }} <br />
-                {{ "ITEM_2" | translate }}<br />
-                {{ "ITEM_3" | translate }}<br />
-                {{ "ITEM_4" | translate }}<br />
-                {{ "ITEM_5" | translate }}<br />
+            <div class="wrapper flex justify-center overflow-auto">
+              <div class="flex flex-col justify-center text-center">
+                <p
+                  class="food_titles my-5 text-center text-[20px] tracking-wider text-orange-600 lg:text-[26px]"
+                >
+                  {{ "INTRO" | translate }}
+                </p>
+                <p class="font-one text-[25px] lg:text-[30px]">
+                  {{ "ITEM_1" | translate }}
+                </p>
+                <p class="font-two text-[40px] lg:text-[50px]">
+                  {{ "ITEM_2" | translate }}
+                </p>
+                <p class="font-three text-[30px] lg:text-[40px]">
+                  {{ "ITEM_3" | translate }}
+                </p>
+                <p class="text-[30px] lg:text-[40px]">
+                  {{ "ITEM_4" | translate }}
+                </p>
+                <p
+                  class="font-serif text-[25px] tracking-widest lg:text-[30px]"
+                >
+                  {{ "ITEM_5" | translate }}
+                </p>
               </div>
             </div>
           </span>
@@ -46,11 +60,11 @@
             class="h-[50%] w-[100vw] bg-[url('^./assets/pictures/no-bg-burger.png')] bg-cover bg-left bg-no-repeat sm:h-full sm:w-[50%]"
           ></div>
           <span
-            class="my-auto block h-auto px-4 py-2 text-justify align-middle font-bold sm:h-auto sm:w-[45%] sm:text-left"
+            class="my-auto block h-auto px-4 py-2 text-justify align-middle sm:h-auto sm:w-[45%] sm:text-left"
           >
             <div class="mx-auto w-fit"></div>
             <div>
-              <div class="flex flex-col justify-start">
+              <div class="flex flex-col justify-start text-center sm:text-left">
                 <h1
                   class="food_titles my-5 text-center text-[20px] tracking-wider text-orange-600 sm:text-[30px]"
                 >
@@ -89,17 +103,17 @@
             class="h-[50%] w-[100vw] bg-[url('^./assets/pictures/gyros.png')] bg-cover bg-left bg-no-repeat sm:h-full sm:w-[50%]"
           ></div>
           <span
-            class="my-auto block h-auto px-4 pt-2 text-justify align-middle font-bold sm:h-auto sm:w-[45%] sm:text-left"
+            class="my-auto block h-auto px-4 pt-2 text-justify align-middle sm:h-auto sm:w-[45%] sm:text-left"
           >
             <div>
               <div
-                class="flex flex-col justify-start text-justify text-base font-bold tracking-wider sm:text-[20px]"
+                class="flex flex-col justify-start text-justify text-base tracking-wider sm:text-[20px]"
               >
-                <h1
+                <p
                   class="food_titles my-5 text-center text-[20px] text-orange-600 sm:text-[30px]"
                 >
                   {{ "PORTIONS" | translate }}
-                </h1>
+                </p>
                 <h1>
                   {{ "CRISPY_CHICKEN" | translate }}
                 </h1>
@@ -136,20 +150,42 @@
         </div>
         <div class="h-full w-[100vw] bg-transparent sm:flex">
           <div
-            class="h-[50%] w-[100vw] bg-[url('^./assets/pictures/gyros.png')] bg-left bg-no-repeat sm:h-full sm:w-[50%] sm:bg-cover"
+            class="h-[50%] w-[100vw] bg-[url('^./assets/pictures/wrapz.png')] bg-cover bg-center bg-no-repeat sm:h-full lg:w-[50%]"
           ></div>
           <span
-            class="my-auto block h-auto px-4 pt-2 text-justify align-middle font-bold sm:h-auto sm:w-[45%] sm:text-left"
+            class="my-auto block h-auto px-4 pt-2 text-justify align-middle sm:h-auto sm:w-[45%] sm:text-left"
           >
-            <div>
-              {{ "INTRO" | translate }}<br />
-              <br />
-              <div class="flex justify-center sm:justify-start">
-                {{ "ITEM_1" | translate }} <br />
-                {{ "ITEM_2" | translate }}<br />
-                {{ "ITEM_3" | translate }}<br />
-                {{ "ITEM_4" | translate }}<br />
-                {{ "ITEM_5" | translate }}<br />
+            <div class="wrapper flex justify-center overflow-auto">
+              <div class="flex flex-col justify-center text-center sm:text-left">
+                <h1
+                  class="food_titles my-5 text-[20px] text-orange-600 sm:text-[30px] text-center"
+                >
+                  {{ "WRAPS" | translate }}
+              </h1>
+                <p class="food_titles tracking-wider text-orange-600">
+                  {{ "CRAZY_DONKEY" | translate }}
+                </p>
+                <p class="text-base tracking-wide">
+                  {{ "BURGER_1" | translate }}
+                </p>
+                <p class="food_titles tracking-wider text-orange-600">
+                  {{ "PORK_BURGER" | translate }}
+                </p>
+                <p class="text-base tracking-wide">
+                  {{ "BURGER_2" | translate }}
+                </p>
+                <p class="food_titles tracking-wider text-orange-600">
+                  {{ "CHICKEN_BURGER" | translate }}
+                </p>
+                <p class="text-base tracking-wide">
+                  {{ "BURGER_3" | translate }}
+                </p>
+                <p class="food_titles tracking-wider text-orange-600">
+                  {{ "VEGGIE_BURGER" | translate }}
+                </p>
+                <p class="text-base tracking-wide">
+                  {{ "BURGER_4" | translate }}
+                </p>
               </div>
             </div>
           </span>
@@ -159,13 +195,11 @@
     <div
       class="mt-[700px] flex h-fit flex-col justify-start bg-black bg-opacity-60 pb-5 text-center text-white sm:mt-0 sm:w-full"
     >
-      <h1
-        class="titles text-[30px] font-bold sm:text-[45px] sm:tracking-[10px]"
-      >
+      <h1 class="titles text-[30px] sm:text-[45px] sm:tracking-[10px]">
         Crazy Donkeys
       </h1>
       <h1
-        class="titles mx-auto w-fit whitespace-nowrap border-b-[1px] border-white text-[10px] font-bold tracking-[20px] sm:text-[20px]"
+        class="titles mx-auto w-fit whitespace-nowrap border-b-[1px] border-white text-[10px] tracking-[20px] sm:text-[20px]"
       >
         Est. 2022
       </h1>

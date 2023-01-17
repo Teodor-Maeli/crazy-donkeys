@@ -31,11 +31,11 @@
   },
   "HOME_TITLE": "Burgers and Grill sandwiches",
   "INTRO": "Welcome to Crazy Donkeys, where we serve delicious and made at the moment food with only the finest ingredients! Our menu includes:",
-  "ITEM_1": "● Burgers and grill sandwiches in mid-size and XXL options",
-  "ITEM_2": "● Mouthwatering Greek-style gyros",
-  "ITEM_3": "● Cheese-topped French fries",
-  "ITEM_4": "● Grandma's savory meatballs with fries",
-  "ITEM_5": "● Crispy chicken",
+  "ITEM_1": "Burgers and grill sandwiches",
+  "ITEM_2": "Mouthwatering Greek-style gyros",
+  "ITEM_3": "French fries",
+  "ITEM_4": "Crispy chicken ",
+  "ITEM_5": "Grandma's savory meatballs with fries",
   "MENU": "MENU :)",
   "BURGER_1": "A juicy beef patty topped with bacon, pickle, cheddar cheese, lettuce, tomato,served with fries and our special sauce.",
   "BURGER_2": "A succulent pork patty topped with onion, cheddar cheese, pickle, lettuce,served with fries and our special sauce.",
@@ -57,7 +57,8 @@
   "CHIPS":"● CHIPS",
   "SANDWICH":"● Princess Sandwich",
   "TOAST":"● Toast with bacon and cheese",
-  "GYROS":"● Greek style gyros"
+  "GYROS":"● Greek style gyros",
+  "WRAPS" : "GRILLED WRAPS"
 
   
 }

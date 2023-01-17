@@ -20,6 +20,12 @@
 
 @media only screen and (max-width: 334px) {
   #slider-container {
-    margin-top: 310px!important;
+    margin-top: 310px !important;
+  }
 }
+
+@media only screen and (max-width: 310px) {
+  .wrapper {
+    width: 310px;
+  }
 }
