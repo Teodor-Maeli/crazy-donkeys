@@ -1,13 +1,17 @@
 <div class="image-bg h-full w-full bg-cover bg-bottom">
   <div>
     <button
-      class="arrow absolute right-[2%] top-[60px] z-10 h-[48px] w-[48px] -translate-y-1/2 transform rounded-[48px] border-[2px] bg-black opacity-80 duration-200 hover:scale-125 hover:border-orange-600 hover:text-orange-600 sm:top-1/2"
+      class="absolute right-[2%] top-[70px] z-10 h-[48px] w-fit -translate-y-1/2 transform animate-bounce rounded-[48px] border-[2px] bg-black p-[5px] opacity-80 duration-200 hover:animate-none hover:border-orange-600 hover:text-orange-600 sm:top-[150px]"
       (click)="slideNext()"
-    ></button>
+    >
+      {{ nextFromMenu() | translate }}
+    </button>
     <button
-      class="arrow absolute left-[2%] top-[60px] z-10 h-[48px] w-[48px] -translate-y-1/2 rotate-180 transform rounded-[48px] border-[2px] bg-black opacity-80 duration-200 hover:scale-125 hover:border-orange-600 hover:text-orange-600 sm:top-1/2"
+      class="absolute left-[2%] top-[70px] z-10 h-[48px] w-fit -translate-y-1/2 transform animate-bounce rounded-[48px] border-[2px] bg-black p-[5px] opacity-80 duration-200 hover:animate-none hover:border-orange-600 hover:text-orange-600 sm:top-[150px]"
       (click)="slidePrev()"
-    ></button>
+    >
+      {{ prevFromMenu() | translate  }}
+    </button>
   </div>
   <div
     class="gradient flex h-full w-full flex-col items-center justify-center overflow-x-hidden lg:justify-start"
@@ -17,44 +21,9 @@
     >
       <div
         id="slider"
-        class="absolute flex h-[700px] w-[400%] overflow-y-auto bg-black bg-opacity-60 sm:h-full"
+        class="absolute flex h-[700px] w-[300%] overflow-y-auto bg-black bg-opacity-60 sm:h-full"
         [@slide]="this.getCurrentSlide()"
       >
-        <div class="h-full w-[100vw] bg-transparent sm:flex">
-          <div
-            class="h-[50%] w-[100vw] bg-[url('^./assets/pictures/pita.png')] bg-cover bg-left bg-no-repeat sm:h-full sm:w-[50%]"
-          ></div>
-          <span
-            class="my-auto block h-auto px-4 py-2 text-justify align-middle sm:h-auto sm:w-[45%] sm:text-left"
-          >
-            <div class="wrapper flex justify-center overflow-auto">
-              <div class="flex flex-col justify-center text-center">
-                <p
-                  class="food_titles my-5 text-center text-[20px] tracking-wider text-orange-600 lg:text-[26px]"
-                >
-                  {{ "INTRO" | translate }}
-                </p>
-                <p class="font-one text-[25px] lg:text-[30px]">
-                  {{ "ITEM_1" | translate }}
-                </p>
-                <p class="font-two text-[40px] lg:text-[50px]">
-                  {{ "ITEM_2" | translate }}
-                </p>
-                <p class="font-three text-[30px] lg:text-[40px]">
-                  {{ "ITEM_3" | translate }}
-                </p>
-                <p class="text-[30px] lg:text-[40px]">
-                  {{ "ITEM_4" | translate }}
-                </p>
-                <p
-                  class="font-serif text-[25px] tracking-widest lg:text-[30px]"
-                >
-                  {{ "ITEM_5" | translate }}
-                </p>
-              </div>
-            </div>
-          </span>
-        </div>
         <div class="h-full w-[100vw] bg-transparent sm:flex">
           <div
             class="h-[50%] w-[100vw] bg-[url('^./assets/pictures/no-bg-burger.png')] bg-cover bg-left bg-no-repeat sm:h-full sm:w-[50%]"
@@ -70,30 +39,98 @@
                 >
                   {{ "BURGERS" | translate }}
                 </h1>
-                <h1 class="food_titles tracking-wider text-orange-600">
+                <h1 class="food_titles font-one tracking-wider text-orange-600">
                   {{ "CRAZY_DONKEY" | translate }}
                 </h1>
-                <h1 class="text-base tracking-wide">
+                <p class="text-base tracking-wide">
                   {{ "BURGER_1" | translate }}
-                </h1>
-                <h1 class="food_titles tracking-wider text-orange-600">
+                </p>
+                <h1 class="food_titles font-one tracking-wider text-orange-600">
                   {{ "PORK_BURGER" | translate }}
                 </h1>
-                <h1 class="text-base tracking-wide">
+                <p class="text-base tracking-wide">
                   {{ "BURGER_2" | translate }}
-                </h1>
-                <h1 class="food_titles tracking-wider text-orange-600">
+                </p>
+                <h1 class="food_titles font-one tracking-wider text-orange-600">
                   {{ "CHICKEN_BURGER" | translate }}
                 </h1>
-                <h1 class="text-base tracking-wide">
+                <p class="text-base tracking-wide">
                   {{ "BURGER_3" | translate }}
-                </h1>
-                <h1 class="food_titles tracking-wider text-orange-600">
+                </p>
+                <h1 class="food_titles font-one tracking-wider text-orange-600">
                   {{ "VEGGIE_BURGER" | translate }}
                 </h1>
-                <h1 class="text-base tracking-wide">
+                <p class="text-base tracking-wide">
                   {{ "BURGER_4" | translate }}
+                </p>
+              </div>
+            </div>
+          </span>
+        </div>
+        <div class="h-full w-[100vw] bg-transparent sm:flex">
+          <div
+            class="h-[50%] w-[100vw] bg-[url('^./assets/pictures/wrapz.png')] bg-cover bg-center bg-no-repeat sm:h-full lg:w-[50%]"
+          ></div>
+          <span
+            class="my-auto block h-auto px-4 pt-2 text-justify align-middle sm:h-auto sm:w-[45%] sm:text-left"
+          >
+            <div class="wrapper flex justify-center overflow-auto">
+              <div
+                class="flex flex-col justify-center text-center sm:text-left"
+              >
+                <h1
+                  class="food_titles my-5 text-center text-[20px] text-orange-600 sm:text-[30px]"
+                >
+                  {{ "WRAPS" | translate }}
                 </h1>
+                <h1
+                  class="food_titles font-one uppercase tracking-wider text-orange-600"
+                >
+                  {{ "FARM_WRAP_TITLE" | translate }}
+                </h1>
+                <p class="text-base tracking-wide">
+                  {{ "FARM_WRAP" | translate }}
+                </p>
+                <h1
+                  class="food_titles font-one uppercase tracking-wider text-orange-600"
+                >
+                  {{ "PORK_WRAP_TITLE" | translate }}
+                </h1>
+                <p class="text-base tracking-wide">
+                  {{ "PORK_WRAP" | translate }}
+                </p>
+                <h1
+                  class="food_titles font-one uppercase tracking-wider text-orange-600"
+                >
+                  {{ "CHICKEN_WRAP_TITLE" | translate }}
+                </h1>
+                <p class="text-base tracking-wide">
+                  {{ "CHICKEN_WRAP" | translate }}
+                </p>
+                <h1
+                  class="food_titles font-one uppercase tracking-wider text-orange-600"
+                >
+                  {{ "FLAT_SAUSAGE_CHEESE_WRAP_TITLE" | translate }}
+                </h1>
+                <p class="text-base tracking-wide">
+                  {{ "FLAT_SAUSAGE_CHEESE_WRAP" | translate }}
+                </p>
+                <h1
+                  class="food_titles font-one uppercase tracking-wider text-orange-600"
+                >
+                  {{ "BACON_CHEESE_WRAP_TITLE" | translate }}
+                </h1>
+                <p class="text-base tracking-wide">
+                  {{ "BACON_CHEESE_WRAP" | translate }}
+                </p>
+                <h1
+                  class="food_titles font-one uppercase tracking-wider text-orange-600"
+                >
+                  {{ "VEGAN_WRAP_TITLE" | translate }}
+                </h1>
+                <p class="text-base tracking-wide">
+                  {{ "VEGAN_WRAP" | translate }}
+                </p>
               </div>
             </div>
           </span>
@@ -110,7 +147,7 @@
                 class="flex flex-col justify-start text-justify text-base tracking-wider sm:text-[20px]"
               >
                 <p
-                  class="food_titles my-5 text-center text-[20px] text-orange-600 sm:text-[30px]"
+                  class="food_titles font-three my-5 text-center text-[20px] text-orange-600 sm:text-[30px]"
                 >
                   {{ "PORTIONS" | translate }}
                 </p>
@@ -144,48 +181,6 @@
                 <h1>
                   {{ "GYROS" | translate }}
                 </h1>
-              </div>
-            </div>
-          </span>
-        </div>
-        <div class="h-full w-[100vw] bg-transparent sm:flex">
-          <div
-            class="h-[50%] w-[100vw] bg-[url('^./assets/pictures/wrapz.png')] bg-cover bg-center bg-no-repeat sm:h-full lg:w-[50%]"
-          ></div>
-          <span
-            class="my-auto block h-auto px-4 pt-2 text-justify align-middle sm:h-auto sm:w-[45%] sm:text-left"
-          >
-            <div class="wrapper flex justify-center overflow-auto">
-              <div class="flex flex-col justify-center text-center sm:text-left">
-                <h1
-                  class="food_titles my-5 text-[20px] text-orange-600 sm:text-[30px] text-center"
-                >
-                  {{ "WRAPS" | translate }}
-              </h1>
-                <p class="food_titles tracking-wider text-orange-600">
-                  {{ "CRAZY_DONKEY" | translate }}
-                </p>
-                <p class="text-base tracking-wide">
-                  {{ "BURGER_1" | translate }}
-                </p>
-                <p class="food_titles tracking-wider text-orange-600">
-                  {{ "PORK_BURGER" | translate }}
-                </p>
-                <p class="text-base tracking-wide">
-                  {{ "BURGER_2" | translate }}
-                </p>
-                <p class="food_titles tracking-wider text-orange-600">
-                  {{ "CHICKEN_BURGER" | translate }}
-                </p>
-                <p class="text-base tracking-wide">
-                  {{ "BURGER_3" | translate }}
-                </p>
-                <p class="food_titles tracking-wider text-orange-600">
-                  {{ "VEGGIE_BURGER" | translate }}
-                </p>
-                <p class="text-base tracking-wide">
-                  {{ "BURGER_4" | translate }}
-                </p>
               </div>
             </div>
           </span>

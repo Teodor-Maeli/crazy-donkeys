@@ -20,21 +20,15 @@ import {
         })
       ),
       state(
-        '25',
+        '33.33',
         style({
-          transform: 'translateX(-25%)',
+          transform: 'translateX(-33.33%)',
         })
       ),
       state(
-        '50',
+        '66.66',
         style({
-          transform: 'translateX(-50%)',
-        })
-      ),
-      state(
-        '75',
-        style({
-          transform: 'translateX(-75%)',
+          transform: 'translateX(-66.66%)',
         })
       ),
       transition('* => *', [animate(500)]),
@@ -54,19 +48,19 @@ export class HomeComponent implements OnInit, AfterViewInit {
   }
 
   slideNext(): void {
-    if (this.percentage === 75) {
+    if (this.percentage === 66.66) {
       this.percentage = 0;
       return;
     }
-    this.percentage += 25;
+    this.percentage += 33.33;
   }
 
   slidePrev(): void {
     if (this.percentage === 0) {
-      this.percentage = 75;
+      this.percentage = 66.66;
       return;
     }
-    this.percentage -= 25;
+    this.percentage -= 33.33;
   }
 
   getCurrentSlide(): number {
@@ -82,4 +76,13 @@ export class HomeComponent implements OnInit, AfterViewInit {
   stopInterval(): void {
     clearInterval(this.interval);
   }
+
+  nextFromMenu(): string {
+    return this.percentage == 0 ? "SANDWICHES" : this.percentage == 33.33 ?  "PORTIONS" : "BURGERS"
+  }
+
+  prevFromMenu(): string {
+    return this.percentage == 0 ? "PORTIONS" : this.percentage == 33.33 ?  "BURGERS" : "WRAPS"
+  }
+  
 }

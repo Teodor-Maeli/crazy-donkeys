@@ -1,7 +1,7 @@
 {
   "NAV": {
     "MENU": {
-      "HOME": "Home",
+      "HOME": "MENU",
       "FOOD_MENU": "Menu",
       "CONTACTS": "Find us"
     }
@@ -48,6 +48,7 @@
   "VEGGIE_BURGER": "● VEGGIE BURGER",
   "PORTIONS":"PORTIONS",
   "BURGERS":"BURGERS",
+  "SANDWICHES":"SANDWICHES",
   "CRISPY_CHICKEN":"● Crispy chicken with french fries and souce",
   "FRIED_MEAT": "● Grand's Ma fried meat balls with french fries and souce",
   "CHICKEN_WINGS": "● Marinate chicken wings with french fries and souce",
@@ -58,7 +59,19 @@
   "SANDWICH":"● Princess Sandwich",
   "TOAST":"● Toast with bacon and cheese",
   "GYROS":"● Greek style gyros",
-  "WRAPS" : "GRILLED WRAPS"
+  "WRAPS" : "GRILLED WRAPS",
+  "FARM_WRAP":"Crispy chicken, fries, lettuce, tomato, cheese and sauce.",
+  "PORK_WRAP":"Juicy pork, cabbage, fries, pickle, tomato, cheese and sauce.",
+  "CHICKEN_WRAP":"Juicy chicken fillet, cabbage, fries, fresh cucumber, tomato, cheese and sauce.",
+  "FLAT_SAUSAGE_CHEESE_WRAP":"Sausage and cheese, cabbage, fries, tomato and sauce.",
+  "BACON_CHEESE_WRAP":"Bacon and cheese, cabbage, fries, tomato and sauce.",
+  "VEGAN_WRAP":"Vegetable meatball, roasted pepper, mayo and sauce.",
+  "FARM_WRAP_TITLE":"● The farm",
+  "PORK_WRAP_TITLE":"● Juicy pork",
+  "CHICKEN_WRAP_TITLE":"● Crispy chicken fillet",
+  "FLAT_SAUSAGE_CHEESE_WRAP_TITLE":"● Flat sausage and cheese",
+  "BACON_CHEESE_WRAP_TITLE":"● Bacon and cheese",
+  "VEGAN_WRAP_TITLE":"● Vegan"
 
   
 }

@@ -19,8 +19,4 @@ export class FooterComponent implements OnInit {
       '0x4bdfc6d27f0cc747?sa=X&ved=2ahUKEwjcq9WxlZj8AhU0' +
       'SfEDHUjZCagQ9Rd6BAhFEAQ';
   }
-
-  redirectLinkedIn(): void {
-    window.location.href = 'https://www.linkedin.com/in/teodor-maeli';
-  }
 }
