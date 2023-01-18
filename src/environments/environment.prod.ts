@@ -1,5 +1,5 @@
 export const environment = {
   production: true,
-  langFlagBg: '/restaurant-static-angular/assets/icons/bulgaria.png',
-  langFlagEn: '/restaurant-static-angular/assets/icons/united-kingdom.png'
+  langFlagBg: '/crazy-donkeys/assets/icons/bulgaria.png',
+  langFlagEn: '/crazy-donkeys/assets/icons/united-kingdom.png'
 }

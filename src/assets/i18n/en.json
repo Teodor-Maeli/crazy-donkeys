@@ -1,7 +1,7 @@
 {
   "NAV": {
     "MENU": {
-      "HOME": "Home",
+      "HOME": "MENU",
       "FOOD_MENU": "Menu",
       "CONTACTS": "Find us"
     }
@@ -31,11 +31,11 @@
   },
   "HOME_TITLE": "Burgers and Grill sandwiches",
   "INTRO": "Welcome to Crazy Donkeys, where we serve delicious and made at the moment food with only the finest ingredients! Our menu includes:",
-  "ITEM_1": "● Burgers and grill sandwiches in mid-size and XXL options",
-  "ITEM_2": "● Mouthwatering Greek-style gyros",
-  "ITEM_3": "● Cheese-topped French fries",
-  "ITEM_4": "● Grandma's savory meatballs with fries",
-  "ITEM_5": "● Crispy chicken",
+  "ITEM_1": "Burgers and grill sandwiches",
+  "ITEM_2": "Mouthwatering Greek-style gyros",
+  "ITEM_3": "French fries",
+  "ITEM_4": "Crispy chicken ",
+  "ITEM_5": "Grandma's savory meatballs with fries",
   "MENU": "MENU :)",
   "BURGER_1": "A juicy beef patty topped with bacon, pickle, cheddar cheese, lettuce, tomato,served with fries and our special sauce.",
   "BURGER_2": "A succulent pork patty topped with onion, cheddar cheese, pickle, lettuce,served with fries and our special sauce.",
@@ -48,6 +48,7 @@
   "VEGGIE_BURGER": "● VEGGIE BURGER",
   "PORTIONS":"PORTIONS",
   "BURGERS":"BURGERS",
+  "SANDWICHES":"SANDWICHES",
   "CRISPY_CHICKEN":"● Crispy chicken with french fries and souce",
   "FRIED_MEAT": "● Grand's Ma fried meat balls with french fries and souce",
   "CHICKEN_WINGS": "● Marinate chicken wings with french fries and souce",
@@ -57,7 +58,20 @@
   "CHIPS":"● CHIPS",
   "SANDWICH":"● Princess Sandwich",
   "TOAST":"● Toast with bacon and cheese",
-  "GYROS":"● Greek style gyros"
+  "GYROS":"● Greek style gyros",
+  "WRAPS" : "GRILLED WRAPS",
+  "FARM_WRAP":"Crispy chicken, fries, lettuce, tomato, cheese and sauce.",
+  "PORK_WRAP":"Juicy pork, cabbage, fries, pickle, tomato, cheese and sauce.",
+  "CHICKEN_WRAP":"Juicy chicken fillet, cabbage, fries, fresh cucumber, tomato, cheese and sauce.",
+  "FLAT_SAUSAGE_CHEESE_WRAP":"Sausage and cheese, cabbage, fries, tomato and sauce.",
+  "BACON_CHEESE_WRAP":"Bacon and cheese, cabbage, fries, tomato and sauce.",
+  "VEGAN_WRAP":"Vegetable meatball, roasted pepper, mayo and sauce.",
+  "FARM_WRAP_TITLE":"● The farm",
+  "PORK_WRAP_TITLE":"● Juicy pork",
+  "CHICKEN_WRAP_TITLE":"● Crispy chicken fillet",
+  "FLAT_SAUSAGE_CHEESE_WRAP_TITLE":"● Flat sausage and cheese",
+  "BACON_CHEESE_WRAP_TITLE":"● Bacon and cheese",
+  "VEGAN_WRAP_TITLE":"● Vegan"
 
   
 }
