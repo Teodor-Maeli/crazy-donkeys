@@ -17,7 +17,7 @@ import {
         '0',
         style({
           transform: 'translateX(0%)',
-        })
+        }),
       ),
       state(
         '33.33',
@@ -78,11 +78,18 @@ export class HomeComponent implements OnInit, AfterViewInit {
   }
 
   nextFromMenu(): string {
-    return this.percentage == 0 ? "SANDWICHES" : this.percentage == 33.33 ?  "PORTIONS" : "BURGERS"
+    return this.percentage == 0
+      ? 'SANDWICHES'
+      : this.percentage == 33.33
+      ? 'PORTIONS'
+      : 'BURGERS';
   }
 
   prevFromMenu(): string {
-    return this.percentage == 0 ? "PORTIONS" : this.percentage == 33.33 ?  "BURGERS" : "WRAPS"
+    return this.percentage == 0
+      ? 'PORTIONS'
+      : this.percentage == 33.33
+      ? 'BURGERS'
+      : 'WRAPS';
   }
-  
 }

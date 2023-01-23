@@ -7,6 +7,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Stalinist+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Underdog&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Rubik+Moonrocks&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap');
 
 html,
 body {
@@ -31,7 +32,8 @@ body {
 }
 
 .font-three {
-  font-family: 'Rubik Moonrocks', cursive;
+  font-family: 'Amatic SC', cursive;
+  font-weight: 900!important;
 }
 
 
