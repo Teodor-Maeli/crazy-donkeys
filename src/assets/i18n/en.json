@@ -71,7 +71,32 @@
   "CHICKEN_WRAP_TITLE":"Crispy chicken fillet - 250g 5.80lv. / 350g 6.80lv.",
   "FLAT_SAUSAGE_CHEESE_WRAP_TITLE":"Flat sausage and cheese - 250g 5.80lv. / 350g 6.80lv.",
   "BACON_CHEESE_WRAP_TITLE":"Bacon and cheese - 250g 5.30lv. / 350g 6.50lv",
-  "VEGAN_WRAP_TITLE":"Vegan - XL 350g 5.99lv."
-
-  
+  "VEGAN_WRAP_TITLE":"Vegan - XL 350g 5.99lv.",
+  "TERMS": {
+    "sentence0": "Terms and Conditions",
+    "sentence1": "These terms and conditions govern the terms of use of www.crazy-donkeys.eu, hereinafter for short the \"website\".",
+      "sentence2": "The website is operated by \"Mesarnica Cemera Ltd\" with the EIC 204173838, hereinafter for short \"Operator\".",
+      "sentence3": "If necessary, you can contact us using the following contacts: Email: CrazyDonkeysFoods@gmail.com Phone: {contact phone}",
+      "sentence4": "By using the Website, the user agrees to these terms and conditions.",
+      "sentence5": "If you do not agree with the same, you should REFRAIN from using the Website.",
+      "sentence6": "1. Intellectual Property",
+      "sentence7": "1.1. All intellectual property rights regarding the information resources and content of the website are exercised by the Operator. The same are protected by the Copyright Act and related rights, and any use of content from the Website without the consent of the Operator is a violation of the law that may result in civil, administrative or criminal liability.",
+      "sentence8": "1.2. In the case of copying or reproducing information beyond what is permitted, as well as in any other violation of intellectual property rights on the Operator's resources, the Operator has the right to claim compensation for the direct and indirect damages suffered in full. ",
+      "sentence9": "2. Limitation of Liability",
+      "sentence10": "2.1. The Operator takes the necessary measures to keep the content of the Website up-to-date, but is not responsible for the actual up-to-dateness of the same. In this regard, the Operator is not liable for damages, including direct and indirect damages, including loss of profits that a user of the Website would incur under any circumstances related to the published content of the Website and access to the same. By using the Website, users assume all risks related thereto, including any risk to end-user devices, software or data to users.",
+      "sentence11": "2.2. To the extent that the content of the Website contains links to content located outside the same, the user is aware of the fact that the Operator has no control over the same and is not responsible for the consequences of activating links leading outside the Website." ,
+      "sentence12": "3. User Registration",
+      "sentence13": "3.1. The operator reserves the right to provide part of the content of the Website only to users who have registered their user profile on the Website. The relevant content, limited only to registered users, should at all times be indicated as such by the Operator.",
+      "sentence14":"3.2. When creating a user profile, the user agrees that the Operator will process his personal data in accordance with the rules of the Personal Data Protection Policy published on the Website.",
+      "sentence15":"4. Use of the Website",
+      "sentence16":"4.1. To the extent that the Operator has provided an opportunity for users to upload content to the Website, they should not upload defamatory, uncensored, offensive, pornographic or otherwise illegal or immoral content.",
+      "sentence17":"4.2. Users shall use the Website in good faith, including not taking malicious actions that may affect the accessibility of content to third parties or the use of the Website in general.",
+      "sentence18":"5. Others",
+      "sentence19":"5.1. The operator reserves the right to amend these general terms and conditions at its discretion, as at any moment the current terms of use of the Website will be published on the same.",
+      "sentence20":"5.2 The provisions of the current legislation of the Republic of Bulgaria shall apply to all matters not settled by these General Terms and Conditions.",
+      "sentence21":"These terms and conditions have been prepared with the help of https://obshti-uslovia.com"
+    },
+    "COOKIE_POLICY": {
+      "sentence0":"Cookies policy"
+    }
 }

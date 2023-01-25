@@ -1,5 +1,5 @@
 <div
-  class="relative h-full w-full flex-col justify-center bg-stone-800 p-5 sm:flex"
+  class="relative h-full w-full flex-col justify-center bg-stone-800 p-5 flex"
 >
   <img
     src="./assets/pictures/tomato.png"
@@ -20,8 +20,12 @@
     <p>{{ "FOOTER.WORK_II" | translate }}</p>
   </div>
   <div
-    class="relative bottom-2 mt-5 text-center sm:absolute sm:right-5 sm:mt-0"
+    class="relative bottom-2 mt-5 text-center text-[15px] lg:absolute lg:right-20 lg:mt-0"
   >
-    <h1 class="text-xs">{{ "FOOTER.RIGHTS_RESERVED" | translate }}</h1>
+    <h1>{{ "FOOTER.RIGHTS_RESERVED" | translate }}</h1>
+  </div>
+  <div class="relative flex flex-col bottom-2 mt-5 text-center text-[22px] lg:absolute lg:left-20 lg:mt-0 gap-4">
+    <h1 class="cursor-pointer duration-300 font-three hover:scale-125 hover:text-orange-600">{{"TERMS.sentence0" | translate}}</h1>
+    <h1 class="cursor-pointer duration-300 font-three hover:scale-125 hover:text-orange-600">{{"COOKIE_POLICY.sentence0" | translate}}</h1>
   </div>
 </div>
