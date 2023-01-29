@@ -1,13 +1,13 @@
 <div class="image-bg h-full w-full bg-cover bg-bottom">
   <div>
     <button
-      class="absolute right-[-5px] top-[120px] z-10 h-[38px] w-[100px] -translate-y-1/2 transform rounded-md border-[2px] border-orange-600 bg-black p-[5px] text-xs leading-none opacity-80 hover:text-orange-600 sm:top-[150px]"
+      class="absolute right-[0px] top-[120px] z-10 h-[38px] w-[100px] -translate-y-1/2 transform rounded-md border-[2px] border-r-0 rounded-r-none border-orange-600 bg-black p-[5px] text-xs leading-none opacity-80 hover:text-orange-600 sm:top-[150px]"
       (click)="slideNext()"
     >
       {{ nextFromMenu() | translate }}
     </button>
     <button
-      class="absolute left-[-5px] top-[120px] z-10 h-[38px] w-[100px] -translate-y-1/2 transform rounded-md border-[2px] border-orange-600 bg-black p-[5px] text-xs leading-none opacity-80 hover:text-orange-600 sm:top-[150px]"
+      class="absolute left-[0px] top-[120px] z-10 h-[38px] w-[100px] -translate-y-1/2 transform rounded-md border-[2px] border-l-0 rounded-l-none border-orange-600 bg-black p-[5px] text-xs leading-none opacity-80 hover:text-orange-600 sm:top-[150px]"
       (click)="slidePrev()"
     >
       {{ prevFromMenu() | translate }}

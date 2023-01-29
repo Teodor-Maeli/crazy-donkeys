@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CookieService } from 'ngx-cookie-service';
 
 @Component({
   selector: 'app-full-layout',
@@ -6,8 +7,23 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./full-layout.component.scss'],
 })
 export class FullLayoutComponent implements OnInit {
-  constructor() {}
+  cookieAccepted = false;
+  constructor(private cookieService: CookieService) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    if (this.cookieService.get('cookieAccepted') === 'true') {
+      this.cookieAccepted = true;
+    }
+  }
+
+  acceptCookies() {
+    const now = new Date();
+    const expirationDate = new Date(
+      now.getFullYear(),
+      now.getMonth() + 5,
+      now.getDate()
+    );
+    this.cookieAccepted = true;
+    this.cookieService.set('cookieAccepted', 'true',expirationDate);
+  }
 }
-
