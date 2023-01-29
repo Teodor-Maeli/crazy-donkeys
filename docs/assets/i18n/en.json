@@ -107,6 +107,10 @@
       "sentence21":"These terms and conditions have been prepared with the help of https://obshti-uslovia.com"
     },
     "COOKIE_POLICY": {
-      "sentence0":"Cookies policy"
+      "TITLE":"Cookies & Privacy",
+      "sentence0":"Cookies policy",
+      "ACCEPT":"Accept",
+      "READ":"Read more",
+      "DESCRIPTION":"This website may be using cookies from third party applications, please accept or read for more details :)"
     }
 }
