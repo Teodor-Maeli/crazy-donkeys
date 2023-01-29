@@ -10,3 +10,4 @@ export class FullLayoutComponent implements OnInit {
 
   ngOnInit(): void {}
 }
+

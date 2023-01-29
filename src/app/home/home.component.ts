@@ -6,6 +6,9 @@ import {
   animate,
   transition,
 } from '@angular/animations';
+import { burgers, defaultDescClass, defaultTitleClass, portions, wraps } from '../products/products';
+import { Products } from '../products/products.metadata';
+import { elementAt } from 'rxjs';
 
 @Component({
   selector: 'app-home',
@@ -17,7 +20,7 @@ import {
         '0',
         style({
           transform: 'translateX(0%)',
-        }),
+        })
       ),
       state(
         '33.33',
@@ -39,6 +42,11 @@ export class HomeComponent implements OnInit, AfterViewInit {
   private slider: HTMLDivElement = document.createElement('div');
   percentage: number = 0;
   interval!: NodeJS.Timer;
+  titleClass:string = defaultTitleClass;
+  descriptionClass:string = defaultDescClass;
+  burgers: Products[] = burgers
+  wraps: Products[] = wraps
+  portions: Products[] = portions
   constructor() {}
 
   ngOnInit(): void {}
@@ -79,7 +87,7 @@ export class HomeComponent implements OnInit, AfterViewInit {
 
   nextFromMenu(): string {
     return this.percentage == 0
-      ? 'SANDWICHES'
+      ? 'WRAPS'
       : this.percentage == 33.33
       ? 'PORTIONS'
       : 'BURGERS';
@@ -91,5 +99,10 @@ export class HomeComponent implements OnInit, AfterViewInit {
       : this.percentage == 33.33
       ? 'BURGERS'
       : 'WRAPS';
+  }
+
+  scrollTo(): void {
+    const slider = document.getElementById("info") as HTMLDivElement;
+    slider.scrollIntoView({behavior:"smooth"});
   }
 }
