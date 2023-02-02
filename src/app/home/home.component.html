@@ -1,53 +1,53 @@
 <div class="image-bg h-full w-full bg-cover bg-bottom">
-  <div>
-    <button
-      class="absolute right-[0px] top-[120px] z-10 h-[38px] w-[100px] -translate-y-1/2 transform rounded-md border-[2px] border-r-0 rounded-r-none border-orange-600 bg-black p-[5px] text-xs leading-none opacity-80 hover:text-orange-600 sm:top-[150px]"
-      (click)="slideNext()"
-    >
-      {{ nextFromMenu() | translate }}
-    </button>
-    <button
-      class="absolute left-[0px] top-[120px] z-10 h-[38px] w-[100px] -translate-y-1/2 transform rounded-md border-[2px] border-l-0 rounded-l-none border-orange-600 bg-black p-[5px] text-xs leading-none opacity-80 hover:text-orange-600 sm:top-[150px]"
-      (click)="slidePrev()"
-    >
-      {{ prevFromMenu() | translate }}
-    </button>
-  </div>
-
   <div
-    class="gradient flex h-full w-full flex-col items-center justify-center overflow-x-hidden lg:justify-start"
+    class="gradient block h-full w-full items-center justify-center overflow-x-hidden bg-black bg-opacity-60 lg:justify-start"
   >
+    <div class="h-[20%]"></div>
     <div
-      class="mt-[100px] h-[100%] w-full text-[13px] sm:text-[15px] md:text-[16px] lg:text-[18.5px]"
+      class="h-[50%] w-full text-[13px] sm:text-[15px] md:text-[16px] lg:text-[18.5px]"
     >
       <div class="relative h-full w-full">
         <div
           class="h-[1px] w-full bg-gradient-to-l from-black via-orange-600 to-slate-600"
         ></div>
-
+        <button
+        class="absolute right-[0px] top-[0] z-10 h-[38px] w-[100px] -translate-y-1/2 transform rounded-md rounded-r-none border-[2px] border-r-0 border-orange-600 bg-black p-[5px] text-xs leading-none hover:text-orange-600 sm:top-[150px]"
+        (click)="slideNext()"
+      >
+        {{ nextFromMenu() | translate }}
+      </button>
+      <button
+        class="absolute left-[0px] top-[0] z-10 h-[38px] w-[100px] -translate-y-1/2 transform rounded-md rounded-l-none border-[2px] border-l-0 border-orange-600 bg-black p-[5px] text-xs leading-none hover:text-orange-600 sm:top-[150px]"
+        (click)="slidePrev()"
+      >
+        {{ prevFromMenu() | translate }}
+      </button>
         <div
           id="slider"
-          class="absolute flex h-[600px] w-[300%] overflow-y-auto bg-black bg-opacity-60 sm:h-full"
+          class="absolute top-0 flex h-full w-[300%] overflow-y-auto bg-black bg-opacity-60 sm:h-full"
           [@slide]="this.getCurrentSlide()"
         >
           <div class="h-full w-[100vw] bg-transparent lg:flex">
             <div
               class="relative h-[50%] w-[100vw] bg-[url('^./assets/pictures/no-bg-burger.png')] bg-cover bg-left bg-no-repeat sm:h-full lg:w-[50%]"
             >
-              <div class="absolute w-full flex justify-center lg:hidden bottom-3 animate-bounce"
-              (click)="scrollTo()">
+              <div
+                class="absolute bottom-3 flex w-full animate-bounce justify-center lg:hidden"
+                (click)="scrollTo()"
+              >
                 <img
                   src="./assets/icons/arrow.png"
                   class="w-[70px] cursor-pointer"
                 />
               </div>
             </div>
-            <span id="info"
-              class="my-auto block h-auto px-4 py-2 text-justify align-middle sm:h-auto sm:text-left lg:w-[45%]"
+            <span
+              id="info"
+              class="my-auto block h-full px-4 py-2 text-justify align-middle sm:h-full sm:text-left lg:w-[45%]"
             >
-              <div>
+              <div class="h-full">
                 <div
-                  class="flex flex-col justify-start text-center sm:text-left"
+                  class="flex h-full flex-col justify-start text-center sm:overflow-auto sm:text-left"
                 >
                   <h1
                     class="food_titles my-3 text-center text-[20px] tracking-wider text-orange-600 sm:text-[30px]"
@@ -68,24 +68,31 @@
           </div>
           <div class="h-full w-[100vw] bg-transparent lg:flex">
             <div
-              class="h-[50%] relative w-[100vw] bg-[url('^./assets/pictures/wrapz.png')] bg-cover bg-left bg-no-repeat sm:h-full lg:w-[50%]"
+              class="relative h-[50%] w-[100vw] bg-[url('^./assets/pictures/wrapz.png')] bg-cover bg-left bg-no-repeat sm:h-full lg:w-[50%]"
             >
-            <div class="absolute w-full flex justify-center lg:hidden bottom-3 animate-bounce"
-            (click)="scrollTo()">
-              <img
-                src="./assets/icons/arrow.png"
-                class="w-[70px] cursor-pointer"
-              />
-              <div id="tooltip-default" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
-                Tooltip content
-                <div class="tooltip-arrow" data-popper-arrow></div>
+              <div
+                class="absolute bottom-3 flex w-full animate-bounce justify-center lg:hidden"
+                (click)="scrollTo()"
+              >
+                <img
+                  src="./assets/icons/arrow.png"
+                  class="w-[70px] cursor-pointer"
+                />
+                <div
+                  id="tooltip-default"
+                  role="tooltip"
+                  class="tooltip invisible absolute z-10 inline-block rounded-lg bg-gray-900 px-3 py-2 text-sm font-medium text-white opacity-0 shadow-sm transition-opacity duration-300 dark:bg-gray-700"
+                >
+                  Tooltip content
+                  <div class="tooltip-arrow" data-popper-arrow></div>
+                </div>
+              </div>
             </div>
-            </div>
-          </div>
             <span
-              class="my-auto block h-auto px-4 py-2 text-justify align-middle sm:h-auto sm:text-left lg:w-[45%]"
+              id="info"
+              class="my-auto block h-auto px-4 py-2 text-justify align-middle sm:h-full sm:text-left lg:w-[45%]"
             >
-              <div>
+              <div class="h-full sm:overflow-auto">
                 <div
                   class="flex flex-col justify-start text-center sm:text-left"
                 >
@@ -108,22 +115,25 @@
           </div>
           <div class="h-full w-[100vw] bg-transparent lg:flex">
             <div
-              class="h-[50%] relative w-[100vw] bg-[url('^./assets/pictures/gyros.png')] bg-cover bg-left bg-no-repeat sm:h-full lg:w-[50%]"
+              class="relative h-[50%] w-[100vw] bg-[url('^./assets/pictures/gyros.png')] bg-center bg-no-repeat sm:h-full sm:bg-left md:bg-cover lg:w-[50%]"
             >
-            <div class="absolute w-full flex justify-center lg:hidden bottom-3 animate-bounce"
-            (click)="scrollTo()">
-              <img
-                src="./assets/icons/arrow.png"
-                class="w-[70px] cursor-pointer"
-              />
+              <div
+                class="absolute bottom-3 flex w-full animate-bounce justify-center lg:hidden"
+                (click)="scrollTo()"
+              >
+                <img
+                  src="./assets/icons/arrow.png"
+                  class="w-[70px] cursor-pointer"
+                />
+              </div>
             </div>
-          </div>
             <span
-              class="my-auto block h-auto p-4 pt-2 text-justify align-middle sm:h-auto sm:text-left lg:w-[45%]"
+              id="info"
+              class="my-auto block h-auto px-4 py-2 text-justify align-middle sm:h-full sm:text-left lg:w-[45%]"
             >
-              <div>
+              <div class="h-full sm:overflow-auto">
                 <div
-                  class="flex flex-col justify-center text-center sm:text-left"
+                  class="flex flex-col justify-start text-center sm:text-left"
                 >
                   <h1
                     class="food_titles my-3 text-center text-[20px] text-orange-600 sm:text-[30px]"
@@ -146,7 +156,7 @@
       </div>
     </div>
     <div
-      class="mt-[600px] flex h-fit w-full flex-col justify-start bg-black bg-opacity-60 pb-5 text-center text-white sm:mt-0"
+      class="flex h-fit w-full flex-col justify-start pb-5 text-center text-white sm:mt-0"
     >
       <div
         class="z-50 h-[1px] w-full bg-gradient-to-l from-black via-orange-600 to-slate-600"
