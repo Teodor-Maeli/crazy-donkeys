@@ -112,5 +112,6 @@
       "ACCEPT":"Accept",
       "READ":"Read more",
       "DESCRIPTION":"This website may be using cookies from third party applications, please accept or read for more details :)"
-    }
+    },
+    "PRICES_DESC":"All prices are in BGN"
 }

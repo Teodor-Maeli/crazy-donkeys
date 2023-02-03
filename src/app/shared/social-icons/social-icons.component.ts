@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CookieService } from 'ngx-cookie-service';
 
 @Component({
   selector: 'app-social-icons',
@@ -6,11 +7,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./social-icons.component.scss'],
 })
 export class SocialIconsComponent implements OnInit {
-  constructor() {}
+  constructor(private cookieService: CookieService) {}
 
   ngOnInit(): void {}
 
   redirectSocials(media: string) {
+    if (this.cookieService.get('cookieAccepted') !== 'true') {
+      return;
+    }
     if (media == 'instagram') {
       window.location.href = 'https://www.instagram.com/crazydonkeys2023/';
     } else if (media == 'facebook') {

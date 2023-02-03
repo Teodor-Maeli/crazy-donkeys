@@ -8,7 +8,6 @@ import {
 } from '@angular/animations';
 import { burgers, defaultDescClass, defaultTitleClass, portions, wraps } from '../products/products';
 import { Products } from '../products/products.metadata';
-import { elementAt } from 'rxjs';
 
 @Component({
   selector: 'app-home',
@@ -39,7 +38,6 @@ import { elementAt } from 'rxjs';
   ],
 })
 export class HomeComponent implements OnInit, AfterViewInit {
-  private slider: HTMLDivElement = document.createElement('div');
   percentage: number = 0;
   interval!: NodeJS.Timer;
   titleClass:string = defaultTitleClass;
