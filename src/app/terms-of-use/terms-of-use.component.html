@@ -1,32 +1,17 @@
 <div class="image-bg h-full w-full bg-cover bg-bottom">
   <div
-    class="gradient flex h-full w-full flex-col items-center justify-center overflow-hidden bg-black bg-opacity-60 lg:justify-start"
+    class="gradient flex h-full w-full flex-col items-center lg:justify-start"
   >
     <div
-      class="my-auto h-[98%] w-[90%] px-2 rounded-md bg-white bg-opacity-20 text-center pt-32 overflow-auto pb-5"
+      class="my-auto w-[95%] sm:w-[90%] bg-slate-800 overflow-hidden bg-opacity-50 px-2 pt-14 sm:pt-32 pb-5 text-center"
     >
-      <p class="text-[25px] text-orange-600">{{ "TERMS.sentence0" | translate }}</p>
-      <p>{{ "TERMS.sentence1" | translate }}</p>
-      <p>{{ "TERMS.sentence2" | translate }}</p>
-      <p>{{ "TERMS.sentence3" | translate }}</p>
-      <p>{{ "TERMS.sentence4" | translate }}</p>
-      <p>{{ "TERMS.sentence5" | translate }}</p>
-      <p>{{ "TERMS.sentence6" | translate }}</p>
-      <p>{{ "TERMS.sentence7" | translate }}</p>
-      <p>{{ "TERMS.sentence8" | translate }}</p>
-      <p>{{ "TERMS.sentence9" | translate }}</p>
-      <p>{{ "TERMS.sentence10" | translate }}</p>
-      <p>{{ "TERMS.sentence11" | translate }}</p>
-      <p>{{ "TERMS.sentence12" | translate }}</p>
-      <p>{{ "TERMS.sentence13" | translate }}</p>
-      <p>{{ "TERMS.sentence14" | translate }}</p>
-      <p>{{ "TERMS.sentence15" | translate }}</p>
-      <p>{{ "TERMS.sentence16" | translate }}</p>
-      <p>{{ "TERMS.sentence17" | translate }}</p>
-      <p>{{ "TERMS.sentence18" | translate }}</p>
-      <p>{{ "TERMS.sentence19" | translate }}</p>
-      <p>{{ "TERMS.sentence20" | translate }}</p>
-      <p>{{ "TERMS.sentence21" | translate }}</p>
+    <h1 class="font-three mb-2 text-[30px] text-orange-600 ">{{"TERMS.sentence0" | translate}}</h1>
+    <div
+    class="h-[1px] w-full bg-gradient-to-r from-black via-orange-600 to-slate-600"
+  ></div>
+    <div class="h-[99%] overflow-auto mt-2">
+      <p class="font-three text-[23px]" *ngFor="let term of terms">{{ term | translate }}</p>
+    </div>
     </div>
   </div>
 </div>
