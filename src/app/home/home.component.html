@@ -5,17 +5,16 @@
     <div
       class="relative flex h-[150px] w-full justify-center overflow-hidden"
       id="french-fries"
-    >
-    </div>
+    ></div>
     <div
       class="h-full w-full text-[13px] sm:text-[15px] md:text-[16px] lg:text-[18.5px]"
     >
       <div class="relative h-full w-full">
         <div
-          class="h-[1px] w-full bg-gradient-to-l from-black via-orange-600 to-slate-600"
+          class="h-[2px] absolute z-[10] w-full bg-gradient-to-l from-black via-orange-600 to-slate-600"
         ></div>
         <button
-          class="absolute right-[0px] top-[0] z-10 h-[38px] w-[100px] -translate-y-1/2 transform rounded-md rounded-r-none border-[2px] border-r-0 border-orange-600 bg-black p-[5px] text-xs leading-none hover:text-orange-600 sm:top-[150px]"
+          class="absolute right-[0px] top-[0] z-[20] h-[38px] w-[100px] -translate-y-1/2 transform rounded-md rounded-r-none border-[2px] border-r-0 border-orange-600 bg-black p-[5px] text-xs leading-none hover:text-orange-600 sm:top-[150px]"
           (click)="slideNext()"
         >
           {{ nextFromMenu() | translate }}
@@ -28,7 +27,7 @@
         </button>
         <div
           id="slider"
-          class="absolute top-0 flex h-full w-[300%] overflow-y-auto bg-black bg-opacity-60 sm:h-full"
+          class="absolute top-0 flex h-full w-[300%] overflow-y-auto lg:overflow-y-hidden bg-slate-800 bg-opacity-50 sm:h-full"
           [@slide]="this.getCurrentSlide()"
         >
           <div class="h-full w-[100vw] bg-transparent lg:flex">
@@ -45,11 +44,13 @@
                 />
               </div>
             </div>
-            <span
+            <div
               id="info"
-              class="my-auto block h-full px-4 py-2 text-justify align-middle sm:h-full sm:text-left lg:w-[45%]"
+              class="my-y mx-1 overflow-y-scroll py-2 text-justify align-middle sm:h-full sm:text-left lg:w-[45%]"
             >
-              <div class="h-full">
+              <div
+                class="block h-fit w-full px-2"
+              >
                 <div
                   class="flex h-full flex-col justify-start text-center sm:overflow-auto sm:text-left"
                 >
@@ -68,7 +69,7 @@
                   </div>
                 </div>
               </div>
-            </span>
+            </div>
           </div>
           <div class="h-full w-[100vw] bg-transparent lg:flex">
             <div
@@ -92,11 +93,13 @@
                 </div>
               </div>
             </div>
-            <span
+            <div
               id="info"
-              class="my-auto block h-auto px-4 py-2 text-justify align-middle sm:h-full sm:text-left lg:w-[45%]"
+              class="my-y mx-1 overflow-y-scroll py-2 text-justify align-middle sm:h-full sm:text-left lg:w-[45%]"
             >
-              <div class="h-full sm:overflow-auto">
+              <div
+                class="block h-fit w-full px-2"
+              >
                 <div
                   class="flex flex-col justify-start text-center sm:text-left"
                 >
@@ -115,7 +118,7 @@
                   </div>
                 </div>
               </div>
-            </span>
+            </div>
           </div>
           <div class="h-full w-[100vw] bg-transparent lg:flex">
             <div
@@ -131,11 +134,13 @@
                 />
               </div>
             </div>
-            <span
+            <div
               id="info"
-              class="my-auto block h-auto px-4 py-2 text-justify align-middle sm:h-full sm:text-left lg:w-[45%]"
+              class="my-y mx-1 overflow-y-scroll py-2 text-justify align-middle sm:h-full sm:text-left lg:w-[45%]"
             >
-              <div class="h-full sm:overflow-auto">
+              <div
+                class="block h-fit w-full px-2 "
+              >
                 <div
                   class="flex flex-col justify-start text-center sm:text-left"
                 >
@@ -154,21 +159,16 @@
                   </div>
                 </div>
               </div>
-            </span>
+            </div>
           </div>
         </div>
-        <h1
-          class="absolute left-1/2 bottom-0 z-50 h-fit translate-x-[-50%] transform rounded-t-md border-[1px] border-b-0 border-orange-600 bg-black p-1 text-[12px]"
-        >
-          {{ "PRICES_DESC" | translate }}
-        </h1>
       </div>
     </div>
     <div
       class="mt-auto mb-2 flex h-fit w-full flex-col justify-start text-center text-white sm:mt-0"
     >
       <div
-        class="z-50 h-[1px] w-full bg-gradient-to-l from-black via-orange-600 to-slate-600"
+        class="z-50 h-[3px] w-full bg-gradient-to-l from-black via-orange-600 to-slate-600"
       ></div>
       <h1 class="titles text-[20px] sm:text-[45px] sm:tracking-[10px]">
         Crazy Donkeys

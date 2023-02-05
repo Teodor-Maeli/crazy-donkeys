@@ -29,4 +29,9 @@ export class FooterComponent implements OnInit {
     this.router.navigate(['/terms-of-use']);
     window.scrollTo(0, 0);
   }
+
+  navigatePrivacyPolicy(): void {
+    this.router.navigate(['/privacy-policy']);
+    window.scrollTo(0, 0);
+  }
 }

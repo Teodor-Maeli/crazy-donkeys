@@ -9,6 +9,7 @@ import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { HttpLoaderFactory } from './shared/functions/functions';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { PrivacyPolicyComponent } from './privacy-policy/privacy-policy.component';
 
 @NgModule({
   declarations: [AppComponent, FullLayoutComponent],

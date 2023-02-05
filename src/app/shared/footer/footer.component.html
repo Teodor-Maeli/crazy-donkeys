@@ -1,12 +1,12 @@
 <div
-  class="relative h-auto w-full flex-col justify-center bg-stone-800 p-5 flex"
+  class="relative flex h-auto w-full flex-col justify-center bg-stone-800 p-5"
 >
   <img
     src="./assets/pictures/tomato.png"
-    class="absolute left-[2%] top-0  h-[250px] sm:h-[333px] w-[500px] scale-x-[-1] overflow-hidden opacity-20 sm:left-[10%] sm:top-[-10%]"
+    class="absolute left-[2%] top-0 h-[250px] w-[500px] scale-x-[-1] overflow-hidden opacity-20 sm:left-[10%] sm:top-[-10%] sm:h-[333px]"
   />
   <div
-    class="contacts relative mx-auto w-fit text-center text-[14px] md:text-lg tracking-[2px]"
+    class="contacts relative mx-auto w-fit text-center text-[14px] tracking-[2px] md:text-lg"
   >
     <h1>{{ "FOOTER.ADDRESS" | translate }}</h1>
     <p
@@ -24,8 +24,20 @@
   >
     <h1>{{ "FOOTER.RIGHTS_RESERVED" | translate }}</h1>
   </div>
-  <div class="relative flex flex-col bottom-2 mt-1 text-center text-[20px] md:text-[22px] lg:absolute lg:left-20 gap-4">
-    <h1 class="cursor-pointer duration-300 font-three hover:scale-125 hover:text-orange-600"(click)="navigateTermsOfUse()">{{"TERMS.sentence0" | translate}}</h1>
-    <h1 class="cursor-pointer duration-300 font-three hover:scale-125 hover:text-orange-600">{{"COOKIE_POLICY.sentence0" | translate}}</h1>
+  <div
+    class="relative bottom-2 mt-1 flex flex-col gap-4 text-center text-[20px] md:text-[22px] lg:absolute lg:left-20"
+  >
+    <h1
+      class="font-three cursor-pointer duration-300 hover:scale-125 hover:text-orange-600"
+      (click)="navigateTermsOfUse()"
+    >
+      {{ "TERMS.sentence0" | translate }}
+    </h1>
+    <h1
+      class="font-three cursor-pointer duration-300 hover:scale-125 hover:text-orange-600"
+      (click)="navigatePrivacyPolicy()"
+    >
+      {{ "COOKIE_POLICY.sentence0" | translate }}
+    </h1>
   </div>
 </div>

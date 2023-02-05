@@ -12,14 +12,11 @@
 
 @keyframes drop {
   0% {
-    bottom: -200%;
-  }
-
-  50% {
-    bottom: 200%;
+    bottom: 150%;
   }
 
   100% {
-    bottom: -200%;
+    bottom: -150%;
+    rotate: 180deg;
   }
 }

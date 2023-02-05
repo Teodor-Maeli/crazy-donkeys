@@ -52,6 +52,10 @@ export class HomeComponent implements OnInit, AfterViewInit {
   wraps: Products[] = wraps;
   portions: Products[] = portions;
   potatos: string[] = [];
+  potatoPNG: string = './assets/pictures/potato.png';
+  burgerPNG: string = './assets/pictures/cartoon-burger.png';
+  hotdogPNG: string = './assets/pictures/hotdog.png';
+  chickenPNG: string = './assets/pictures/fried-chicken.png';
   constructor() {}
 
   ngOnInit(): void {
@@ -60,7 +64,7 @@ export class HomeComponent implements OnInit, AfterViewInit {
       'french-fries'
     ) as HTMLDivElement;
 
-    for (let i = 0; i < window.innerWidth / 20; i++) {
+    for (let i = 0; i < window.innerWidth / 50; i++) {
       doc.appendChild(this.appendFrenchFriensToElement());
     }
   }
@@ -70,15 +74,24 @@ export class HomeComponent implements OnInit, AfterViewInit {
   }
 
   appendFrenchFriensToElement(): HTMLImageElement {
+    let randomImgCode: string = this.generateRandomNums(1, 6, '1');
     let doc: HTMLImageElement = document.createElement('img');
-    doc.src = './assets/pictures/potato.png';
+    doc.src =
+      randomImgCode === '21'
+        ? this.potatoPNG
+        : randomImgCode === '41'
+        ? this.hotdogPNG
+        : randomImgCode === '51'
+        ? this.chickenPNG
+        : randomImgCode === '31'
+        ? this.burgerPNG
+        : this.potatoPNG;
     doc.style.position = 'absolute';
-    doc.style.right = this.generateRandomNums(0, 100, '%');
-    doc.style.height = this.generateRandomNums(10, 100, 'px');
+    doc.style.right = this.generateRandomNums(-2, 105, '%');
+    doc.style.height = this.generateRandomNums(20,100, '%');
     doc.style.transform = 'rotate(' + this.generateRandomNums(0, 360, 'deg)');
-    doc.id = 'fries';
     doc.style.animation =
-      'drop ' + this.generateRandomNums(10, 100, 's') + ' linear infinite';
+      'drop ' + this.generateRandomNums(10, 20, 's') + ' linear infinite';
     return doc;
   }
 
@@ -105,7 +118,7 @@ export class HomeComponent implements OnInit, AfterViewInit {
   startInterval(): void {
     this.interval = setInterval(() => {
       this.slideNext();
-    }, 25000);
+    }, 215000);
   }
 
   stopInterval(): void {

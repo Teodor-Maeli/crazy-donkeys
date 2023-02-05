@@ -18,4 +18,10 @@ export const Full_ROUTES: Routes = [
       import('../../terms-of-use/terms-of-use.module').then((m) => m.TermsOfUseModule),
     pathMatch: 'full',
   },
+  {
+    path: 'privacy-policy',
+    loadChildren: () =>
+      import('../../privacy-policy/privacy-policy.module').then((m) => m.PrivacyPolicyModule),
+    pathMatch: 'full',
+  },
 ];
