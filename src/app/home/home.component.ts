@@ -52,19 +52,18 @@ export class HomeComponent implements OnInit, AfterViewInit {
   wraps: Products[] = wraps;
   portions: Products[] = portions;
   potatos: string[] = [];
-  potatoPNG: string = './assets/pictures/potato.png';
+  wrapPNG: string = './assets/pictures/wrap.png';
   burgerPNG: string = './assets/pictures/cartoon-burger.png';
   hotdogPNG: string = './assets/pictures/hotdog.png';
   chickenPNG: string = './assets/pictures/fried-chicken.png';
   constructor() {}
 
   ngOnInit(): void {
-    setTimeout(() => this.scrollTo(), 1200);
     let doc: HTMLDivElement = document.getElementById(
       'french-fries'
     ) as HTMLDivElement;
 
-    for (let i = 0; i < window.innerWidth / 50; i++) {
+    for (let i = 0; i < window.innerWidth/ 120; i++) {
       doc.appendChild(this.appendFrenchFriensToElement());
     }
   }
@@ -74,24 +73,22 @@ export class HomeComponent implements OnInit, AfterViewInit {
   }
 
   appendFrenchFriensToElement(): HTMLImageElement {
-    let randomImgCode: string = this.generateRandomNums(1, 6, '1');
+    let randomImgCode: string = this.generateRandomNums(1, 5, '1');
     let doc: HTMLImageElement = document.createElement('img');
     doc.src =
       randomImgCode === '21'
-        ? this.potatoPNG
-        : randomImgCode === '41'
-        ? this.hotdogPNG
-        : randomImgCode === '51'
-        ? this.chickenPNG
+        ? this.wrapPNG
         : randomImgCode === '31'
-        ? this.burgerPNG
-        : this.potatoPNG;
+        ? this.hotdogPNG
+        : this.burgerPNG;
+        doc.classList.add("grayscale-[80%]")
     doc.style.position = 'absolute';
     doc.style.right = this.generateRandomNums(-2, 105, '%');
-    doc.style.height = this.generateRandomNums(20,100, '%');
+    doc.style.height = this.generateRandomNums(60, 150, '%');
     doc.style.transform = 'rotate(' + this.generateRandomNums(0, 360, 'deg)');
+    doc.style.animationDelay = this.generateRandomNums(3, 100, 's');
     doc.style.animation =
-      'drop ' + this.generateRandomNums(10, 20, 's') + ' linear infinite';
+      'drop ' + this.generateRandomNums(5, 20, 's') + ' linear infinite';
     return doc;
   }
 

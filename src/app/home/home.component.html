@@ -14,13 +14,13 @@
           class="h-[2px] absolute z-[10] w-full bg-gradient-to-l from-black via-orange-600 to-slate-600"
         ></div>
         <button
-          class="absolute right-[0px] top-[0] z-[20] h-[38px] w-[100px] -translate-y-1/2 transform rounded-md rounded-r-none border-[2px] border-r-0 border-orange-600 bg-black p-[5px] text-xs leading-none hover:text-orange-600 sm:top-[150px]"
+          class="absolute right-[0px] top-[0] z-[20] h-[38px] w-[100px] -translate-y-1/2 transform rounded-full opacity-90 rounded-r-none border-[2px] border-r-0 border-orange-900 bg-slate-800  p-[5px] text-xs leading-none hover:text-orange-600 sm:top-[150px]"
           (click)="slideNext()"
         >
           {{ nextFromMenu() | translate }}
         </button>
         <button
-          class="absolute left-[0px] top-[0] z-10 h-[38px] w-[100px] -translate-y-1/2 transform rounded-md rounded-l-none border-[2px] border-l-0 border-orange-600 bg-black p-[5px] text-xs leading-none hover:text-orange-600 sm:top-[150px]"
+          class="absolute left-[0px] top-[0] z-10 h-[38px] w-[100px] -translate-y-1/2 transform rounded-full opacity-90 rounded-l-none border-[2px] border-l-0 border-orange-900 bg-slate-800 p-[5px] text-xs leading-none hover:text-orange-600 sm:top-[150px]"
           (click)="slidePrev()"
         >
           {{ prevFromMenu() | translate }}
