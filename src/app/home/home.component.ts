@@ -63,7 +63,7 @@ export class HomeComponent implements OnInit, AfterViewInit {
       'french-fries'
     ) as HTMLDivElement;
 
-    for (let i = 0; i < window.innerWidth/ 120; i++) {
+    for (let i = 0; i < window.innerWidth/ 90; i++) {
       doc.appendChild(this.appendFrenchFriensToElement());
     }
   }
@@ -84,7 +84,7 @@ export class HomeComponent implements OnInit, AfterViewInit {
         doc.classList.add("grayscale-[80%]")
     doc.style.position = 'absolute';
     doc.style.right = this.generateRandomNums(-2, 105, '%');
-    doc.style.height = this.generateRandomNums(60, 150, '%');
+    doc.style.height = this.generateRandomNums(35, 150, '%');
     doc.style.transform = 'rotate(' + this.generateRandomNums(0, 360, 'deg)');
     doc.style.animationDelay = this.generateRandomNums(3, 100, 's');
     doc.style.animation =

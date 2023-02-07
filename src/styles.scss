@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 @import url('https://fonts.googleapis.com/css2?family=Rubik+Distressed&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Diplomata+SC&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fascinate+Inline&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Rubik+Dirt&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Stalinist+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Underdog&display=swap');
@@ -16,7 +16,7 @@ body {
 }
 
 .titles {
-  font-family: 'Diplomata SC', cursive;
+  font-family: 'Fascinate Inline', cursive;
 }
 
 .food_titles {
@@ -43,6 +43,7 @@ body {
   scrollbar-color: opacity 0.0;
   scrollbar-width: thin;
   -webkit-tap-highlight-color: transparent;
+  outline-color: transparent;
 }
 
 .image-bg {

@@ -8,6 +8,7 @@
   <div
     class="contacts relative mx-auto w-fit text-center text-[14px] tracking-[2px] md:text-lg"
   >
+
     <h1>{{ "FOOTER.ADDRESS" | translate }}</h1>
     <p
       class="mt-1 mb-1 cursor-pointer text-orange-600 duration-300 hover:scale-125"
@@ -20,25 +21,47 @@
     <p>{{ "FOOTER.WORK_II" | translate }}</p>
   </div>
   <div
-    class="relative bottom-2 mt-5 text-center text-[15px] lg:absolute lg:right-20 lg:mt-0"
+    class="relative bottom-2 mt-5 text-center text-[13px] lg:absolute lg:right-20 lg:mt-0"
   >
-  <img src="./assets/icons/donkey.png" class="w-[100px] mx-auto grayscale-[60%]">
+  <div class="flex">
+    <img
+      src="./assets/icons/donkey.png"
+      class="ml-auto mr-5 w-[100px] grayscale-[60%]"
+    />
+    <img
+    src="./assets/pictures/cartoon-burger.png"
+    class="mr-auto w-[60px] h-[60px] my-auto "
+  />
+  </div>
+
     <h1>{{ "FOOTER.RIGHTS_RESERVED" | translate }}</h1>
   </div>
   <div
-    class="relative bottom-2 mt-1 flex flex-col gap-4 text-center text-[20px] md:text-[22px] lg:absolute lg:left-20"
+    class="relative bottom-1 mt-1 flex flex-col gap-4 text-center text-[20px] md:text-[22px] lg:absolute lg:left-2 xl:left-10"
   >
+  <div class="flex justify-center  flex-col">
+    <h1 class="titles text-[25px] sm:tracking-[9px]">
+      Crazy Donkeys
+    </h1>
+    <h1
+      class="titles mx-auto mt-2 whitespace-nowrap border-b-[1px] border-white text-[20px] tracking-[10px] sm:mt-4"
+    >
+      Est. 2022
+    </h1>
+  </div>
     <button
-      class="font-three cursor-pointer duration-300 hover:scale-125 hover:text-orange-600"
+      class="font-three flex cursor-pointer justify-center duration-300 hover:scale-125 hover:text-orange-600"
       (click)="navigateTermsOfUse()"
     >
-      {{ "TERMS.sentence0" | translate }}
+      {{ "TERMS.sentence0" | translate
+      }}<img src="./assets/icons/terms&conditions.png" class="mx-2 w-[30px]" />
     </button>
     <button
-      class="font-three flex justify-center cursor-pointer duration-300 hover:scale-125 hover:text-orange-600"
+      class="font-three flex cursor-pointer justify-center duration-300 hover:scale-125 hover:text-orange-600"
       (click)="navigatePrivacyPolicy()"
     >
-      {{ "COOKIE_POLICY.sentence0" | translate }}<img src="./assets/icons/privacyPolicy.png" class="bg-orange-600 border-[1px] border-black rounded-full p-1 mx-2 w-[30px] sm:w-[40px]">
+      {{ "COOKIE_POLICY.sentence0" | translate
+      }}<img src="./assets/icons/privacyPolicy.png" class="mx-2 w-[30px]" />
     </button>
   </div>
 </div>
