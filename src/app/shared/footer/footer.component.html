@@ -1,5 +1,5 @@
 <div
-  class="relative flex h-auto w-full flex-col justify-center bg-stone-800 p-5"
+  class="relative flex h-auto w-full flex-col justify-center bg-stone-700 p-5"
 >
   <img
     src="./assets/pictures/tomato.png"
@@ -28,17 +28,17 @@
   <div
     class="relative bottom-2 mt-1 flex flex-col gap-4 text-center text-[20px] md:text-[22px] lg:absolute lg:left-20"
   >
-    <h1
+    <button
       class="font-three cursor-pointer duration-300 hover:scale-125 hover:text-orange-600"
       (click)="navigateTermsOfUse()"
     >
       {{ "TERMS.sentence0" | translate }}
-    </h1>
-    <h1
-      class="font-three cursor-pointer duration-300 hover:scale-125 hover:text-orange-600"
+    </button>
+    <button
+      class="font-three flex justify-center cursor-pointer duration-300 hover:scale-125 hover:text-orange-600"
       (click)="navigatePrivacyPolicy()"
     >
-      {{ "COOKIE_POLICY.sentence0" | translate }}
-    </h1>
+      {{ "COOKIE_POLICY.sentence0" | translate }}<img src="./assets/icons/privacyPolicy.png" class="bg-orange-600 border-[1px] border-black rounded-full p-1 mx-2 w-[30px] sm:w-[40px]">
+    </button>
   </div>
 </div>
