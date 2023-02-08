@@ -15,13 +15,25 @@ export const Full_ROUTES: Routes = [
   {
     path: 'terms-of-use',
     loadChildren: () =>
-      import('../../terms-of-use/terms-of-use.module').then((m) => m.TermsOfUseModule),
+      import('../../terms-of-use/terms-of-use.module').then(
+        (m) => m.TermsOfUseModule
+      ),
     pathMatch: 'full',
   },
   {
     path: 'privacy-policy',
     loadChildren: () =>
-      import('../../privacy-policy/privacy-policy.module').then((m) => m.PrivacyPolicyModule),
+      import('../../privacy-policy/privacy-policy.module').then(
+        (m) => m.PrivacyPolicyModule
+      ),
+    pathMatch: 'full',
+  },
+  {
+    path: 'cookie-policy',
+    loadChildren: () =>
+      import('../../cookie-policy/cookie-policy.module').then(
+        (m) => m.CookiePolicyModule
+      ),
     pathMatch: 'full',
   },
 ];

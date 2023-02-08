@@ -5,9 +5,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Fascinate+Inline&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Rubik+Dirt&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Stalinist+One&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Underdog&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Rubik+Moonrocks&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Serif+Pro:ital,wght@1,600&display=swap');
 
 html,
 body {
@@ -19,25 +19,17 @@ body {
   font-family: 'Fascinate Inline', cursive;
 }
 
-.food_titles {
-  font-family: 'Rubik Dirt', cursive;
-}
-
-.font-one {
-  font-family: 'Stalinist One', cursive;
-}
-
-.font-two {
-  font-family: 'Underdog', cursive;
-}
-
 .font-three {
-  font-family: 'Amatic SC', cursive;
+  font-family: 'Rubik Distressed', cursive;
+}
+
+.font-four {
+  font-family: 'Source Serif Pro', serif;
 }
 
 
 * {
-  font-family: 'Rubik Distressed', cursive;
+  font-family: 'Source Serif Pro', serif;
   cursor: url('../src/assets/pictures/cursor.png'), auto;	
   scrollbar-color: rgba(0, 0, 0, 0.0) rgba(0, 0, 0, 0.0);
   scrollbar-color: opacity 0.0;

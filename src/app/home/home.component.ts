@@ -8,7 +8,6 @@ import {
 } from '@angular/animations';
 import {
   burgers,
-  defaultDescClass,
   defaultTitleClass,
   portions,
   wraps,
@@ -47,7 +46,6 @@ export class HomeComponent implements OnInit, AfterViewInit {
   percentage: number = 0;
   interval!: NodeJS.Timer;
   titleClass: string = defaultTitleClass;
-  descriptionClass: string = defaultDescClass;
   burgers: Products[] = burgers;
   wraps: Products[] = wraps;
   portions: Products[] = portions;

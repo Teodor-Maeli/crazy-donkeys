@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { CookieService } from 'ngx-cookie-service';
 import { elementAt } from 'rxjs';
 
@@ -8,27 +9,32 @@ import { elementAt } from 'rxjs';
   styleUrls: ['./full-layout.component.scss'],
 })
 export class FullLayoutComponent implements OnInit {
-  cookieAccepted:boolean = false;
-  constructor(private cookieService: CookieService) {}
+  cookieAccepted: boolean = false;
+  constructor(private cookieService: CookieService, private router: Router) {}
 
   ngOnInit(): void {
-    if (this.cookieService.get('cookieAccepted') === 'true') {
+    if (this.cookieService.get('policyAccepted') === 'true') {
       this.cookieAccepted = true;
     }
+    console.log(window.location);
   }
 
-  acceptCookies() {
-    const now:Date = new Date();
-    const expirationDate:Date = new Date(
+  acceptCookies(): void {
+    const now: Date = new Date();
+    const expirationDate: Date = new Date(
       now.getFullYear(),
-      now.getMonth() + 5,
-      now.getDate()
+      now.getMonth() ,
+      now.getDate() + 1
     );
     this.cookieAccepted = true;
-    this.cookieService.set('cookieAccepted', 'true', expirationDate);
+    this.cookieService.set('policyAccepted', 'true', expirationDate);
   }
 
-  privacyReadMore() {
-    const element:HTMLParagraphElement = document.getElementById("privacy_info") as HTMLParagraphElement;
+  privacyReadMore(): void {
+    this.router.navigate(['/cookie-policy']);
+  }
+
+  isReadingPrivacyPolicy(): boolean {
+    return window.location.toString().includes('cookie-policy');
   }
 }

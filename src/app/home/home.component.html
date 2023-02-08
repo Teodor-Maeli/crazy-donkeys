@@ -1,4 +1,4 @@
-<div class="image-bg h-full w-full bg-cover bg-bottom overflow-hidden">
+<div class="image-bg h-full w-full overflow-hidden bg-cover bg-bottom">
   <div
     class="gradient flex h-full w-full flex-col items-center justify-center bg-black bg-opacity-60 lg:justify-start"
   >
@@ -14,13 +14,13 @@
           class="absolute z-[10] h-[2px] w-full bg-gradient-to-l from-black via-orange-600 to-slate-600"
         ></div>
         <button
-          class="absolute right-[0px] top-[0] z-[20] h-[38px] w-[100px] -translate-y-1/2 transform rounded-full rounded-r-none border-[2px] border-r-0 border-orange-900 bg-slate-800 p-[5px] text-xs leading-none opacity-90 hover:text-orange-600 sm:top-[150px]"
+          class="absolute font-three right-[0px] top-[0] z-[20] h-[38px] w-[100px] -translate-y-1/2 transform rounded-full rounded-r-none border-[2px] border-r-0 border-orange-900 bg-slate-800 p-[5px] text-xs leading-none opacity-90 hover:text-orange-600 sm:top-[150px]"
           (click)="slideNext()"
         >
           {{ nextFromMenu() | translate }}
         </button>
         <button
-          class="absolute left-[0px] top-[0] z-10 h-[38px] w-[100px] -translate-y-1/2 transform rounded-full rounded-l-none border-[2px] border-l-0 border-orange-900 bg-slate-800 p-[5px] text-xs leading-none opacity-90 hover:text-orange-600 sm:top-[150px]"
+          class="absolute left-[0px] font-three top-[0] z-10 h-[38px] w-[100px] -translate-y-1/2 transform rounded-full rounded-l-none border-[2px] border-l-0 border-orange-900 bg-slate-800 p-[5px] text-xs leading-none opacity-90 hover:text-orange-600 sm:top-[150px]"
           (click)="slidePrev()"
         >
           {{ prevFromMenu() | translate }}
@@ -33,17 +33,7 @@
           <div class="h-full w-[100vw] bg-transparent lg:flex">
             <div
               class="relative h-[50%] w-[100vw] bg-[url('^./assets/pictures/no-bg-burger.png')] bg-cover bg-left bg-no-repeat sm:h-full lg:w-[50%]"
-            >
-              <div
-                class="absolute bottom-3 flex w-full animate-bounce justify-center lg:hidden"
-                (click)="scrollTo()"
-              >
-                <img
-                  src="./assets/icons/arrow.png"
-                  class="w-[50px] cursor-pointer"
-                />
-              </div>
-            </div>
+            ></div>
             <div
               id="info"
               class="my-y mx-1 overflow-y-scroll py-2 text-justify align-middle sm:h-full sm:text-left lg:w-[45%]"
@@ -53,17 +43,20 @@
                   class="flex h-full flex-col justify-start text-center sm:overflow-auto sm:text-left"
                 >
                   <h1
-                    class="food_titles my-3 text-center text-[20px] tracking-wider text-orange-600 sm:text-[30px]"
+                    class="font-four my-3 text-center text-[30px] tracking-wider text-orange-600 sm:text-[30px]"
                   >
                     {{ "BURGERS" | translate }} MID/XXL
                   </h1>
-                  <div *ngFor="let burger of burgers">
+                  <div *ngFor="let burger of burgers" class="my-2">
                     <h1 class="{{ titleClass }}">
                       {{ burger.title | translate }}
                     </h1>
-                    <p class="{{ descriptionClass }}">
+                    <p class=" text-[20px] font-four">
                       {{ burger.description | translate }}
                     </p>
+                    <div id="allergens" *ngFor="let allergen of burger.allergens">
+                      <img src="{{allergen}}">
+                    </div>
                   </div>
                 </div>
               </div>
@@ -71,26 +64,8 @@
           </div>
           <div class="h-full w-[100vw] bg-transparent lg:flex">
             <div
-              class="relative h-[50%] w-[100vw] bg-[url('^./assets/pictures/wrapz.png')] bg-cover bg-left bg-no-repeat sm:h-full lg:w-[50%]"
-            >
-              <div
-                class="absolute bottom-3 flex w-full animate-bounce justify-center lg:hidden"
-                (click)="scrollTo()"
-              >
-                <img
-                  src="./assets/icons/arrow.png"
-                  class="w-[50px] cursor-pointer"
-                />
-                <div
-                  id="tooltip-default"
-                  role="tooltip"
-                  class="tooltip invisible absolute z-10 inline-block rounded-lg bg-gray-900 px-3 py-2 text-sm font-medium text-white opacity-0 shadow-sm transition-opacity duration-300 dark:bg-gray-700"
-                >
-                  Tooltip content
-                  <div class="tooltip-arrow" data-popper-arrow></div>
-                </div>
-              </div>
-            </div>
+              class="relative h-[50%] w-[100vw] bg-[url('^./assets/pictures/wrapz.png')] bg-cover bg-center bg-no-repeat sm:h-full lg:w-[50%]"
+            ></div>
             <div
               id="info"
               class="my-y mx-1 overflow-y-scroll py-2 text-justify align-middle sm:h-full sm:text-left lg:w-[45%]"
@@ -100,15 +75,15 @@
                   class="flex flex-col justify-start text-center sm:text-left"
                 >
                   <h1
-                    class="food_titles my-3 text-center text-[20px] text-orange-600 sm:text-[30px]"
+                    class="font-four my-3 text-center text-[30px] tracking-wider text-orange-600 sm:text-[30px]"
                   >
                     {{ "WRAPS" | translate }} MID/XL
                   </h1>
-                  <div *ngFor="let wrap of wraps">
+                  <div *ngFor="let wrap of wraps" class="my-2">
                     <h1 class="{{ titleClass }}">
                       {{ wrap.title | translate }}
                     </h1>
-                    <p class="{{ descriptionClass }}">
+                    <p class=" text-[20px] font-four">
                       {{ wrap.description | translate }}
                     </p>
                   </div>
@@ -119,17 +94,7 @@
           <div class="h-full w-[100vw] bg-transparent lg:flex">
             <div
               class="relative h-[50%] w-[100vw] bg-[url('^./assets/pictures/gyros.png')] bg-cover bg-no-repeat sm:h-full sm:bg-left md:bg-cover lg:w-[50%]"
-            >
-              <div
-                class="absolute bottom-3 flex w-full animate-bounce justify-center lg:hidden"
-                (click)="scrollTo()"
-              >
-                <img
-                  src="./assets/icons/arrow.png"
-                  class="w-[50px] cursor-pointer"
-                />
-              </div>
-            </div>
+            ></div>
             <div
               id="info"
               class="my-y mx-1 overflow-y-scroll py-2 text-justify align-middle sm:h-full sm:text-left lg:w-[45%]"
@@ -139,15 +104,15 @@
                   class="flex flex-col justify-start text-center sm:text-left"
                 >
                   <h1
-                    class="food_titles my-3 text-center text-[20px] text-orange-600 sm:text-[30px]"
+                    class="font-four my-3 text-center text-[30px] tracking-wider text-orange-600 sm:text-[30px]"
                   >
                     {{ "PORTIONS" | translate }}
                   </h1>
-                  <div *ngFor="let portion of portions">
+                  <div *ngFor="let portion of portions" class="my-2">
                     <h1 class="{{ titleClass }} leading-none sm:text-[26px]">
                       {{ portion.title | translate }}
                     </h1>
-                    <p class="{{ descriptionClass }}">
+                    <p class=" text-[20px] font-four">
                       {{ portion.description | translate }}
                     </p>
                   </div>
@@ -164,9 +129,10 @@
       <div
         class="z-50 h-[3px] w-full bg-gradient-to-l from-black via-orange-600 to-slate-600"
       ></div>
-  
 
-      <div class="mx-auto w-fit py-auto"><app-social-icons></app-social-icons></div>
+      <div class="py-auto mx-auto w-fit">
+        <app-social-icons></app-social-icons>
+      </div>
     </div>
   </div>
 </div>

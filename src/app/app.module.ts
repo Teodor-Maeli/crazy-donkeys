@@ -10,6 +10,7 @@ import { HttpLoaderFactory } from './shared/functions/functions';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { PrivacyPolicyComponent } from './privacy-policy/privacy-policy.component';
+import { CookiePolicyComponent } from './cookie-policy/cookie-policy.component';
 
 @NgModule({
   declarations: [AppComponent, FullLayoutComponent],
