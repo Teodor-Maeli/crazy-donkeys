@@ -20,7 +20,7 @@
     <p class="font-four">{{ "FOOTER.WORK_II" | translate }}</p>
   </div>
   <div
-    class="relative bottom-2 mt-5 text-center text-[13px] lg:absolute lg:right-20 lg:mt-0"
+    class="relative bottom-2 mt-5 text-center text-[13px] lg:absolute lg:right-3 lg:mt-0"
   >
     <div class="flex flex-col xl:flex-row">
       <div class="flex flex-col justify-center">
@@ -43,19 +43,19 @@
       </div>
     </div>
 
-    <h1 class="font-four text-center text-gray-300 lg:text-right">
+    <h1 class="font-four text-center w-fit mx-auto xl:w-full text-gray-300 lg:text-right">
       {{ "FOOTER.RIGHTS_RESERVED" | translate }}
     </h1>
   </div>
   <div
-    class="relative bottom-1 mt-1 flex flex-col gap-4 text-center text-[20px] md:text-[22px] lg:absolute lg:left-2 xl:left-10"
+    class="relative bottom-1 mt-1 flex flex-col gap-4 text-center text-[20px] md:text-[22px] lg:absolute lg:left-2 xl:left-1"
   >
     <button
       class="font-four flex cursor-pointer justify-center text-[18px] duration-300 hover:scale-125 hover:text-orange-600"
-      (click)="navigateTermsOfUse()"
+      (click)="navigateCookiePolicy()"
     >
-      {{ "TERMS.sentence0" | translate
-      }}<img src="./assets/icons/terms&conditions.png" class="mx-2 w-[30px]" />
+      {{ "COOKIE_POLICY.TITLE" | translate
+      }}<img src="./assets/icons/cookie.png" class="mx-2 w-[35px]" />
     </button>
     <button
       class="font-four flex cursor-pointer justify-center text-[18px] duration-300 hover:scale-125 hover:text-orange-600"

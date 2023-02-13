@@ -5,12 +5,13 @@
       <div
         class="my-auto w-[95%] sm:w-[90%] bg-slate-800 overflow-hidden bg-opacity-50 px-2 pt-14 sm:pt-32 pb-10 text-center sm:text-left"
       >
-      <h1 class="font-four mb-2 text-[30px] text-orange-600 ">{{"PRIVACY_POLICY.sentence0" | translate}}</h1>
+      <h1 class="font-four mb-2 text-[30px] text-orange-600 ">{{"COOKIE_POLICY.sentence1" | translate}}</h1>
       <div
       class="h-[1px] w-full bg-gradient-to-r from-black via-orange-600 to-slate-600"
     ></div>
       <div class="h-[95%] overflow-auto mt-2">
-        <p class="font-four text-[23px]" *ngFor="let sentence of cookiePolicy">{{ sentence | translate }}</p>
+        <p class="font-four text-[23px]" *ngFor="let sentence of cookiePolicy" id={{sentence.substr(14,sentence.length)}}
+        >{{ sentence | translate }}</p>
       </div>
       </div>
     </div>
