@@ -32,9 +32,11 @@
         >
           <div class="h-full w-[100vw] bg-transparent lg:flex">
             <div
+            id="slider-img"
               class="relative h-[50%] w-[100vw] bg-[url('^./assets/pictures/no-bg-burger.png')] bg-cover bg-left bg-no-repeat sm:h-full lg:w-[50%]"
             ></div>
             <div
+            #info
               id="info"
               class="my-y mx-1 overflow-y-scroll py-2 text-justify align-middle sm:h-full sm:text-left lg:w-[45%]"
             >
@@ -57,6 +59,9 @@
                     <div id="allergens" *ngFor="let allergen of burger.allergens">
                       <img src="{{allergen}}">
                     </div>
+                    <div
+                    class="z-50 h-[1px] w-full bg-gradient-to-r from-black via-white to-black"
+                  ></div>
                   </div>
                 </div>
               </div>
@@ -67,6 +72,7 @@
               class="relative h-[50%] w-[100vw] bg-[url('^./assets/pictures/wrapz.png')] bg-cover bg-center bg-no-repeat sm:h-full lg:w-[50%]"
             ></div>
             <div
+            #info
               id="info"
               class="my-y mx-1 overflow-y-scroll py-2 text-justify align-middle sm:h-full sm:text-left lg:w-[45%]"
             >
@@ -86,6 +92,9 @@
                     <p class=" text-[20px] font-four">
                       {{ wrap.description | translate }}
                     </p>
+                    <div
+                    class="z-50 h-[1px] w-full bg-gradient-to-r from-black via-white to-black"
+                  ></div>
                   </div>
                 </div>
               </div>
@@ -96,6 +105,7 @@
               class="relative h-[50%] w-[100vw] bg-[url('^./assets/pictures/gyros.png')] bg-cover bg-no-repeat sm:h-full sm:bg-left md:bg-cover lg:w-[50%]"
             ></div>
             <div
+            #info
               id="info"
               class="my-y mx-1 overflow-y-scroll py-2 text-justify align-middle sm:h-full sm:text-left lg:w-[45%]"
             >
@@ -115,6 +125,9 @@
                     <p class=" text-[20px] font-four">
                       {{ portion.description | translate }}
                     </p>
+                    <div
+                    class="z-50 h-[1px] w-full bg-gradient-to-r from-black via-white to-black"
+                  ></div>
                   </div>
                 </div>
               </div>
@@ -130,8 +143,21 @@
         class="z-50 h-[3px] w-full bg-gradient-to-l from-black via-orange-600 to-slate-600"
       ></div>
 
-      <div class="py-auto mx-auto w-fit">
-        <app-social-icons></app-social-icons>
+      <div class="h-[150px] relative w-full">
+        <div class="absolute h-full w-[400%] sm:w-[200%] md:w-[100%]  p-1 flex gap-2">
+         <div class="h-full w-[25.0%] bg-white bg-opacity-60 rounded-md">
+
+         </div>
+         <div class="h-full w-[25.0%] bg-white bg-opacity-60 rounded-md">
+
+         </div>
+         <div class="h-full w-[25.0%] bg-white bg-opacity-60 rounded-md">
+
+         </div>
+         <div class="h-full w-[25.0%] bg-white bg-opacity-60 rounded-md">
+
+         </div>
+        </div>      
       </div>
     </div>
   </div>

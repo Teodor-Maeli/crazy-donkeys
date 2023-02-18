@@ -61,7 +61,7 @@ export class HomeComponent implements OnInit, AfterViewInit {
       'french-fries'
     ) as HTMLDivElement;
 
-    for (let i = 0; i < window.innerWidth/ 90; i++) {
+    for (let i = 0; i < window.innerWidth / 90; i++) {
       doc.appendChild(this.appendFrenchFriensToElement());
     }
   }
@@ -79,7 +79,7 @@ export class HomeComponent implements OnInit, AfterViewInit {
         : randomImgCode === '31'
         ? this.hotdogPNG
         : this.burgerPNG;
-        doc.classList.add("grayscale-[80%]")
+    doc.classList.add('grayscale-[80%]');
     doc.style.position = 'absolute';
     doc.style.right = this.generateRandomNums(-2, 105, '%');
     doc.style.height = this.generateRandomNums(35, 150, '%');
@@ -138,7 +138,9 @@ export class HomeComponent implements OnInit, AfterViewInit {
 
   scrollTo(): void {
     const slider = document.getElementById('info') as HTMLDivElement;
-    slider.scrollIntoView({ behavior: 'smooth' });
+
+      slider.scrollTop = slider.scrollHeight - slider.clientHeight
+    
   }
 
   generateRandomNums(min: number, max: number, prefix: string): string {

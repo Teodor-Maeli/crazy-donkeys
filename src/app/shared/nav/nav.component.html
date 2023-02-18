@@ -48,7 +48,7 @@
 
   <div
     id="lang-changer"
-    class="absolute top-1 right-3 z-[99999] h-10 w-10 sm:top-5 sm:right-4"
+    class="fixed top-1 right-3 z-[99999] h-10 w-10 sm:top-5 sm:right-4"
     (click)="openLanguageChanger()"
   >
     <img
@@ -59,7 +59,7 @@
     />
   </div>
 </div>
-<ul id="langs" class="absolute right-11 top-16 z-[99999] hidden text-center">
+<ul id="langs" class="fixed right-11 top-16 z-[99999] hidden text-center">
   <li
     (click)="onClickChangeLangFlag('bg')"
     class="mt-5 w-[150px] cursor-pointer bg-orange-500 tracking-[1px] text-black duration-300 hover:scale-125 hover:border-[1px] hover:bg-black hover:text-white"

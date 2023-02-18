@@ -48,28 +48,28 @@
     </h1>
   </div>
   <div
-    class="relative bottom-1 mt-1 flex flex-col gap-4 text-center text-[20px] md:text-[22px] lg:absolute lg:left-2 xl:left-1"
+    class="relative bottom-1 mt-1 flex flex-col gap-4 text-[13px] text-center lg:absolute lg:left-5"
   >
     <button
-      class="font-four flex cursor-pointer justify-center text-[18px] duration-300 hover:scale-125 hover:text-orange-600"
+      class="font-four flex cursor-pointer justify-center duration-300 hover:scale-125 hover:text-orange-600"
       (click)="navigateCookiePolicy()"
     >
       {{ "COOKIE_POLICY.TITLE" | translate
-      }}<img src="./assets/icons/cookie.png" class="mx-2 w-[35px]" />
+      }}<img src="./assets/icons/cookie.png" class="mx-2 w-[30px]" />
     </button>
     <button
-      class="font-four flex cursor-pointer justify-center text-[18px] duration-300 hover:scale-125 hover:text-orange-600"
+      class="font-four flex cursor-pointer justify-center duration-300 hover:scale-125 hover:text-orange-600"
       (click)="navigateTermsOfUse()"
     >
       {{ "TERMS.sentence0" | translate
-      }}<img src="./assets/icons/terms&conditions.png" class="mx-2 w-[30px]" />
+      }}<img src="./assets/icons/terms&conditions.png" class="mx-2 w-[25px]" />
     </button>
     <button
-      class="font-four flex cursor-pointer justify-center text-[18px] duration-300 hover:scale-125 hover:text-orange-600"
+      class="font-four flex cursor-pointer justify-center duration-300 hover:scale-125 hover:text-orange-600"
       (click)="navigatePrivacyPolicy()"
     >
-      {{ "COOKIE_POLICY.sentence0" | translate
-      }}<img src="./assets/icons/privacyPolicy.png" class="mx-2 w-[30px]" />
+      {{ "PRIVACY_POLICY.sentence0" | translate
+      }}<img src="./assets/icons/privacyPolicy.png" class="mx-2 w-[25px]" />
     </button>
   </div>
 </div>
