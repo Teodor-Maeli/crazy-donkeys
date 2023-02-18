@@ -1,4 +1,7 @@
 {
+  "OTHERS":{
+    "BESTSELLERS":"BESTSELLERS"
+  },
   "NAV": {
     "MENU": {
       "HOME": "MENU",
@@ -198,5 +201,12 @@
      "sentence63":"Important!At the moment, the administrator of this website is not involved in the processing of any personal data.",
      "sentence64":"This privacy policy has been prepared with the help of https://obshti-uslovia.com"
    },
-  "PRICES_DESC": "All prices are in BGN"
+  "PRICES_DESC": "All prices are in BGN",
+  "HOT_ITEMS": {
+    "PITA_FLAMBE":"PITA FLAMBE",
+    "GYROS_WRAP":"GYROS WRAP",
+    "DOUBLE_DONKEY_BURGER":"XXL CRAZY DONKEY BURGER",
+    "HOT_DOG":"HOT DOG",
+    "POTATO_ROSTI":"POTATO RÖSTI"
+  }
 }

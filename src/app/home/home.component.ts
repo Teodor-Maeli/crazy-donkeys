@@ -9,6 +9,7 @@ import {
 import {
   burgers,
   defaultTitleClass,
+  hotProducts,
   portions,
   wraps,
 } from '../products/products';
@@ -54,6 +55,7 @@ export class HomeComponent implements OnInit, AfterViewInit {
   burgerPNG: string = './assets/pictures/cartoon-burger.png';
   hotdogPNG: string = './assets/pictures/hotdog.png';
   chickenPNG: string = './assets/pictures/fried-chicken.png';
+  hotProducts: Products[] = hotProducts
   constructor() {}
 
   ngOnInit(): void {
@@ -134,13 +136,6 @@ export class HomeComponent implements OnInit, AfterViewInit {
       : this.percentage == 33.33
       ? 'BURGERS'
       : 'WRAPS';
-  }
-
-  scrollTo(): void {
-    const slider = document.getElementById('info') as HTMLDivElement;
-
-      slider.scrollTop = slider.scrollHeight - slider.clientHeight
-    
   }
 
   generateRandomNums(min: number, max: number, prefix: string): string {

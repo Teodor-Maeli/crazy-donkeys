@@ -16,7 +16,6 @@ export class FullLayoutComponent implements OnInit {
     if (this.cookieService.get('policyAccepted') === 'true') {
       this.cookieAccepted = true;
     }
-    console.log(window.location);
   }
 
   acceptCookies(): void {
