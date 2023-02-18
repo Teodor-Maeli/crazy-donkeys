@@ -65,35 +65,35 @@ export const hotProducts: Products[] = [
     description: 'HOT_ITEMS.POTATO_BALLS_DESC',
     allergens: [''],
     img: './assets/pictures/pita.png',
-    stars: [1,1,1,1,1]
+    stars: Array(5).fill(0)
   },
   {
     title: 'HOT_ITEMS.GYROS_WRAP',
     description: 'HOT_ITEMS.GYROS_WRAP_DESC',
     allergens: [''],
     img: './assets/pictures/gyrosWrap.png',
-    stars: [1,1,1,1]
+    stars: Array(4).fill(0)
   },
   {
     title: 'HOT_ITEMS.HOT_DOG',
     description: 'HOT_ITEMS.HOT_DOG_DESC',
     allergens: [''],
     img: './assets/pictures/hot-dog.png',
-    stars: [1,1,1,1]
+    stars: Array(4).fill(0)
   },
   {
     title: 'HOT_ITEMS.DOUBLE_DONKEY_BURGER',
     description: 'HOT_ITEMS.DOUBLE_DONKEY_BURGER_DESC',
     allergens: [''],
     img: '',
-    stars: [1,1,1,1,1,1]
+    stars: Array(6).fill(0)
   },
   {
     title: 'HOT_ITEMS.POTATO_ROSTI',
     description: 'HOT_ITEMS.POTATO_ROSTI_DESC',
     allergens: [''],
     img: '',
-    stars: [1,1,1,1]
+    stars: Array(4).fill(0)
   },
 ];
 

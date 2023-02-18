@@ -44,10 +44,11 @@
                   class="flex h-full flex-col justify-start text-center sm:overflow-auto sm:text-left"
                 >
                   <h1
-                    class="font-four titles my-3 text-center text-[30px] tracking-wider text-orange-600 sm:text-[30px]"
+                    class="font-four titles my-3 text-center text-[30px] tracking-wider text-white sm:text-[30px]"
                   >
                     {{ "BURGERS" | translate }} MID/XXL
                   </h1>
+                  
                   <div *ngFor="let burger of burgers" class="my-2">
                     <h1 class="{{ titleClass }}">
                       {{ burger.title | translate }}
@@ -82,7 +83,7 @@
                   class="flex flex-col justify-start text-center sm:text-left"
                 >
                   <h1
-                    class="font-four my-3 text-center text-[30px] tracking-wider text-orange-600 sm:text-[30px]"
+                    class="font-four my-3 text-center text-[30px] tracking-wider text-white sm:text-[30px]"
                   >
                     {{ "WRAPS" | translate }} MID/XL
                   </h1>
@@ -114,7 +115,7 @@
                   class="flex flex-col justify-start text-center sm:text-left"
                 >
                   <h1
-                    class="font-four my-3 text-center text-[30px] tracking-wider text-orange-600 sm:text-[30px]"
+                    class="font-four my-3 text-center text-[30px] tracking-wider text-white sm:text-[30px]"
                   >
                     {{ "PORTIONS" | translate }}
                   </h1>
@@ -140,7 +141,7 @@
       class="relative mt-auto mb-2 flex h-fit w-full flex-col justify-start text-center text-white sm:mt-0"
     >
       <div
-        class="absolute top-[-100%] bottom-4 left-4 right-0 z-[999] m-auto flex h-[30px] w-[120px] rotate-6 items-center justify-center rounded border border-slate-900 bg-orange-600 bg-opacity-80 text-black md:h-[40px] md:w-[200px]"
+        class="absolute top-[-100%] bottom-4 left-4 right-0 z-[999] m-auto flex h-[30px] w-[120px] rotate-6 items-center justify-center rounded border border-slate-900 bg-orange-600 grayscale-[30%] bg-opacity-80 text-black md:h-[40px] md:w-[200px]"
       >
         <h1 class="align-middle">{{ "OTHERS.BESTSELLERS" | translate }}</h1>
       </div>
@@ -150,7 +151,7 @@
       <div
         class="z-50 h-[3px] w-full bg-gradient-to-l from-black via-orange-600 to-slate-600"
       ></div>
-      <div class="relative h-[170px] w-full overflow-x-auto">
+      <div class="relative h-[170px] w-full overflow-x-auto overflow-y-hidden">
         <div
           class="absolute flex h-full w-[500%] gap-2 p-1 pt-2 sm:w-[250%] md:w-[166.5%] lg:w-[100%]"
         >
@@ -166,7 +167,6 @@
             </div>
             <div></div>
             <div class="mt-3 flex h-full w-full flex-col px-5">
-              <h1>{{ product.title | translate }}</h1>
               <div class="flex justify-center">
                 <svg
                   *ngFor="let productStar of product.stars"
@@ -182,6 +182,7 @@
                   ></path>
                 </svg>
               </div>
+              <h1>{{ product.title | translate }}</h1>
             </div>
           </div>
         </div>
