@@ -4,15 +4,15 @@
   },
   "NAV": {
     "MENU": {
-      "HOME": "MENU",
+      "HOME": "Home",
       "FOOD_MENU": "Menu",
       "CONTACTS": "Find us"
     }
   },
   "FOOTER": {
-    "ADDRESS": "Address:",
+    "ADDRESS": "Contact us",
     "STREET": "Lajos Kosut str. 19 , 9003 Varna",
-    "WORK_I": "Monday - Friday : 9:30 - 20:30",
+    "WORK_I": "Monday - Saturday : 9:30 - 19:30",
     "WORK_II": "Saturday : 10:00 - 20:00 ",
     "RIGHTS_RESERVED": "© 2023 All rights reserved"
   },
@@ -86,7 +86,7 @@
   "BACON_CHEESE_WRAP_TITLE": "Bacon and cheese - 250g 5.30lv. / 350g 6.50lv.",
   "VEGAN_WRAP_TITLE": "Vegan - XL 350g 5.99lv.",
   "TERMS": {
-    "sentence0": "Terms and Conditions",
+    "sentence0": "Terms of service",
     "sentence1": "These terms and conditions govern the terms of use of www.crazy-donkeys.eu, hereinafter for short the \"website\".",
     "sentence2": "The website is operated by \"Mesarnica Cemera Ltd\" with the EIC 204173838, hereinafter for short \"Operator\".",
     "sentence3": "If necessary, you can contact us using the following contacts: Email: CrazyDonkeysFoods@gmail.com Phone: +359 884 917 666",

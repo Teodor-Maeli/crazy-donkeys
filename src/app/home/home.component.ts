@@ -63,9 +63,9 @@ export class HomeComponent implements OnInit, AfterViewInit {
       'french-fries'
     ) as HTMLDivElement;
 
-    for (let i = 0; i < window.innerWidth / 90; i++) {
-      doc.appendChild(this.appendFrenchFriensToElement());
-    }
+    // for (let i = 0; i < window.innerWidth / 90; i++) {
+    //   doc.appendChild(this.appendFrenchFriensToElement());
+    // }
   }
 
   ngAfterViewInit(): void {

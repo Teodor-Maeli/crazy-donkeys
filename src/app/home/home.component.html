@@ -2,32 +2,32 @@
   <div
     class="gradient flex h-full w-full flex-col items-center justify-center bg-black bg-opacity-60 lg:justify-start"
   >
-    <div
-      class="relative flex h-[150px] w-full justify-center overflow-hidden"
-      id="french-fries"
-    ></div>
+  <div
+  class=" flex h-[150px] bg-[#222831] w-full justify-center overflow-hidden"
+  id="french-fries"
+></div>
     <div
       class="h-full w-full text-[13px] sm:text-[15px] md:text-[16px] lg:text-[18.5px]"
     >
       <div class="relative h-full w-full">
         <div
-          class="absolute z-[10] h-[2px] w-full bg-gradient-to-l from-black via-orange-600 to-slate-600"
+          class="absolute z-[10] h-[2px] w-full bg-gradient-to-l from-black via-white to-slate-600"
         ></div>
         <button
-          class="font-three absolute right-[0px] top-[0] z-[20] h-[38px] w-[100px] -translate-y-1/2 transform rounded-full rounded-r-none border-[2px] border-r-0 border-orange-900 bg-slate-800 p-[5px] text-xs leading-none opacity-90 hover:text-orange-600 sm:top-[150px]"
+          class="font-three absolute right-[0px] top-[0] z-[20] h-[38px] w-[100px] -translate-y-1/2 transform rounded-full rounded-r-none border-[2px] border-r-0 border-white bg-black p-[5px] text-xs leading-none opacity-90 hover:text-yellow-600 sm:top-[150px]"
           (click)="slideNext()"
         >
           {{ nextFromMenu() | translate }}
         </button>
         <button
-          class="font-three absolute left-[0px] top-[0] z-10 h-[38px] w-[100px] -translate-y-1/2 transform rounded-full rounded-l-none border-[2px] border-l-0 border-orange-900 bg-slate-800 p-[5px] text-xs leading-none opacity-90 hover:text-orange-600 sm:top-[150px]"
+          class="font-three absolute left-[0px] top-[0] z-10 h-[38px] w-[100px] -translate-y-1/2 transform rounded-full rounded-l-none border-[2px] border-l-0 border-white bg-black p-[5px] text-xs leading-none opacity-90 hover:text-yellow-600 sm:top-[150px]"
           (click)="slidePrev()"
         >
           {{ prevFromMenu() | translate }}
         </button>
         <div
           id="slider"
-          class="absolute top-0 flex h-full w-[300%] overflow-y-auto bg-slate-800 bg-opacity-50 sm:h-full"
+          class="absolute top-0 flex h-full w-[300%] overflow-y-auto bg-yellow-600 bg-opacity-70 sm:h-full"
           [@slide]="this.getCurrentSlide()"
         >
           <div class="h-full w-[100vw] bg-transparent lg:flex">
@@ -44,7 +44,7 @@
                   class="flex h-full flex-col justify-start text-center sm:overflow-auto sm:text-left"
                 >
                   <h1
-                    class="font-four titles my-3 text-center text-[30px] tracking-wider text-white sm:text-[30px]"
+                    class="font-three titles my-3 text-center text-[30px] tracking-wider text-white sm:text-[30px]"
                   >
                     {{ "BURGERS" | translate }} MID/XXL
                   </h1>
@@ -83,7 +83,7 @@
                   class="flex flex-col justify-start text-center sm:text-left"
                 >
                   <h1
-                    class="font-four my-3 text-center text-[30px] tracking-wider text-white sm:text-[30px]"
+                    class="font-three my-3 text-center text-[30px] tracking-wider text-white sm:text-[30px]"
                   >
                     {{ "WRAPS" | translate }} MID/XL
                   </h1>
@@ -115,7 +115,7 @@
                   class="flex flex-col justify-start text-center sm:text-left"
                 >
                   <h1
-                    class="font-four my-3 text-center text-[30px] tracking-wider text-white sm:text-[30px]"
+                    class="font-three my-3 text-center text-[30px] tracking-wider text-white sm:text-[30px]"
                   >
                     {{ "PORTIONS" | translate }}
                   </h1>
@@ -138,30 +138,30 @@
       </div>
     </div>
     <div
-      class="relative mt-auto mb-2 flex h-fit w-full flex-col justify-start text-center text-white sm:mt-0"
+      class="relative mt-auto flex h-fit w-full flex-col justify-start text-center text-white sm:mt-0"
     >
       <div
-        class="absolute top-[-100%] bottom-4 left-4 right-0 z-[999] m-auto flex h-[30px] w-[120px] rotate-6 items-center justify-center rounded border border-slate-900 bg-orange-600 grayscale-[30%] bg-opacity-80 text-black md:h-[40px] md:w-[200px]"
+        class="absolute top-[-100%] bottom-4 left-4 right-0 z-[999] m-auto flex h-[30px] w-[150px] rotate-6 items-center justify-center rounded border border-slate-900 bg-orange-500 grayscale-[30%] bg-opacity-80 text-black md:h-[40px] md:w-[200px]"
       >
-        <h1 class="align-middle">{{ "OTHERS.BESTSELLERS" | translate }}</h1>
+        <h1 class="align-middle font-white tracking-widest font-three">{{ "OTHERS.BESTSELLERS" | translate }}</h1>
       </div>
       <div
-        class="absolute top-[-104%] bottom-0 left-0 right-0 z-[998] m-auto h-[30px] w-[120px] rotate-6 rounded bg-slate-900 bg-opacity-90 md:h-[40px] md:w-[200px]"
+        class="absolute top-[-104%] bottom-0 left-0 right-0 z-[998] m-auto h-[30px] w-[150px] rotate-6 rounded bg-slate-900 bg-opacity-90 md:h-[40px] md:w-[200px]"
       ></div>
       <div
-        class="z-50 h-[3px] w-full bg-gradient-to-l from-black via-orange-600 to-slate-600"
+        class="z-50 h-[3px] w-full bg-gradient-to-l from-black via-white to-slate-600"
       ></div>
       <div class="relative h-[170px] w-full overflow-x-auto overflow-y-hidden">
         <div
-          class="absolute flex h-full w-[500%] gap-2 p-1 pt-2 sm:w-[250%] md:w-[166.5%] lg:w-[100%]"
+          class="absolute bg-yellow-600 bg-opacity-40 flex h-full w-[450%] gap-4 p-2 sm:w-[200%] xl:w-[100%]"
         >
           <div
-            class="flex h-full w-[25.0%] rounded-md bg-slate-600 bg-opacity-50 duration-150 hover:bg-opacity-100"
+            class="flex h-full w-[25.0%] rounded-xl bg-[#222831] bg-opacity-80   duration-150  hover:bg-black hover:bg-opacity-60"
             *ngFor="let product of hotProducts"
           >
             <div class="flex h-full w-full items-center justify-center">
               <img
-                class="h-[93%] w-[93%] rounded-md bg-black bg-opacity-50"
+                class="h-full w-full rounded-md "
                 src="{{ product.img }}"
               />
             </div>
@@ -171,7 +171,7 @@
                 <svg
                   *ngFor="let productStar of product.stars"
                   aria-hidden="true"
-                  class="h-5 w-5 text-yellow-400"
+                  class="h-5 w-5 text-yellow-600"
                   fill="currentColor"
                   viewBox="0 0 20 20"
                   xmlns="http://www.w3.org/2000/svg"

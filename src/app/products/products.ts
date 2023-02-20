@@ -1,7 +1,7 @@
 import { Products } from './products.metadata';
 
 export const defaultTitleClass: string =
-  'font-four uppercase text-[23px] sm:text-[27px] text-orange-600 tracking-wider';
+  'font-three uppercase text-[23px] sm:text-[27px] text-black tracking-wider';
 
 export const burgers: Products[] = [
   {
@@ -65,21 +65,21 @@ export const hotProducts: Products[] = [
     description: 'HOT_ITEMS.POTATO_BALLS_DESC',
     allergens: [''],
     img: './assets/pictures/pita.png',
-    stars: Array(5).fill(0)
+    stars: Array(6).fill(0)
   },
   {
     title: 'HOT_ITEMS.GYROS_WRAP',
     description: 'HOT_ITEMS.GYROS_WRAP_DESC',
     allergens: [''],
     img: './assets/pictures/gyrosWrap.png',
-    stars: Array(4).fill(0)
+    stars: Array(5).fill(0)
   },
   {
     title: 'HOT_ITEMS.HOT_DOG',
     description: 'HOT_ITEMS.HOT_DOG_DESC',
     allergens: [''],
     img: './assets/pictures/hot-dog.png',
-    stars: Array(4).fill(0)
+    stars: Array(5).fill(0)
   },
   {
     title: 'HOT_ITEMS.DOUBLE_DONKEY_BURGER',
@@ -93,7 +93,7 @@ export const hotProducts: Products[] = [
     description: 'HOT_ITEMS.POTATO_ROSTI_DESC',
     allergens: [''],
     img: '',
-    stars: Array(4).fill(0)
+    stars: Array(5).fill(0)
   },
 ];
 

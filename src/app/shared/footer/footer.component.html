@@ -1,75 +1,80 @@
 <div
-  class="relative flex h-auto w-full flex-col justify-center bg-stone-700 p-5"
+  class="relative flex whitespace-nowrap sm:whitespace-normal flex-col h-auto w-full bg-[#222831] p-5"
 >
   <img
     src="./assets/pictures/tomato.png"
     class="absolute left-[2%] top-0 h-[250px] w-[500px] scale-x-[-1] overflow-hidden opacity-20 sm:left-[10%] sm:top-[-10%] sm:h-[333px]"
   />
-  <div
-    class="contacts relative mx-auto w-fit text-center text-[20px] tracking-[2px] md:text-lg"
-  >
-    <h1 class="font-four">{{ "FOOTER.ADDRESS" | translate }}</h1>
-    <p
-      class="font-four mt-1 mb-1 cursor-pointer text-orange-600 duration-300 hover:scale-125"
-      (click)="redirectToLocation()"
+
+  <div class=" z-10 flex flex-col gap-5 sm:flex-row  justify-center items-center">
+    <div
+      class="bottom-0 w-fit sm:w-[33%] mt-1 flex flex-col justify-center gap-4 text-center text-[18px]"
     >
-      {{ "FOOTER.STREET" | translate }}
-    </p>
-    <p class="font-four">+359 884 917 666</p>
-    <p class="font-four">{{ "FOOTER.WORK_I" | translate }}</p>
-    <p class="font-four">{{ "FOOTER.WORK_II" | translate }}</p>
-  </div>
-  <div
-    class="relative bottom-2 mt-5 text-center text-[13px] lg:absolute lg:right-3 lg:mt-0"
-  >
-    <div class="flex flex-col xl:flex-row">
-      <div class="flex flex-col justify-center">
-        <h1 class="titles text-[25px] sm:tracking-[9px]">Crazy Donkeys</h1>
-        <h1
-          class="titles mx-auto mt-2 whitespace-nowrap border-b-[1px] border-white text-[20px] tracking-[10px] sm:mt-4"
-        >
-          Est. 2022
-        </h1>
+      <button
+        class="font-four flex cursor-pointer justify-center duration-300 hover:scale-125 hover:text-orange-600"
+        (click)="navigateCookiePolicy()"
+      >
+        {{ "COOKIE_POLICY.TITLE" | translate
+        }}<img src="./assets/icons/cookie.png" class="mx-2 w-[30px]" />
+      </button>
+      <button
+        class="font-four  flex cursor-pointer justify-center duration-300 hover:scale-125 hover:text-orange-600"
+        (click)="navigateTermsOfUse()"
+      >
+        {{ "TERMS.sentence0" | translate
+        }}<img
+          src="./assets/icons/terms&conditions.png"
+          class="mx-2 w-[25px]"
+        />
+      </button>
+      <button
+        class="font-four flex cursor-pointer justify-center duration-300 hover:scale-125 hover:text-orange-600"
+        (click)="navigatePrivacyPolicy()"
+      >
+        {{ "PRIVACY_POLICY.sentence0" | translate
+        }}<img src="./assets/icons/privacyPolicy.png" class="mx-2 w-[25px]" />
+      </button>
+    </div>
+    <div class="flex order-first sm:order-2 w-fit sm:w-[33%] flex-col justify-center">
+      <div class="flex flex-col lg:flex-row">
+        <h1 class="titles text-justify w-fit mx-auto lg:mr-2 lg:ml-auto text-[40px] sm:tracking-[5px]">Crazy</h1>
+        <h1 class="titles text-justify w-fit mx-auto lg:ml-2 lg:mr-auto text-[40px] sm:tracking-[5px]">Donkeys</h1>
       </div>
-      <div class="mt-3 flex xl:mt-0">
+
+      <h1
+        class="titles mx-auto mt-2 whitespace-nowrap border-b-[1px] border-white text-[20px] tracking-[10px] sm:mt-4"
+      >
+        Est. 2022
+      </h1>
+    </div>
+    <div class="contacts order-last w-fit sm:w-[33%]  text-center text-[20px]">
+      <h1 class="font-three text-[30px]">{{ "FOOTER.ADDRESS" | translate }}</h1>
+      <p
+        class="font-four mt-1 mb-1 cursor-pointer text-orange-600 duration-300 hover:scale-125"
+        (click)="redirectToLocation()"
+      >
+        {{ "FOOTER.STREET" | translate }}
+      </p>
+      <p class="font-four">+359 884 917 666</p>
+      <p class="font-four">{{ "FOOTER.WORK_I" | translate }}</p>
+    </div>
+  </div>
+  <div class="mx-auto text-center text-[13px]"> 
+      <div class="w-full flex justify-center">
         <img
           src="./assets/icons/donkey.png"
-          class="ml-auto mr-5 w-[100px] grayscale-[60%]"
+          class="w-[100px] grayscale-[60%]"
         />
         <img
           src="./assets/pictures/cartoon-burger.png"
-          class="my-auto mr-auto h-[60px] w-[60px]"
+          class="my-auto h-[80px] w-[80px]"
         />
-      </div>
     </div>
 
-    <h1 class="font-four text-center w-fit mx-auto xl:w-full text-gray-300 lg:text-right">
+    <h1
+      class="font-four mx-auto w-fit text-[20px] text-center text-gray-300"
+    >
       {{ "FOOTER.RIGHTS_RESERVED" | translate }}
     </h1>
-  </div>
-  <div
-    class="relative bottom-0 lg:bottom-5  mt-1 flex flex-col gap-4 text-[13px] text-center lg:absolute lg:left-5"
-  >
-    <button
-      class="font-four flex cursor-pointer justify-center duration-300 hover:scale-125 hover:text-orange-600"
-      (click)="navigateCookiePolicy()"
-    >
-      {{ "COOKIE_POLICY.TITLE" | translate
-      }}<img src="./assets/icons/cookie.png" class="mx-2 w-[30px]" />
-    </button>
-    <button
-      class="font-four flex cursor-pointer justify-center duration-300 hover:scale-125 hover:text-orange-600"
-      (click)="navigateTermsOfUse()"
-    >
-      {{ "TERMS.sentence0" | translate
-      }}<img src="./assets/icons/terms&conditions.png" class="mx-2 w-[25px]" />
-    </button>
-    <button
-      class="font-four flex cursor-pointer justify-center duration-300 hover:scale-125 hover:text-orange-600"
-      (click)="navigatePrivacyPolicy()"
-    >
-      {{ "PRIVACY_POLICY.sentence0" | translate
-      }}<img src="./assets/icons/privacyPolicy.png" class="mx-2 w-[25px]" />
-    </button>
   </div>
 </div>
