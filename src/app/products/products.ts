@@ -75,10 +75,17 @@ export const hotProducts: Products[] = [
     stars: Array(5).fill(0)
   },
   {
+    title: 'HOT_ITEMS.POTATO_ROSTI',
+    description: 'HOT_ITEMS.POTATO_ROSTI_DESC',
+    allergens: [''],
+    img: './assets/pictures/potato-rosti.png',
+    stars: Array(5).fill(0),
+  },
+  {
     title: 'HOT_ITEMS.HOT_DOG',
     description: 'HOT_ITEMS.HOT_DOG_DESC',
     allergens: [''],
-    img: './assets/pictures/hot-dog.png',
+    img: '',
     stars: Array(5).fill(0)
   },
   {
@@ -87,13 +94,6 @@ export const hotProducts: Products[] = [
     allergens: [''],
     img: '',
     stars: Array(6).fill(0)
-  },
-  {
-    title: 'HOT_ITEMS.POTATO_ROSTI',
-    description: 'HOT_ITEMS.POTATO_ROSTI_DESC',
-    allergens: [''],
-    img: '',
-    stars: Array(5).fill(0)
   },
 ];
 

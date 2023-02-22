@@ -1,6 +1,6 @@
 <div class="relative z-[9999] w-full" *ngIf="!cookieAccepted">
   <div
-    class="fixed  w-full border-b-[2px] border-t-[2px] border-orange-800 bg-white shadow dark:bg-[#e0dfdfde]"
+    class="fixed  w-full border-b-[2px] border-t-[2px] border-red-900 bg-white shadow dark:bg-[#e0dfdfde]"
   >
     <button
       type="button"
@@ -38,12 +38,12 @@
         <button
           data-modal-hide="popup-modal"
           type="button"
-          class="mr-2 inline-flex items-center rounded-lg bg-red-600 px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-red-800 focus:outline-none focus:ring-4 focus:ring-red-300 dark:focus:ring-red-800"
+          class="inline-flex items-center rounded-lg bg-red-600 px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-red-800 focus:outline-none focus:ring-4 focus:ring-red-300 dark:focus:ring-red-800"
           (click)="acceptCookies()"
         >
           {{ "COOKIE_POLICY.ACCEPT" | translate }}
         </button>
-        <button
+        <button *ngIf="!isReadingPrivacyPolicy()"
           data-modal-hide="popup-modal"
           type="button"
           class="rounded-lg border border-gray-200 bg-white px-5 py-2.5 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-900 focus:z-10 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:border-gray-500 dark:bg-gray-700 dark:text-gray-300 dark:hover:bg-gray-600 dark:hover:text-white dark:focus:ring-gray-600"
@@ -64,7 +64,7 @@
     <router-outlet></router-outlet>
   </div>
   <div
-  class="absolute z-[10] h-[2px] w-full bg-gradient-to-l from-black via-white to-slate-600"
+  class="absolute z-[10] h-[2px] w-full bg-gradient-to-l from-black via-white to-[#4C4556]"
 ></div>
   <app-footer
     class="flex h-auto w-full justify-center overflow-hidden bg-black"

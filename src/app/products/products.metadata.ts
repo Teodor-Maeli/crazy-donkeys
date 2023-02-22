@@ -4,4 +4,5 @@ export type Products = {
     allergens:string[],
     img?:string,
     stars?:number[]
+    class?:string
 }

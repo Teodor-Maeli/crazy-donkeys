@@ -10,21 +10,23 @@
           class="absolute z-[10] h-[2px] w-full bg-gradient-to-l from-black via-white to-slate-600"
         ></div>
         <button
-          class="font-three absolute right-[0px] top-[50px] z-20 h-[38px] w-[100px] -translate-y-1/2 transform rounded-lg rounded-r-none border-[2px] border-r-0 border-black text-black bg-white p-[5px] text-xs leading-none hover:bg-yellow-600 sm:top-[150px]"
+          class="font-three absolute right-[0px] top-[50px] z-20 h-[38px] w-[100px] -translate-y-1/2 transform rounded-lg rounded-r-none border-[2px] border-r-0 border-gray-900 bg-white p-[5px] text-xs leading-none text-black hover:bg-yellow-600 sm:top-[150px]"
           (click)="slideNext()"
         >
           {{ nextFromMenu() | translate }}
         </button>
-        <div class="absolute right-[0px] top-[56px] z-10 h-[40px] w-[105px] -translate-y-1/2 transform rounded-lg rounded-r-none  bg-black text-xs leading-none sm:top-[155px]">
-        </div>
+        <div
+          class="absolute right-[0px] top-[56px] z-10 h-[40px] w-[105px] -translate-y-1/2 transform rounded-lg rounded-r-none bg-gray-900 text-xs leading-none sm:top-[155px]"
+        ></div>
         <button
-          class="font-three absolute left-[0px] top-[50px] z-20 h-[38px] w-[100px] -translate-y-1/2 transform rounded-lg rounded-l-none border-[2px] border-l-0 border-black text-black bg-white p-[5px] text-xs leading-none hover:bg-yellow-600 sm:top-[150px]"
+          class="font-three absolute left-[0px] top-[50px] z-20 h-[38px] w-[100px] -translate-y-1/2 transform rounded-lg rounded-l-none border-[2px] border-l-0 border-gray-900 bg-white p-[5px] text-xs leading-none text-black hover:bg-yellow-600 sm:top-[150px]"
           (click)="slidePrev()"
         >
           {{ prevFromMenu() | translate }}
         </button>
-        <div class="absolute left-[0px] top-[56px] z-10 h-[40px] w-[105px] -translate-y-1/2 transform rounded-lg rounded-l-none  bg-black text-xs leading-none sm:top-[155px]">
-        </div>
+        <div
+          class="absolute left-[0px] top-[56px] z-10 h-[40px] w-[105px] -translate-y-1/2 transform rounded-lg rounded-l-none bg-gray-900 text-xs leading-none sm:top-[155px]"
+        ></div>
         <div
           id="slider"
           class="absolute top-0 flex h-full w-[300%] overflow-y-auto bg-yellow-600 bg-opacity-70 sm:h-full"
@@ -48,7 +50,7 @@
                   >
                     {{ "BURGERS" | translate }} MID/XXL
                   </h1>
-                  
+
                   <div *ngFor="let burger of burgers" class="my-2">
                     <h1 class="{{ titleClass }}">
                       {{ burger.title | translate }}
@@ -141,9 +143,11 @@
       class="relative mt-auto flex h-fit w-full flex-col justify-start text-center text-white sm:mt-0"
     >
       <div
-        class="absolute top-[-100%] bottom-4 left-4 right-0 z-[999] m-auto flex h-[30px] w-[150px] rotate-6 items-center justify-center rounded border border-slate-900 bg-orange-500 grayscale-[30%] bg-opacity-80 text-black md:h-[40px] md:w-[200px]"
+        class="absolute top-[-100%] bottom-4 left-4 right-0 z-[999] m-auto flex h-[30px] w-[150px] rotate-6 items-center justify-center rounded border border-slate-900 bg-orange-500 bg-opacity-80 text-black grayscale-[30%] md:h-[40px] md:w-[200px]"
       >
-        <h1 class="align-middle font-white tracking-widest font-three">{{ "OTHERS.BESTSELLERS" | translate }}</h1>
+        <h1 class="font-white font-three align-middle tracking-widest">
+          {{ "OTHERS.BESTSELLERS" | translate }}
+        </h1>
       </div>
       <div
         class="absolute top-[-104%] bottom-0 left-0 right-0 z-[998] m-auto h-[30px] w-[150px] rotate-6 rounded bg-slate-900 bg-opacity-90 md:h-[40px] md:w-[200px]"
@@ -153,17 +157,15 @@
       ></div>
       <div class="relative h-[170px] w-full overflow-x-auto overflow-y-hidden">
         <div
-          class="absolute bg-yellow-600 bg-opacity-40 flex h-full w-[450%] gap-4 p-2 sm:w-[200%] xl:w-[100%]"
+          class="absolute flex h-full w-[450%] gap-4 bg-yellow-600 bg-opacity-30 p-2 sm:w-[200%] xl:w-[100%]"
         >
           <div
-            class="flex h-full w-[25.0%] rounded-xl bg-black bg-opacity-60"
+            class="flex h-full w-[25.0%] rounded-xl bg-black bg-opacity-70"
             *ngFor="let product of hotProducts"
-          >
-            <div class="flex h-full w-full items-center justify-center">
-              <img
-                class="h-full w-full rounded-md "
-                src="{{ product.img }}"
-              />
+          >  
+            <div class="flex h-full w-full relative items-center justify-center">
+              <img class="absolute w-[100%]" src="./assets/pictures/white-dish.png">
+              <img class="h-full z-50 w-full rounded-md" src="{{ product.img }}" />
             </div>
             <div></div>
             <div class="mt-3 flex h-full w-full flex-col px-5">

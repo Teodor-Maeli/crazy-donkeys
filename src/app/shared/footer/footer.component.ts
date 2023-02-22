@@ -14,8 +14,9 @@ export class FooterComponent implements OnInit {
   ngOnInit(): void {}
 
   redirectToLocation(): void {
-    if (this.cookieService.get('cookieAccepted') !== 'true') {
+    if (this.cookieService.get('policyAccepted') !== 'true') {
       return;
+
     }
     window.location.href =
       'https://www.google.com/maps/dir//' +

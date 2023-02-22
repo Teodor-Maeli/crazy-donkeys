@@ -1,19 +1,23 @@
 <img
   src="./assets/icons/donkey.png"
   id="logo"
-  class="absolute left-1/2 top-[155px] z-[20] h-auto w-[150px] -translate-x-1/2 -translate-y-1/2 transform cursor-pointer grayscale-[100%] duration-700 hover:rotate-[720deg] md:top-[135px] md:w-[220px]"
+  class="absolute left-1/2 top-[125px] z-[20] h-auto w-[150px] -translate-x-1/2 -translate-y-1/2 transform cursor-pointer grayscale-[100%] duration-700 hover:rotate-[720deg] md:top-[105px] md:w-[220px]"
 />
 <div class="relative flex h-full w-full justify-center">
   <div
-    class="absolute top-5 h-[60px] w-full border-t-[1px] border-b-[1px] border-black bg-red-800 bg-opacity-60 sm:h-[70px] lg:top-10"
+    class="absolute top-2 h-[60px] w-full border-t-[1px] border-b-[1px] border-black bg-red-800 bg-opacity-60 sm:h-[70px] lg:top-5"
   >
-    <div class="flex h-full sm:justify-between w-full">
+    <div class="flex h-full w-full sm:justify-between">
       <h1
-        class="mx-auto font-three my-auto sm:ml-1 whitespace-nowrap  text-white text-[15px] lg:tracking-[2px] md:text-[25px]"
+        class="font-three mx-auto my-auto whitespace-nowrap text-[15px] text-white sm:ml-1 md:text-[25px] lg:tracking-[2px]"
       >
         Burgers & Grill Sandwiches
       </h1>
-      <h1 class="hidden sm:block my-auto ml-2 sm:mr-20 whitespace-nowrap text-[13px] lg:tracking-[2px] md:text-[20px]">+359 88 53 06 334</h1>
+      <h1
+        class="my-auto ml-2 hidden whitespace-nowrap text-[13px] sm:mr-20 sm:block md:text-[20px] lg:tracking-[2px]"
+      >
+        +359 88 53 06 334
+      </h1>
     </div>
   </div>
   <div
@@ -28,7 +32,7 @@
           class="relative z-10 block overflow-hidden rounded-lg p-[8px] text-[13px] font-medium leading-tight text-gray-800 transition-colors duration-300 ease-out hover:scale-110 hover:border-white group-hover:text-white sm:px-3 sm:py-3 sm:text-[20px]"
         >
           <span
-            class="absolute inset-0 h-full w-[100px] rounded-md bg-red-900  px-5 py-3 grayscale-[50%] sm:w-full sm:rounded-lg"
+            class="absolute inset-0 h-full w-[100px] rounded-md bg-[#872642] px-5 py-3 grayscale-[50%] sm:w-full sm:rounded-lg"
           ></span>
           <span
             class="ease absolute left-0 -ml-2 h-48 w-48 origin-top-right -translate-x-full translate-y-12 -rotate-90 bg-black"
@@ -46,7 +50,7 @@
   </div>
   <div
     id="lang-changer"
-    class="fixed top-[30px] right-1 z-[99999] h-10 w-10 sm:right-4 lg:top-[55px]"
+    class="fixed top-[17px] right-1 z-[99999] h-10 w-10 sm:right-4 lg:top-[35px]"
     (click)="openLanguageChanger()"
   >
     <img
@@ -60,13 +64,13 @@
 <ul id="langs" class="fixed right-11 top-16 z-[99999] hidden text-center">
   <li
     (click)="onClickChangeLangFlag('bg')"
-    class="mt-5 w-[150px] cursor-pointer border-[1px] border-black bg-orange-800 tracking-[1px] text-white duration-300 hover:scale-125 hover:border-white hover:bg-black"
+    class="mt-5 w-[150px] cursor-pointer border-[1px] border-black bg-white tracking-[1px] text-black duration-300 hover:scale-125 hover:border-white hover:bg-black hover:text-white"
   >
     Български
   </li>
   <li
     (click)="onClickChangeLangFlag('en')"
-    class="mt-[0.5px] w-[150px] cursor-pointer border-[1px] border-black bg-orange-800 tracking-[1px] text-white duration-300 hover:scale-125 hover:border-white hover:bg-black"
+    class="mt-[0.5px] w-[150px] cursor-pointer border-[1px] border-black bg-white tracking-[1px] text-black duration-300 hover:scale-125 hover:border-white hover:bg-black hover:text-white"
   >
     English
   </li>
