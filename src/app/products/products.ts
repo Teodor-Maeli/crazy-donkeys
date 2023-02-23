@@ -1,4 +1,7 @@
+import { applyUriPrefix } from '../shared/functions/functions';
 import { Products } from './products.metadata';
+
+const uri = '/assets/pictures/'
 
 export const defaultTitleClass: string =
   'font-three uppercase text-[23px] sm:text-[27px] text-black tracking-wider';
@@ -7,22 +10,22 @@ export const burgers: Products[] = [
   {
     title: 'CRAZY_DONKEY',
     description: 'BURGER_1',
-    allergens: [''],
+    allergens: applyUriPrefix(['milk','soy','eggs','gluten']),
   },
   {
     title: 'PORK_BURGER',
     description: 'BURGER_2',
-    allergens: [''],
+    allergens: applyUriPrefix(['milk','eggs','gluten']),
   },
   {
     title: 'CHICKEN_BURGER',
     description: 'BURGER_3',
-    allergens: [''],
+    allergens: applyUriPrefix(['milk','eggs','gluten']),
   },
   {
     title: 'VEGGIE_BURGER',
     description: 'BURGER_4',
-    allergens: [''],
+    allergens: applyUriPrefix(['milk','eggs','gluten']),
   },
 ];
 
@@ -30,32 +33,32 @@ export const wraps: Products[] = [
   {
     title: 'FARM_WRAP_TITLE',
     description: 'FARM_WRAP',
-    allergens: [''],
+    allergens: applyUriPrefix(['milk','eggs','gluten']),
   },
   {
     title: 'PORK_WRAP_TITLE',
     description: 'PORK_WRAP',
-    allergens: [''],
+    allergens: applyUriPrefix(['milk','eggs','gluten']),
   },
   {
     title: 'CHICKEN_WRAP_TITLE',
     description: 'CHICKEN_WRAP',
-    allergens: [''],
+    allergens: applyUriPrefix(['milk','eggs','gluten']),
   },
   {
     title: 'FLAT_SAUSAGE_CHEESE_WRAP_TITLE',
     description: 'FLAT_SAUSAGE_CHEESE_WRAP',
-    allergens: [''],
+    allergens: applyUriPrefix(['milk','eggs','gluten']),
   },
   {
     title: 'BACON_CHEESE_WRAP_TITLE',
     description: 'BACON_CHEESE_WRAP',
-    allergens: [''],
+    allergens: applyUriPrefix(['milk','soy','eggs','gluten']),
   },
   {
     title: 'VEGAN_WRAP_TITLE',
     description: 'VEGAN_WRAP',
-    allergens: [''],
+    allergens: applyUriPrefix(['milk','eggs','gluten']),
   },
 ];
 
@@ -75,18 +78,18 @@ export const hotProducts: Products[] = [
     stars: Array(5).fill(0)
   },
   {
+    title: 'HOT_ITEMS.CHICKEN-WINGS',
+    description: 'HOT_ITEMS.CHICKEN-WINGS',
+    allergens: [''],
+    img: './assets/pictures/chicken-wings.png',
+    stars: Array(5).fill(0)
+  },
+  {
     title: 'HOT_ITEMS.POTATO_ROSTI',
     description: 'HOT_ITEMS.POTATO_ROSTI_DESC',
     allergens: [''],
     img: './assets/pictures/potato-rosti.png',
     stars: Array(5).fill(0),
-  },
-  {
-    title: 'HOT_ITEMS.HOT_DOG',
-    description: 'HOT_ITEMS.HOT_DOG_DESC',
-    allergens: [''],
-    img: '',
-    stars: Array(5).fill(0)
   },
   {
     title: 'HOT_ITEMS.DOUBLE_DONKEY_BURGER',
@@ -101,51 +104,51 @@ export const portions: Products[] = [
   {
     title: 'CRISPY_CHICKEN_TITLE',
     description: 'CRISPY_CHICKEN',
-    allergens: [''],
+    allergens: applyUriPrefix(['milk','eggs',]),
   },
   {
     title: 'FRIED_MEAT_TITLE',
     description: 'FRIED_MEAT',
-    allergens: [''],
+    allergens: applyUriPrefix(['milk','eggs']),
   },
   {
     title: 'CHICKEN_WINGS_TITLE',
     description: 'CHICKEN_WINGS',
-    allergens: [''],
+    allergens: applyUriPrefix(['milk','eggs']),
   },
   {
     title: 'FALAFEL_SALAD_TITLE',
     description: 'FALAFEL_SALAD',
-    allergens: [''],
+    allergens: applyUriPrefix(['milk','soy','gluten']),
   },
   {
     title: 'FRENCH_FRIES_TITLE',
     description: 'FRENCH_FRIES',
-    allergens: [''],
+    allergens: applyUriPrefix(['milk']),
   },
   {
     title: 'FRENCH_FRIES_I_TITLE',
     description: 'FRENCH_FRIES_I',
-    allergens: [''],
+    allergens: [],
   },
   {
     title: 'CHIPS_TITLE',
     description: 'CHIPS',
-    allergens: [''],
+    allergens: [],
   },
   {
     title: 'SANDWICH_TITLE',
     description: 'SANDWICH',
-    allergens: [''],
+    allergens: applyUriPrefix(['milk','eggs','gluten']),
   },
   {
     title: 'TOAST_TITLE',
     description: 'TOAST',
-    allergens: [''],
+    allergens: applyUriPrefix(['milk','gluten']),
   },
   {
     title: 'GYROS_TITLE',
     description: 'GYROS',
-    allergens: [''],
+    allergens: applyUriPrefix(['milk','eggs','gluten']),
   },
 ];

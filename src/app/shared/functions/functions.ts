@@ -4,3 +4,11 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
 }
+
+export function applyUriPrefix(values: string[]): string[] {
+  let modifiedValues: string[] = [];
+  values.forEach((values) =>
+    modifiedValues.push('./assets/icons/' + values + '.png')
+  );
+  return modifiedValues;
+}

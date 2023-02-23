@@ -55,15 +55,19 @@
                     <h1 class="{{ titleClass }}">
                       {{ burger.title | translate }}
                     </h1>
-                    <p class="font-four text-[20px]">
-                      {{ burger.description | translate }}
-                    </p>
-                    <div
-                      id="allergens"
-                      *ngFor="let allergen of burger.allergens"
-                    >
-                      <img src="{{ allergen }}" />
+                    <div class="flex flex-col justify-between sm:flex-row">
+                      <p class="font-four text-[20px] sm:w-[70%]">
+                        {{ burger.description | translate }}
+                      </p>
+                      <div id="allergens" class="flex justify-center gap-3 p-2">
+                        <img
+                          *ngFor="let allergen of burger.allergens"
+                          src="{{ allergen }}"
+                          class="mt-auto h-[30px] w-[30px]"
+                        />
+                      </div>
                     </div>
+
                     <div
                       class="z-50 h-[1px] w-full bg-gradient-to-r from-black via-white to-black"
                     ></div>
@@ -93,9 +97,18 @@
                     <h1 class="{{ titleClass }}">
                       {{ wrap.title | translate }}
                     </h1>
-                    <p class="font-four text-[20px]">
-                      {{ wrap.description | translate }}
-                    </p>
+                    <div class="flex flex-col justify-between sm:flex-row">
+                      <p class="font-four text-[20px] sm:w-[70%]">
+                        {{ wrap.description | translate }}
+                      </p>
+                      <div id="allergens" class="flex justify-center gap-3 p-2">
+                        <img
+                          *ngFor="let allergen of wrap.allergens"
+                          src="{{ allergen }}"
+                          class="mt-auto h-[30px] w-[30px]"
+                        />
+                      </div>
+                    </div>
                     <div
                       class="z-50 h-[1px] w-full bg-gradient-to-r from-black via-white to-black"
                     ></div>
@@ -106,7 +119,7 @@
           </div>
           <div class="h-full w-[100vw] bg-transparent lg:flex">
             <div
-              class="relative h-[50%] w-[100vw] bg-[url('^./assets/pictures/gyros.png')] bg-cover bg-no-repeat sm:h-full sm:bg-left md:bg-cover lg:w-[50%]"
+              class="relative h-[50%] w-[100vw] bg-[url('^./assets/pictures/beer-chicken.png')] bg-cover bg-no-repeat sm:h-full sm:bg-center md:bg-cover lg:w-[50%]"
             ></div>
             <div
               id="info"
@@ -125,9 +138,18 @@
                     <h1 class="{{ titleClass }} leading-none sm:text-[26px]">
                       {{ portion.title | translate }}
                     </h1>
-                    <p class="font-four text-[20px]">
-                      {{ portion.description | translate }}
-                    </p>
+                    <div class="flex flex-col justify-between sm:flex-row">
+                      <p class="font-four text-[20px] sm:w-[70%]">
+                        {{ portion.description | translate }}
+                      </p>
+                      <div id="allergens" class="flex justify-center gap-3 p-2">
+                        <img
+                          *ngFor="let allergen of portion.allergens"
+                          src="{{ allergen }}"
+                          class="mt-auto h-[30px] w-[30px]"
+                        />
+                      </div>
+                    </div>
                     <div
                       class="z-50 h-[1px] w-full bg-gradient-to-r from-black via-white to-black"
                     ></div>
@@ -162,10 +184,18 @@
           <div
             class="flex h-full w-[25.0%] rounded-xl bg-black bg-opacity-70"
             *ngFor="let product of hotProducts"
-          >  
-            <div class="flex h-full w-full relative items-center justify-center">
-              <img class="absolute w-[100%]" src="./assets/pictures/white-dish.png">
-              <img class="h-full z-50 w-full rounded-md" src="{{ product.img }}" />
+          >
+            <div
+              class="relative flex h-full w-full items-center justify-center"
+            >
+              <img
+                class="absolute w-[100%]"
+                src="./assets/pictures/white-dish.png"
+              />
+              <img
+                class="z-50 h-full w-full rounded-md contrast-125"
+                src="{{ product.img }}"
+              />
             </div>
             <div></div>
             <div class="mt-3 flex h-full w-full flex-col px-5">
