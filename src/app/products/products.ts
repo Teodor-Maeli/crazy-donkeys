@@ -64,6 +64,13 @@ export const wraps: Products[] = [
 
 export const hotProducts: Products[] = [
   {
+    title: 'HOT_ITEMS.DOUBLE_DONKEY_BURGER',
+    description: 'HOT_ITEMS.DOUBLE_DONKEY_BURGER_DESC',
+    allergens: [''],
+    img: './assets/pictures/burger.png',
+    stars: Array(6).fill(0)
+  },
+  {
     title: 'HOT_ITEMS.PITA_FLAMBE',
     description: 'HOT_ITEMS.POTATO_BALLS_DESC',
     allergens: [''],
@@ -90,13 +97,6 @@ export const hotProducts: Products[] = [
     allergens: [''],
     img: './assets/pictures/potato-rosti.png',
     stars: Array(5).fill(0),
-  },
-  {
-    title: 'HOT_ITEMS.DOUBLE_DONKEY_BURGER',
-    description: 'HOT_ITEMS.DOUBLE_DONKEY_BURGER_DESC',
-    allergens: [''],
-    img: '',
-    stars: Array(6).fill(0)
   },
 ];
 

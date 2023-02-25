@@ -16,6 +16,9 @@ class="absolute h-[2px] w-full bg-gradient-to-l from-black via-white to-slate-60
       <div class="h-[95%] overflow-auto mt-2">
         <p class="font-four text-[23px]" *ngFor="let sentence of privacySentences" id={{sentence.substr(15,sentence.length)}}>{{ sentence | translate }}</p>
       </div>
+      <div
+      class="h-[1px] w-full bg-gradient-to-r from-black via-orange-600 to-slate-600"
+    ></div>
       </div>
     </div>
   </div>

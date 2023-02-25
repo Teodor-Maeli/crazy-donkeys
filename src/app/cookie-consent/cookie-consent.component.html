@@ -1,0 +1,48 @@
+<div class="relative z-[9999] w-full" *ngIf="!cookieAccepted">
+  <div
+    class="fixed w-full border-b-[2px] border-t-[2px] border-red-900 bg-white shadow dark:bg-[#e0dfdfde]"
+  >
+    <button
+      type="button"
+      class="top-3 right-2.5 ml-auto inline-flex items-center rounded-lg bg-transparent p-1.5 text-sm text-gray-400 hover:bg-gray-200 hover:text-gray-900 dark:hover:bg-gray-800 dark:hover:text-white"
+      data-modal-hide="popup-modal"
+    ></button>
+    <div class="px-2 pb-2 text-center">
+      <div *ngIf="!isRedirected">
+        <img src="./assets/icons/cookie.png" class="mx-auto mb-4 w-[50px]" />
+        <h3 class="mb-5 text-xl font-[2000] text-black">
+          {{ "COOKIE_POLICY.TITLE" | translate }}
+        </h3>
+        <p id="privacy_info" class="mb-5 text-base text-black">
+          {{ "COOKIE_POLICY.DESCRIPTION" | translate }}
+        </p>
+      </div>
+      <p
+        *ngIf="isRedirected"
+        id="privacy_info"
+        class="p-3 text-base text-black px-10"
+      >
+        {{ "COOKIE_POLICY.REDIRECTED" | translate }}
+      </p>
+      <div class="flex w-full justify-center gap-2">
+        <button
+          data-modal-hide="popup-modal"
+          type="button"
+          class="inline-flex items-center rounded-lg bg-red-600 px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-red-800 focus:outline-none focus:ring-4 focus:ring-red-300 dark:focus:ring-red-800"
+          (click)="acceptCookies()"
+        >
+          {{ "COOKIE_POLICY.ACCEPT" | translate }}
+        </button>
+        <button
+          *ngIf="!isRedirected"
+          data-modal-hide="popup-modal"
+          type="button"
+          class="rounded-lg border border-gray-200 bg-white px-5 py-2.5 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-900 focus:z-10 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:border-gray-500 dark:bg-gray-700 dark:text-gray-300 dark:hover:bg-gray-600 dark:hover:text-white dark:focus:ring-gray-600"
+          (click)="privacyReadMore()"
+        >
+          {{ "COOKIE_POLICY.READ" | translate }}
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

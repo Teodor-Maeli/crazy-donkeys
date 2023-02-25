@@ -12,7 +12,7 @@ export class SocialIconsComponent implements OnInit {
   ngOnInit(): void {}
 
   redirectSocials(media: string) {
-    if (this.cookieService.get('cookieAccepted') !== 'true') {
+    if (this.cookieService.get('policyAccepted') !== 'true') {
       return;
     }
     if (media == 'instagram') {

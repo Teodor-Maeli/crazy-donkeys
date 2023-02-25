@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
 import { MenuButtons } from '../models/models';
 import { environment } from 'src/environments/environment';
+import { CookieService } from 'ngx-cookie-service';
 
 @Component({
   selector: 'app-nav',
@@ -31,7 +32,8 @@ export class NavComponent implements OnInit {
   constructor(
     private renderer: Renderer2,
     private translate: TranslateService,
-    private router: Router
+    private router: Router,
+    private cookieService: CookieService
   ) {}
 
   ngOnInit(): void {
@@ -77,5 +79,18 @@ export class NavComponent implements OnInit {
 
   routerNavigate(path: string) {
     this.router.navigate([path]);
+  
+  }
+
+  redirectSocials(media: string) {
+    if (this.cookieService.get('policyAccepted') !== 'true') {
+      return;
+    }
+    if (media == 'instagram') {
+      window.location.href = 'https://www.instagram.com/crazydonkeys2023/';
+    } else if (media == 'facebook') {
+      window.location.href =
+        'https://www.facebook.com/Crazy-Donkeys-%D0%B3%D1%80%D0%B8%D0%BB-%D1%81%D0%B0%D0%BD%D0%B4%D0%B2%D0%B8%D1%87%D0%B8-%D0%B8-%D0%B1%D1%83%D1%80%D0%B3%D0%B5%D1%80%D0%B8-101110796143666/';
+    }
   }
 }

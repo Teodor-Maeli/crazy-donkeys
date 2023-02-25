@@ -11,9 +11,10 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { PrivacyPolicyComponent } from './privacy-policy/privacy-policy.component';
 import { CookiePolicyComponent } from './cookie-policy/cookie-policy.component';
+import { CookieConsentComponent } from './cookie-consent/cookie-consent.component';
 
 @NgModule({
-  declarations: [AppComponent, FullLayoutComponent],
+  declarations: [AppComponent, FullLayoutComponent, CookieConsentComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,

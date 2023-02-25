@@ -9,31 +9,7 @@ import { elementAt } from 'rxjs';
   styleUrls: ['./full-layout.component.scss'],
 })
 export class FullLayoutComponent implements OnInit {
-  cookieAccepted: boolean = false;
-  constructor(private cookieService: CookieService, private router: Router) {}
+  constructor() {}
 
-  ngOnInit(): void {
-    if (this.cookieService.get('policyAccepted') === 'true') {
-      this.cookieAccepted = true;
-    }
-  }
-
-  acceptCookies(): void {
-    const now: Date = new Date();
-    const expirationDate: Date = new Date(
-      now.getFullYear(),
-      now.getMonth() ,
-      now.getDate() + 1
-    );
-    this.cookieAccepted = true;
-    this.cookieService.set('policyAccepted', 'true', expirationDate);
-  }
-
-  privacyReadMore(): void {
-    this.router.navigate(['/cookie-policy']);
-  }
-
-  isReadingPrivacyPolicy(): boolean {
-    return window.location.toString().includes('cookie-policy');
-  }
+  ngOnInit(): void {}
 }

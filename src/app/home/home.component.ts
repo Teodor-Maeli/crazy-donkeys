@@ -39,7 +39,7 @@ import { Products } from '../products/products.metadata';
           transform: 'translateX(-66.66%)',
         })
       ),
-      transition('* => *', [animate(500)]),
+      transition('* => *', [animate(100)]),
     ]),
   ],
 })

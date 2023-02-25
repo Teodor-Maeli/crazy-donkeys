@@ -29,26 +29,32 @@
         ></div>
         <div
           id="slider"
-          class="absolute top-0 flex h-full w-[300%] overflow-y-auto bg-yellow-600 bg-opacity-70 sm:h-full"
+          class="absolute top-0 flex h-full w-[300%] bg-yellow-600 bg-opacity-70 sm:h-full"
           [@slide]="this.getCurrentSlide()"
         >
-          <div class="h-full w-[100vw] bg-transparent lg:flex">
+          <div
+            class="h-full w-[100vw] overflow-y-scroll bg-transparent lg:flex"
+          >
             <div
               id="slider-img"
               class="relative h-[50%] w-[100vw] bg-[url('^./assets/pictures/no-bg-burger.png')] bg-cover bg-left bg-no-repeat sm:h-full lg:w-[50%]"
             ></div>
             <div
               id="info"
-              class="my-y mx-1 overflow-y-scroll py-2 text-justify align-middle sm:h-full sm:text-left lg:w-[45%]"
+              class="my-y mx-1 h-[100%] py-2 text-justify align-middle sm:h-full sm:text-left lg:w-[45%]"
             >
               <div class="block h-fit w-full px-2">
                 <div
                   class="flex h-full flex-col justify-start text-center sm:overflow-auto sm:text-left"
                 >
                   <h1
-                    class="font-three titles my-3 text-center text-[30px] tracking-wider text-white sm:text-[30px]"
+                    class="font-three titles relative my-3 w-[90%] sm:p-5 sm:pb-14 p-2 pb-6 text-center text-[18px] tracking-wider text-white sm:text-[30px]"
                   >
                     {{ "BURGERS" | translate }} MID/XXL
+                    <img
+                      src="./assets/pictures/red-label.png"
+                      class="absolute top-0 -z-10 h-[100%] w-[100%] opacity-80"
+                    />
                   </h1>
 
                   <div *ngFor="let burger of burgers" class="my-2">
@@ -76,22 +82,28 @@
               </div>
             </div>
           </div>
-          <div class="h-full w-[100vw] bg-transparent lg:flex">
+          <div
+            class="h-full w-[100vw] overflow-y-scroll bg-transparent lg:flex"
+          >
             <div
               class="relative h-[50%] w-[100vw] bg-[url('^./assets/pictures/wrapz.png')] bg-cover bg-center bg-no-repeat sm:h-full lg:w-[50%]"
             ></div>
             <div
               id="info"
-              class="my-y mx-1 overflow-y-scroll py-2 text-justify align-middle sm:h-full sm:text-left lg:w-[45%]"
+              class="my-y mx-1 h-[100%] py-2 text-justify align-middle sm:h-full sm:text-left lg:w-[45%]"
             >
               <div class="block h-fit w-full px-2">
                 <div
                   class="flex flex-col justify-start text-center sm:text-left"
                 >
                   <h1
-                    class="font-three my-3 text-center text-[30px] tracking-wider text-white sm:text-[30px]"
+                    class="font-three titles relative my-3 w-[90%] sm:p-5 sm:pb-14 p-2 pb-6 text-center text-[18px] tracking-wider text-white sm:text-[30px]"
                   >
                     {{ "WRAPS" | translate }} MID/XL
+                    <img
+                      src="./assets/pictures/red-label.png"
+                      class="absolute top-0 -z-10 h-[100%] w-[100%] opacity-80"
+                    />
                   </h1>
                   <div *ngFor="let wrap of wraps" class="my-2">
                     <h1 class="{{ titleClass }}">
@@ -117,22 +129,28 @@
               </div>
             </div>
           </div>
-          <div class="h-full w-[100vw] bg-transparent lg:flex">
+          <div
+            class="h-full w-[100vw] overflow-y-scroll bg-transparent lg:flex"
+          >
             <div
-              class="relative h-[50%] w-[100vw] bg-[url('^./assets/pictures/beer-chicken.png')] bg-cover bg-no-repeat sm:h-full sm:bg-center md:bg-cover lg:w-[50%]"
+              class="relative h-[50%] w-[100vw] bg-[url('^./assets/pictures/beer-chicken.png')] bg-cover bg-no-repeat sm:h-full bg-center lg:w-[50%]"
             ></div>
             <div
               id="info"
-              class="my-y mx-1 overflow-y-scroll py-2 text-justify align-middle sm:h-full sm:text-left lg:w-[45%]"
+              class="my-y mx-1 h-[100%] py-2 text-justify align-middle sm:h-full sm:text-left lg:w-[45%]"
             >
               <div class="block h-fit w-full px-2">
                 <div
                   class="flex flex-col justify-start text-center sm:text-left"
                 >
                   <h1
-                    class="font-three my-3 text-center text-[30px] tracking-wider text-white sm:text-[30px]"
+                    class="font-three titles relative my-3 w-[90%] sm:p-5 sm:pb-14 p-2 pb-6 text-center text-[18px] tracking-wider text-white sm:text-[30px]"
                   >
                     {{ "PORTIONS" | translate }}
+                    <img
+                      src="./assets/pictures/red-label.png"
+                      class="absolute top-0 -z-10 h-[100%] w-[100%] opacity-80"
+                    />
                   </h1>
                   <div *ngFor="let portion of portions" class="my-2">
                     <h1 class="{{ titleClass }} leading-none sm:text-[26px]">
@@ -193,7 +211,7 @@
                 src="./assets/pictures/white-dish.png"
               />
               <img
-                class="z-50 h-full w-full rounded-md contrast-125"
+                class="z-50 h-[90%] w-auto rounded-md contrast-125"
                 src="{{ product.img }}"
               />
             </div>
