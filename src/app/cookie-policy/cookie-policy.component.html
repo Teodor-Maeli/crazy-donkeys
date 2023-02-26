@@ -5,16 +5,17 @@
   <div
     class="gradient flex h-full w-full flex-col items-center lg:justify-start"
   >
+  
     <div
-      class="w-[95%] overflow-hidden bg-slate-800 bg-opacity-50 px-2 pt-20 pb-5 text-center sm:w-[90%] sm:pt-32 sm:text-left"
+      class="w-[95%] h-full overflow-auto bg-slate-800 bg-opacity-50 px-2 pt-20 pb-5 text-center sm:w-[90%] sm:pt-32 sm:text-left"
     >
-      <h1 class="font-four mb-2 text-[30px] text-orange-600">
-        {{ "COOKIE_POLICY.sentence1" | translate }}
-      </h1>
-      <div
-        class="h-[1px] w-full bg-gradient-to-r from-black via-orange-600 to-slate-600"
-      ></div>
-      <div class="mt-2 h-[90%] overflow-auto">
+    <h1 class="font-four mb-2 text-[30px] text-orange-600">
+      {{ "COOKIE_POLICY.sentence1" | translate }}
+    </h1>
+    <div
+      class="h-[1px] w-full bg-gradient-to-r from-black via-orange-600 to-slate-600"
+    ></div>
+      <div class="mt-2 h-full">
         <p
           class="font-four text-[23px]"
           *ngFor="let sentence of cookiePolicy"
@@ -22,10 +23,10 @@
         >
           {{ sentence | translate }}
         </p>
-      </div>
-      <div
-        class="h-[1px] w-full bg-gradient-to-r from-black via-orange-600 to-slate-600"
+        <div
+        class="h-[1px] w-full bg-gradient-to-r mb-2 from-black via-orange-600 to-slate-600"
       ></div>
+      </div>
     </div>
   </div>
 </div>

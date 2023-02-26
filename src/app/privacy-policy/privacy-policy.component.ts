@@ -29,10 +29,15 @@ export class PrivacyPolicyComponent implements OnInit, AfterViewInit {
   constructor() {}
 
   ngAfterViewInit(): void {
-    this.privacyTitles.forEach((title) => {
-      let paragraph = document.getElementById(title) as HTMLParagraphElement;
-      paragraph.classList.add('text-orange-600');
-    });
+    setTimeout(() => {
+      this.privacyTitles.forEach((title) => {
+        let paragraph: HTMLParagraphElement = document.getElementById(
+          title) as HTMLParagraphElement;
+        paragraph.classList.add('text-orange-600');
+        console.log(paragraph.classList)
+      });
+    },0)
+
   }
 
   ngOnInit(): void {

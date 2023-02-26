@@ -5,22 +5,24 @@ import { AfterViewInit, Component, OnInit } from '@angular/core';
   templateUrl: './terms-of-use.component.html',
   styleUrls: ['./terms-of-use.component.scss'],
 })
-export class TermsOfUseComponent implements OnInit,AfterViewInit {
+export class TermsOfUseComponent implements OnInit, AfterViewInit {
   terms: string[] = [];
   termsTitles: string[] = [
-    "sentence6",
-    "sentence9",
-    "sentence12",
-    "sentence15",
-    "sentence18"
+    'sentence6',
+    'sentence9',
+    'sentence12',
+    'sentence15',
+    'sentence18',
   ];
 
   constructor() {}
 
   ngAfterViewInit(): void {
-    this.termsTitles.forEach((title) => {
-      let paragraph = document.getElementById(title) as HTMLParagraphElement;
-      paragraph.classList.add('text-orange-600');
+    setTimeout(() => {
+      this.termsTitles.forEach((title) => {
+        let paragraph = document.getElementById(title) as HTMLParagraphElement;
+        paragraph.classList.add('text-orange-600');
+      });
     });
   }
 

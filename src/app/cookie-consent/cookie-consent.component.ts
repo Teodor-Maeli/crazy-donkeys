@@ -29,6 +29,10 @@ export class CookieConsentComponent implements OnInit {
         }
       }
     });
+
+    this.isRedirected = window.location.href.includes('/cookie-policy')
+      ? true
+      : false;
   }
 
   acceptCookies(): void {

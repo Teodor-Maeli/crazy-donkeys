@@ -18,15 +18,18 @@ export class CookiePolicyComponent implements OnInit, AfterViewInit {
   cookieSubTitles: string[] = ['sentence8', 'sentence10'];
   constructor() {}
   ngAfterViewInit(): void {
-    this.cookiesTitles.forEach((title) => {
-      let paragraph = document.getElementById(title) as HTMLParagraphElement;
-      paragraph.classList.add('text-orange-600');
-    });
+    setTimeout(() => {
+      this.cookiesTitles.forEach((title) => {
+        let paragraph = document.getElementById(title) as HTMLParagraphElement;
+        paragraph.classList.add('text-orange-600');
+      });
+  
+      this.cookieSubTitles.forEach((title) => {
+        let paragraph = document.getElementById(title) as HTMLParagraphElement;
+        paragraph.classList.add('text-orange-300');
+      });
+    },0)
 
-    this.cookieSubTitles.forEach((title) => {
-      let paragraph = document.getElementById(title) as HTMLParagraphElement;
-      paragraph.classList.add('text-orange-300');
-    });
   }
 
   ngOnInit(): void {
