@@ -1,13 +1,6 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import url('https://fonts.googleapis.com/css2?family=Rubik+Distressed&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Fascinate+Inline&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Rubik+Dirt&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Stalinist+One&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Rubik+Moonrocks&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Source+Serif+Pro:ital,wght@1,600&display=swap');
 
 html,
 body {
@@ -15,24 +8,38 @@ body {
   color: white;
 }
 
+@font-face {
+  font-family: Fascinate;
+  src: url(./assets/fonts/Fascinate_Inline/FascinateInline-Regular.ttf);
+}
+
+@font-face {
+  font-family: Rudik;
+  src: url(./assets/fonts/Rubik_Distressed/RubikDistressed-Regular.ttf);
+}
+
+@font-face {
+  font-family: Serif-pro;
+  src: url(./assets/fonts/Source_Serif_Pro/SourceSerifPro-SemiBoldItalic.ttf);
+}
+
 .titles {
-  font-family: 'Fascinate Inline', cursive;
+  font-family: "Fascinate";
 }
 
 .font-three {
-  font-family: 'Rubik Distressed', cursive;
+  font-family: "Rudik";
 }
 
 .font-four {
-  font-family: 'Source Serif Pro', serif;
+  font-family: "Serif-pro";
 }
 
-
 * {
-  font-family: 'Source Serif Pro', serif;
-  cursor: url('../src/assets/pictures/cursor.png'), auto;	
-  scrollbar-color: rgba(0, 0, 0, 0.0) rgba(0, 0, 0, 0.0);
-  scrollbar-color: opacity 0.0;
+  font-family: "Source Serif Pro", serif;
+  cursor: url("../src/assets/pictures/cursor.png"), auto;
+  scrollbar-color: rgba(0, 0, 0, 0) rgba(0, 0, 0, 0);
+  scrollbar-color: opacity 0;
   scrollbar-width: thin;
   -webkit-tap-highlight-color: transparent;
   outline-color: transparent;
@@ -42,7 +49,6 @@ body {
   background-repeat: no-repeat;
   background-image: url("../src/assets/pictures/wallpaperflare.com_wallpaper.jpg");
 }
-
 
 .gradient {
   background: rgb(0, 0, 0);
@@ -55,7 +61,6 @@ body {
   );
 }
 
-
 app-contacts,
 app-home {
   width: 100%;
@@ -65,13 +70,17 @@ app-home {
 ::-webkit-scrollbar {
   height: 0px;
   width: 0px;
-  background: transparent
+  background: transparent;
 }
 
-
 ::-webkit-scrollbar-thumb {
-  background: rgb(0,0,0);
-  background: linear-gradient(360deg, rgba(0,0,0,1) 0%, rgba(212,88,24,1) 49%, rgba(0,0,0,1) 100%);
+  background: rgb(0, 0, 0);
+  background: linear-gradient(
+    360deg,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(212, 88, 24, 1) 49%,
+    rgba(0, 0, 0, 1) 100%
+  );
   -webkit-border-radius: 1ex;
   -webkit-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.75);
 }

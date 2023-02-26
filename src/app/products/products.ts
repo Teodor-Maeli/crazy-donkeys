@@ -124,7 +124,7 @@ export const portions: Products[] = [
   {
     title: 'FRENCH_FRIES_TITLE',
     description: 'FRENCH_FRIES',
-    allergens: applyUriPrefix(['milk']),
+    allergens: applyUriPrefix(['milk','eggs']),
   },
   {
     title: 'FRENCH_FRIES_I_TITLE',
@@ -144,7 +144,7 @@ export const portions: Products[] = [
   {
     title: 'TOAST_TITLE',
     description: 'TOAST',
-    allergens: applyUriPrefix(['milk','gluten']),
+    allergens: applyUriPrefix(['milk','eggs','gluten',]),
   },
   {
     title: 'GYROS_TITLE',
