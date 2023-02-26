@@ -48,7 +48,7 @@
                   class="flex h-full flex-col justify-start text-center sm:overflow-auto sm:text-left"
                 >
                   <h1
-                    class="font-three titles relative my-3 w-[90%] sm:p-5 sm:pb-14 p-2 pb-6 text-center text-[18px] tracking-wider text-white sm:text-[30px]"
+                    class="font-three titles relative my-3 w-[90%] p-2 pb-6 text-center text-[18px] tracking-wider text-white sm:p-5 sm:pb-14 sm:text-[30px]"
                   >
                     {{ "BURGERS" | translate }} MID/XXL
                     <img
@@ -97,7 +97,7 @@
                   class="flex flex-col justify-start text-center sm:text-left"
                 >
                   <h1
-                    class="font-three titles relative my-3 w-[90%] sm:p-5 sm:pb-14 p-2 pb-6 text-center text-[18px] tracking-wider text-white sm:text-[30px]"
+                    class="font-three titles relative my-3 w-[90%] p-2 pb-6 text-center text-[18px] tracking-wider text-white sm:p-5 sm:pb-14 sm:text-[30px]"
                   >
                     {{ "WRAPS" | translate }} MID/XL
                     <img
@@ -133,7 +133,7 @@
             class="h-full w-[100vw] overflow-y-scroll bg-transparent lg:flex"
           >
             <div
-              class="relative h-[50%] w-[100vw] bg-[url('^./assets/pictures/beer-chicken.png')] bg-cover bg-no-repeat sm:h-full bg-center lg:w-[50%]"
+              class="relative h-[50%] w-[100vw] bg-[url('^./assets/pictures/beer-chicken.png')] bg-cover bg-center bg-no-repeat sm:h-full lg:w-[50%]"
             ></div>
             <div
               id="info"
@@ -144,12 +144,12 @@
                   class="flex flex-col justify-start text-center sm:text-left"
                 >
                   <h1
-                    class="font-three titles relative my-3 w-[90%] sm:p-5 sm:pb-14 p-2 pb-6 text-center text-[18px] tracking-wider text-white sm:text-[30px]"
+                    class="font-three titles relative my-3 w-[90%] p-2 pb-6 text-center text-[18px] tracking-wider text-white sm:p-5 sm:pb-14 sm:text-[30px]"
                   >
                     {{ "PORTIONS" | translate }}
                     <img
                       src="./assets/pictures/red-label.png"
-                      class="absolute top-0 -z-10 h-[100%] w-[100%] opacity-80"
+                      class="absolute top-0 -z-10 h-[100%] w-[100%]"
                     />
                   </h1>
                   <div *ngFor="let portion of portions" class="my-2">
@@ -204,20 +204,19 @@
             *ngFor="let product of hotProducts"
           >
             <div
-              class="relative flex h-full w-full items-center justify-center"
+              class="relative flex h-full w-[50%] items-center justify-center"
             >
               <img
-                class="absolute w-[100%]"
+                class="absolute w-full"
                 src="./assets/pictures/white-dish.png"
               />
               <img
-                class="z-50 h-[90%] w-auto rounded-md contrast-125"
+                class="z-50 h-[80%] sm:h-[110%] w-auto rounded-md contrast-125"
                 src="{{ product.img }}"
               />
             </div>
-            <div></div>
-            <div class="mt-3 flex h-full w-full flex-col px-5">
-              <div class="flex justify-center">
+            <div class="my-auto h-fit w-[50%] px-5">
+              <div class="mb flex justify-center">
                 <svg
                   *ngFor="let productStar of product.stars"
                   aria-hidden="true"
