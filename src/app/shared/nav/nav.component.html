@@ -13,8 +13,10 @@
         <div
           class="order-3 my-auto flex w-full flex-col text-[13px] text-white sm:order-1 sm:mx-auto sm:ml-2 sm:flex-row md:text-[25px] lg:tracking-[2px]"
         >
-          <p class="font-three">{{"NAV.TITLE" | translate}}&nbsp;</p>
-          <p class="font-three whitespace-nowrap">{{"NAV.TITLE1" | translate}}</p>
+          <p class="font-three">{{ "NAV.TITLE" | translate }}&nbsp;</p>
+          <p class="font-three whitespace-nowrap">
+            {{ "NAV.TITLE1" | translate }}
+          </p>
         </div>
 
         <div
@@ -48,7 +50,7 @@
           </svg>
         </div>
         <h1
-          class="font-three order-3 my-auto ml-2 h-fit whitespace-nowrap text-[10px] sm:mr-20 sm:text-[20px] lg:tracking-[2px]"
+          class="font-three order-3 my-auto ml-2 h-fit whitespace-nowrap text-[15px] sm:mr-20 sm:text-[20px] lg:tracking-[2px]"
         >
           +359 88 53 06 334
         </h1>
@@ -58,8 +60,9 @@
   <div
     class="z-10 mt-auto flex h-fit w-[100%] justify-between sm:w-[550px] sm:pr-[20px] sm:pl-[48px]"
   >
-    <div *ngFor="let button of buttons">
+    <div>
       <a
+        *ngIf="!isHome"
         class="relative  inline-block text-lg group  {{ button.class }}"
         (click)="routerNavigate(button.location)"
       >
@@ -85,7 +88,7 @@
   </div>
   <div
     id="lang-changer"
-    class="fixed top-[17px] right-1 z-[99999] h-10 w-10 sm:right-4 lg:top-[35px]"
+    class="fixed top-[75px] right-1 z-[99999] h-10 w-10 sm:right-4 lg:top-[35px]"
     (click)="openLanguageChanger()"
   >
     <img

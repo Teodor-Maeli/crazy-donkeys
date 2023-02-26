@@ -71,6 +71,13 @@ export const hotProducts: Products[] = [
     stars: Array(6).fill(0)
   },
   {
+    title: 'HOT_ITEMS.CHICKEN-WINGS',
+    description: 'HOT_ITEMS.CHICKEN-WINGS',
+    allergens: [''],
+    img: './assets/pictures/chicken-wings.png',
+    stars: Array(5).fill(0)
+  },
+  {
     title: 'HOT_ITEMS.PITA_FLAMBE',
     description: 'HOT_ITEMS.POTATO_BALLS_DESC',
     allergens: [''],
@@ -85,13 +92,6 @@ export const hotProducts: Products[] = [
     stars: Array(5).fill(0)
   },
   {
-    title: 'HOT_ITEMS.CHICKEN-WINGS',
-    description: 'HOT_ITEMS.CHICKEN-WINGS',
-    allergens: [''],
-    img: './assets/pictures/chicken-wings.png',
-    stars: Array(5).fill(0)
-  },
-  {
     title: 'HOT_ITEMS.POTATO_ROSTI',
     description: 'HOT_ITEMS.POTATO_ROSTI_DESC',
     allergens: [''],
@@ -101,6 +101,16 @@ export const hotProducts: Products[] = [
 ];
 
 export const portions: Products[] = [
+  {
+    title: 'PITA_FLAMBE_CHICKEN_TITLE',
+    description: 'PITA_FLAMBE_CHICKEN',
+    allergens: applyUriPrefix(['milk','eggs','gluten']),
+  },
+  {
+    title: 'PITA_FLAMBE_GYROS_TITLE',
+    description: 'PITA_FLAMBE_GYROS',
+    allergens: applyUriPrefix(['milk','eggs','gluten']),
+  },
   {
     title: 'CRISPY_CHICKEN_TITLE',
     description: 'CRISPY_CHICKEN',
@@ -149,6 +159,11 @@ export const portions: Products[] = [
   {
     title: 'GYROS_TITLE',
     description: 'GYROS',
+    allergens: applyUriPrefix(['milk','eggs','gluten']),
+  },
+  {
+    title: 'POTATO_ROSTI_TITLE',
+    description: 'POTATO_ROSTI',
     allergens: applyUriPrefix(['milk','eggs','gluten']),
   },
 ];

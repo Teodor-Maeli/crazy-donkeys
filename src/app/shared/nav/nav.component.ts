@@ -1,5 +1,5 @@
 import { Component, OnInit, Renderer2 } from '@angular/core';
-import { Router } from '@angular/router';
+import { NavigationStart, Router } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
 import { MenuButtons } from '../models/models';
 import { environment } from 'src/environments/environment';
@@ -11,18 +11,12 @@ import { CookieService } from 'ngx-cookie-service';
   styleUrls: ['./nav.component.scss'],
 })
 export class NavComponent implements OnInit {
-  buttons: MenuButtons[] = [
-    {
-      name: 'NAV.MENU.HOME',
-      location: '',
-      class: 'hover:-rotate-2 ml-[10px] sm:ml-0',
-    },
-    {
-      name: 'NAV.MENU.CONTACTS',
-      location: '/contacts',
-      class: 'hover:rotate-2 mr-[10px] sm:mr-0 ',
-    },
-  ];
+  isHome = false;
+  button: MenuButtons = {
+    name: 'NAV.MENU.HOME',
+    location: '',
+    class: 'hover:-rotate-2 ml-[10px] sm:ml-0',
+  };
 
   langFlag: string =
     localStorage.getItem('lang') === 'bg' || undefined
@@ -37,8 +31,23 @@ export class NavComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
+    this.isHome =
+      window.location.href.includes('cookie') ||
+      window.location.href.includes('privacy') ||
+      window.location.href. includes('terms')
+        ? false
+        : true;
     this.closeLanguageChanger();
     this.setLanguageState();
+    this.router.events.subscribe((event) => {
+      if (event instanceof NavigationStart) {
+        if (event.url === '/') {
+          this.isHome = true;
+        } else {
+          this.isHome = false;
+        }
+      }
+    });
   }
 
   openLanguageChanger(): void {
@@ -79,7 +88,6 @@ export class NavComponent implements OnInit {
 
   routerNavigate(path: string) {
     this.router.navigate([path]);
-  
   }
 
   redirectSocials(media: string) {

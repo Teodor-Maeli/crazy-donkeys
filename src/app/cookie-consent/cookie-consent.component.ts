@@ -22,7 +22,6 @@ export class CookieConsentComponent implements OnInit {
         let castedEvent: NavigationStart = event as NavigationStart;
 
         if (castedEvent.url == '/cookie-policy') {
-          console.log(this.isRedirected);
           this.isRedirected = true;
         } else {
           this.isRedirected = false;

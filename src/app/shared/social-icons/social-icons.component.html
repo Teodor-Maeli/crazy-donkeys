@@ -1,5 +1,5 @@
-<div class=" inline-block w-full items-center justify-center sm:flex">
-  <h1 class="mx-auto w-fit whitespace-nowrap text-2xl sm:mx-0">
+<div class=" flex flex-col w-full items-center justify-center">
+  <h1 class="mx-auto font-three w-fit whitespace-nowrap text-2xl sm:mx-0">
     {{ "SOCIAL_MEDIA.FOLLOW" | translate }}
   </h1>
   <div class="mt-2 flex w-full justify-center sm:pt-0">
@@ -7,7 +7,7 @@
       type="button"
       data-mdb-ripple="true"
       data-mdb-ripple-color="light"
-      class="inline-block rounded border border-white px-6 py-2.5 text-xs font-medium uppercase leading-tight text-white duration-300 hover:scale-125 hover:border-transparent bg-blue-700 sm:ml-5"
+      class="inline-block rounded border border-white px-6 py-2.5 text-xs font-medium uppercase leading-tight text-white duration-300 hover:scale-125 hover:border-transparent bg-blue-700"
       (click)="redirectSocials('facebook')"
     >
       <svg
@@ -21,7 +21,7 @@
         />
       </svg>
     </button>
-    <h1 class="mx-5 text-2xl">{{ "SOCIAL_MEDIA.OR" | translate }}</h1>
+    <h1 class="mx-5 font-three text-2xl">{{ "SOCIAL_MEDIA.OR" | translate }}</h1>
     <!-- Instagram -->
     <button
       type="button"

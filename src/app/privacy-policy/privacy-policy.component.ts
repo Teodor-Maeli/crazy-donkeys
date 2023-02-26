@@ -34,7 +34,6 @@ export class PrivacyPolicyComponent implements OnInit, AfterViewInit {
         let paragraph: HTMLParagraphElement = document.getElementById(
           title) as HTMLParagraphElement;
         paragraph.classList.add('text-orange-600');
-        console.log(paragraph.classList)
       });
     },0)
 
