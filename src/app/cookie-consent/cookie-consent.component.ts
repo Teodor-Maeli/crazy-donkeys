@@ -38,8 +38,8 @@ export class CookieConsentComponent implements OnInit {
     const now: Date = new Date();
     const expirationDate: Date = new Date(
       now.getFullYear(),
-      now.getMonth(),
-      now.getDate() + 1
+      now.getMonth() + 3,
+      now.getDate() 
     );
     this.cookieAccepted = true;
     this.cookieService.set('policyAccepted', 'true', expirationDate);

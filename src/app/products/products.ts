@@ -71,7 +71,7 @@ export const hotProducts: Products[] = [
     stars: Array(6).fill(0)
   },
   {
-    title: 'HOT_ITEMS.CHICKEN-WINGS',
+    title: 'HOT_ITEMS.CHICKEN_WINGS',
     description: 'HOT_ITEMS.CHICKEN-WINGS',
     allergens: [''],
     img: './assets/pictures/chicken-wings.png',
@@ -109,6 +109,11 @@ export const portions: Products[] = [
   {
     title: 'PITA_FLAMBE_GYROS_TITLE',
     description: 'PITA_FLAMBE_GYROS',
+    allergens: applyUriPrefix(['milk','eggs','gluten']),
+  },
+  {
+    title: 'PITA_FLAMBE_BACON_TITLE',
+    description: 'PITA_FLAMBE_BACON',
     allergens: applyUriPrefix(['milk','eggs','gluten']),
   },
   {
