@@ -19,9 +19,9 @@ export class NavComponent implements OnInit {
   };
 
   langFlag: string =
-    localStorage.getItem('lang') === 'bg' || undefined
-      ? environment.langFlagBg
-      : environment.langFlagEn;
+    localStorage.getItem('lang') === 'en'
+      ? environment.langFlagEn
+      : environment.langFlagBg;
 
   constructor(
     private renderer: Renderer2,
@@ -34,7 +34,7 @@ export class NavComponent implements OnInit {
     this.isHome =
       window.location.href.includes('cookie') ||
       window.location.href.includes('privacy') ||
-      window.location.href. includes('terms')
+      window.location.href.includes('terms')
         ? false
         : true;
     this.closeLanguageChanger();
