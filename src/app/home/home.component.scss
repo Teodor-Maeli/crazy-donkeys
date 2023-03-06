@@ -20,3 +20,17 @@
     rotate: 70deg;
   }
 }
+
+.scrollbar-visible::-webkit-scrollbar {
+  height: 10px !important;
+  width: 4px !important;
+  background: black;
+}
+
+.scrollbar-visible {
+  scrollbar-color: #7f2928 rgb(0, 0, 0);
+  scrollbar-color: initial;
+  scrollbar-width: initial;
+  -webkit-tap-highlight-color: initial;
+  outline-color: initial;
+}

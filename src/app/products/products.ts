@@ -92,6 +92,13 @@ export const hotProducts: Products[] = [
     stars: Array(5).fill(0)
   },
   {
+    title: 'HOT_ITEMS.FRIED_WINGS',
+    description: 'HOT_ITEMS.GYROS_WRAP_DESC',
+    allergens: [''],
+    img: './assets/pictures/fried-wings.png',
+    stars: Array(5).fill(0)
+  },
+  {
     title: 'HOT_ITEMS.POTATO_ROSTI',
     description: 'HOT_ITEMS.POTATO_ROSTI_DESC',
     allergens: [''],
@@ -130,6 +137,11 @@ export const portions: Products[] = [
     title: 'CHICKEN_WINGS_TITLE',
     description: 'CHICKEN_WINGS',
     allergens: applyUriPrefix(['milk','eggs']),
+  },
+  {
+    title: 'FRIED_WINGS_TITLE',
+    description: 'FRIED_WINGS',
+    allergens: applyUriPrefix(['milk','eggs','gluten']),
   },
   {
     title: 'FALAFEL_SALAD_TITLE',
