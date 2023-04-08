@@ -36,16 +36,6 @@ export const wraps: Products[] = [
     allergens: applyUriPrefix(['milk','eggs','gluten']),
   },
   {
-    title: 'PORK_WRAP_TITLE',
-    description: 'PORK_WRAP',
-    allergens: applyUriPrefix(['milk','eggs','gluten']),
-  },
-  {
-    title: 'CHICKEN_WRAP_TITLE',
-    description: 'CHICKEN_WRAP',
-    allergens: applyUriPrefix(['milk','eggs','gluten']),
-  },
-  {
     title: 'FLAT_SAUSAGE_CHEESE_WRAP_TITLE',
     description: 'FLAT_SAUSAGE_CHEESE_WRAP',
     allergens: applyUriPrefix(['milk','eggs','gluten']),
